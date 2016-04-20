@@ -1,19 +1,15 @@
 {
-  "name": "macklare",
-  "version": "1.0.0",
-  "description": "En inlämningsuppgift med agil utveckling för en webbsida för mäklarsida.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webcrunch/macklare.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/webcrunch/macklare/issues"
-  },
-  "homepage": "https://github.com/webcrunch/macklare#readme"
+  "name": "angularAppbase",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "*",
+    "serve-favicon": "*",
+    "mongoose": "*",
+    "mongo-express": "*",
+    "gulp": "*",
+    "gulp-less": "*"
+  }
 }
