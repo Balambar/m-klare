@@ -21,6 +21,8 @@
 
     <!-- all CSS -->
     <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   
   </head>
 
@@ -30,8 +32,9 @@
         <div class="row">
 
             <div class="colorclearfix visible-sm-block"></div>
-            <div class="color1 col-sm-5 col-md-offset-5">
-                <h2 class="bg-info">Dyhr & <br> Rumson</h2>
+            <div class="color1 col-sm-5 col-md-offset-5">            
+            <h2 class="bg-info"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr &  Rumson</h2>
+
             </div>
       
             <div class="col-sm-5 col-md-offset-5">
@@ -43,23 +46,7 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-    
-        <div class="row">
-
-            <div class="colorclearfix visible-sm-block"></div>
-            <div class="color1 col-sm-5 col-md-offset-5">
-                <h2 class="bg-info">Dyhr & <br> Rumson</h2>
-            </div>
-      
-            <div class="col-sm-5 col-md-offset-5">
-                <div class="form-group">
-                    <h3 class="bg-info"><label for="exampleSearch">Sök Bostad</label></h3> 
-                    <input type="text" class="form-control" id="exampleSearch" placeholder="Search">   
-                </div>
-            </div>
-        </div>
-    </div>
+    <ng-view> </ng-view>
 
     <!-- just testing that the app works -->
    <!--  <form novalidate name="testForm">
