@@ -2,7 +2,7 @@ console.log("Hello world!");
 
 // declare our angular app
 // and it's dependencies
-angular.module("myApp", [
+var app = angular.module("myApp", [
   'ngRoute',
   'ngResource',
   'ngTouch',
@@ -13,9 +13,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 
 	$routeProvider
     .when("/", {
-      templateUrl: "templates/home.html",
-      controller: "home"
+      templateUrl: "templates/home.html"
+      // controller: "home"
     })
+
     .otherwise({
       templateUrl: "templates/404.html"
     });
