@@ -1,13 +1,14 @@
 module.exports = function(mongoose){
 
   // Create a new mongoose schema
-  var SellerSchema = mongoose.Schema({
+  var OwnerSchema = mongoose.Schema({
     name: {type: String, required: true},
     telefon: {type: Number, required: true},
     email: {type: String, required: true},
-    img: {type: String, required: false}
+    // a relation
+    // doneBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
   });
 
   // Return the model
-  return mongoose.model("Seller", SellerSchema);
+  return mongoose.model("Owner", OwnerSchema);
 };
