@@ -2,8 +2,10 @@ Routes
 
 En påbörjad tankemönster om våra routes - agil process :) 
 
+
+- ändra på fastigheter/buy samt fastigheter/sell ??? 
 *  / - index sidan 
 *  /fastigheter/buy eller fastigheter/sell  - köp eller sälj routes  
-*  /lägenheter/:id  eller  /villor/:id - detaljerad vy
-* /fastignheter -> enkel vy med alla objekt   
+*  /appartment/:id  eller  /villor/:id - detaljerad vy
+* /fastigheter -> enkel vy med alla objekt   
 
