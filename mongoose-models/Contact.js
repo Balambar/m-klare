@@ -7,6 +7,12 @@ module.exports = function(mongoose){
     email: {type: String, required: true}
   });
 
+  //enforce the schema required key even when the PUT method is used
+  //we use .pre since we want to validate before saving it to the database
+  ContactSchema.pre('update', function(next) {
+    this.options.runValidators = true;
+    next();
+  });
   // Return the model
   return mongoose.model("Contact", ContactSchema);
 };

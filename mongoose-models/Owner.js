@@ -5,8 +5,13 @@ module.exports = function(mongoose){
     name: {type: String, required: true},
     telefon: {type: Number, required: true},
     email: {type: String, required: true},
-    // a relation
-    // doneBy: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }]
+  });
+
+  //enforce the schema required key even when the PUT method is used
+  //we use .pre since we want to validate before saving it to the database
+  OwnerSchema.pre('update', function(next) {
+    this.options.runValidators = true;
+    next();
   });
 
   // Return the model
