@@ -17,7 +17,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: "home"
     })
     .when("/about",{
-      // templateUrl: "",
+      templateUrl: "templates/about.html"
       // controller: ""
     })
     .when("/fastigheter",{
