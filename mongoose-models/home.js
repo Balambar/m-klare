@@ -11,12 +11,10 @@ module.exports = function(mongoose){
     size: {type: Number, required: true},
     price: {type: Number, required: true},
     shown: {type: Boolean, required: true},
-    img: [
-      {type: String, required: false},
-      {type: String, required: false},
-      {type: String, required: false},
-      {type: String, required: false},
-      ],
+    img: [{
+      name: {type: String, required: true},
+      url: {type: String, required: true}
+    }],
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Owner',
