@@ -9,6 +9,10 @@ module.exports = function(mongoose){
     area: {type: String, required: true},
     type: {type: String, required: true},
     size: {type: Number, required: true},
+    rooms: {type: Number, required: true},
+    toilets: {type: Number, required: true},
+    garden: {type: Boolean, required: true},
+    balcony: {type: Boolean, required: true},
     price: {type: Number, required: true},
     shown: {type: Boolean, required: true},
     img: [{
