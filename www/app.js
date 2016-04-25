@@ -20,17 +20,35 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       templateUrl: "templates/about.html"
       // controller: ""
     })
+    .when("/sellers",{  
+      // templateUrl: "",
+      // controller: ""
+    })
     .when("/fastigheter",{
-      // templateUrl: "",
+      templateUrl: "templates/fastigheter.html"
+      
       // controller: ""
     })
-    .when("/appartment/:id",{
-      // templateUrl: "",
+     .when("/villor",{
+      // templateUrl: "templates/.html"
+      
       // controller: ""
     })
+     .when("/appartments",{
+      // templateUrl: "",
+      // controller: ""
+    }) 
     .when("/villor/:id",{
       // templateUrl: "",
       // controller: ""
+    })
+    .when("/appartment/:id",{  
+      // templateUrl: "",
+      // controller: ""
+    })
+    .when("/contact",{  
+        templateUrl: "templates/contact.html",
+        controller: "controllers/contact.js"
     })
 
     .otherwise({
