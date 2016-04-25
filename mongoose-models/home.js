@@ -1,5 +1,8 @@
 module.exports = function(mongoose){
 
+  //require the populate post function
+  var populatePosts = require('./../app/monPop').populatePosts;
+
   // Create a new mongoose schema
   var HomeSchema = mongoose.Schema({
     address: {type: String, required: true},
@@ -8,12 +11,10 @@ module.exports = function(mongoose){
     size: {type: Number, required: true},
     price: {type: Number, required: true},
     shown: {type: Boolean, required: true},
-    img: [
-      {type: String, required: false},
-      {type: String, required: false},
-      {type: String, required: false},
-      {type: String, required: false},
-      ],
+    img: [{
+      name: {type: String, required: true},
+      url: {type: String, required: true}
+    }],
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Owner',
@@ -25,6 +26,19 @@ module.exports = function(mongoose){
       required: true
     }
   });
+
+  //enforce the schema required key even when the PUT method is used
+  //we use .pre since we want to validate before saving it to the database
+  HomeSchema.pre('update', function(next) {
+    this.options.runValidators = true;
+    next();
+  });
+
+  //after GET we populate the required fields
+  HomeSchema.post('find', function(docs, next) {
+      populatePosts(docs, next, 'owner');
+      populatePosts(docs, next, 'seller');
+    });
 
   // Return the model
   return mongoose.model("Home", HomeSchema);

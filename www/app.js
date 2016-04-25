@@ -11,10 +11,26 @@ var app = angular.module("myApp", [
 
 app.config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
 
-	$routeProvider
+  $routeProvider
     .when("/", {
       templateUrl: "templates/home.html"
       // controller: "home"
+    })
+    .when("/about",{
+      templateUrl: "templates/about.html"
+      // controller: ""
+    })
+    .when("/fastigheter",{
+      // templateUrl: "",
+      // controller: ""
+    })
+    .when("/appartment/:id",{
+      // templateUrl: "",
+      // controller: ""
+    })
+    .when("/villor/:id",{
+      // templateUrl: "",
+      // controller: ""
     })
 
     .otherwise({
