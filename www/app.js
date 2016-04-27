@@ -20,12 +20,6 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       templateUrl: "templates/about.html"
       // controller: ""
     })
-    .when("/sellers",{  
-
-    templateUrl: "templates/fastigheter.html"
-      // templateUrl: "",
-      // controller: ""
-    })
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
       controller: "fastigheter"
@@ -50,6 +44,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     .when("/contact",{  
         templateUrl: "templates/contact.html",
         controller: "contact"
+    })
+    .when("/sellers",{  
+        templateUrl: "templates/seller.html",
+        controller: "seller"
     })
 
     .otherwise({

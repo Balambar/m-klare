@@ -1,14 +1,14 @@
-<div ng-controller="controlador1">
-
-  <h1>Telefonlista till Mäklare</h1>
-  <label>buscar</label>
-  <input type="search" ng-model="search">
-
-  <p ng-repeat=" entrada in myApp | filter : search">
-    {{entrada.name }} : {{entrada.telefon}} : {{entrada.email}} : {{entrada.img}}
-
-    <img src="ejemplo1.jpg" alt="imagen1" ng-mouseleave="mouseDejaLaimagen()" ng-mouseenter="mouseSobreLaimagen()">
-
-  </p>
-
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-24 col-xs-offset-0 col-md-7">
+			<h1>Sellers</h1>
+			<div ng-repeat="seller in sellers">
+				<img src={{seller.img}} width="230px" height="240px"><br>
+				<b>Namn: </b><p>{{seller.name}}</p>
+				<b>Email: </b><p>{{seller.email}}</p>
+				<b>Telefon: </b><p>{{seller.telefon}}</p>
+				<b>Om mig själv: </b><p>{{seller.about}}</p> 
+			</div>
+		</div>
+	</div>
 </div>
