@@ -30,12 +30,12 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: ""
     })
      .when("/villor",{
-      // templateUrl: "templates/.html"
+      templateUrl: "templates/villor.html"
       
       // controller: ""
     })
      .when("/appartments",{
-      // templateUrl: "",
+      templateUrl: "templates/appartments.html",
       // controller: ""
     }) 
     .when("/villor/:id",{
