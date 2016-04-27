@@ -25,9 +25,8 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: ""
     })
     .when("/fastigheter",{
-      templateUrl: "templates/fastigheter.html"
-      
-      // controller: ""
+      templateUrl: "templates/fastigheter.html",
+      controller: "fast"
     })
      .when("/villor",{
       templateUrl: "templates/villor.html"
