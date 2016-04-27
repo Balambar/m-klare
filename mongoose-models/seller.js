@@ -5,6 +5,7 @@ module.exports = function(mongoose){
     name: {type: String, required: true},
     telefon: {type: Number, required: true},
     email: {type: String, required: true},
+    about: {type: String, required: true},
     img: {type: String, required: false}
   });
 

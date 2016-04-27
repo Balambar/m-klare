@@ -1,24 +1,29 @@
-/*app.controller("contact", ["$scope", "$resource", "Contact", function($scope, $resource, Contact) {
-  
-	Contact.create({
-	name: $scope.$watch("#contactName"),
-	email: $scope.$watch("#contactEmail"),
-	telefon: $scope.$watch("#contactTelefon"),
-	messege: $scope.$watch("#contactMessage")
+app.controller("contact", ["Contact", function(Contact){
+
+	$('#sendContact').click(function(){
+
+		if ($("#contactName").val() == "" || $("#contactEmail").val() == "" || $("#contactMessage").val() == "") {
+			alert("Du måste fylla i alla obligatoriska rutor!");
+		}
+		else
+			Contact.create({
+				name: $("#contactName").val(),
+				email: $("#contactEmail").val(),
+				telefon: $("#contactTelefon").val(),
+				message: $("#contactMessage").val()
+			}, function(){
+				alert("Tack för din meddelande!");
+			});
+
+			$("#contactName").val("");
+			$("#contactEmail").val("");
+			$("#contactTelefon").val("");
+			$("#contactMessage").val("");
+
 	});
 
-	$scope.alla = "HOLA";
-	console.log("JEJEJE");
-
-}]);*/
-
-app.controller("contact", ["$scope", "Contact", function($scope, Contact){
-
 	Contact.get(function(allContacts){
-
-		$scope.contacts = allContacts;
 		console.log(allContacts);
-
 	});
 
 }]);
