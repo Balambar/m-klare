@@ -4,11 +4,11 @@
     <div class="col-xs-24 col-xs-offset-0 col-md-8 col-md-offset-7">
       <form>
         <div class="form-group">
-          <label for="contactName">Namn: </label>
+          <label for="contactName">*Namn: </label>
           <input type="text" class="form-control" id="contactName" placeholder="Namn">
         </div>
         <div class="form-group">
-          <label for="contactEmail">Email: </label>
+          <label for="contactEmail">*Email: </label>
           <input type="email" class="form-control" id="contactEmail" placeholder="Email">
         </div>
         <div class="form-group">
@@ -16,11 +16,12 @@
           <input type="text" class="form-control" id="contactTelefon" placeholder="Telefonnummer">
         </div>
         <div class="form-group">
-          <label for="contactMessage">Meddelande: </label>
-          <textarea type="text" class="form-control" id="contactMessage" placeholder="Meddelande"></textarea>
+          <label for="contactMessage">*Meddelande: </label>
+          <textarea type="text" rows="5" class="form-control" id="contactMessage" placeholder="Meddelande"></textarea>
         </div>
-        <button type="submit" class="btn btn-default">Skicka</button>
-      </form>
-    </div>
+        <button type="submit" id="sendContact" class="btn btn-default">Skicka</button>
+      </form><br>
+      <div><i>* Obligatoriska rutor att fylla i</i></div>
+    </div>  
   </div>
 </div>   

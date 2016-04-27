@@ -14,7 +14,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
   $routeProvider
     .when("/", {
       templateUrl: "templates/home.html"
-      // controller: "home"
+      //controller: "home"
     })
     .when("/about",{
       templateUrl: "templates/about.html"
@@ -25,17 +25,16 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: ""
     })
     .when("/fastigheter",{
-      templateUrl: "templates/fastigheter.html"
-      
-      // controller: ""
+      templateUrl: "templates/fastigheter.html",
+      controller: "fast"
     })
      .when("/villor",{
-      // templateUrl: "templates/.html"
+      templateUrl: "templates/villor.html"
       
       // controller: ""
     })
      .when("/appartments",{
-      // templateUrl: "",
+      templateUrl: "templates/appartments.html",
       // controller: ""
     }) 
     .when("/villor/:id",{
@@ -48,7 +47,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     })
     .when("/contact",{  
         templateUrl: "templates/contact.html",
-        controller: "controllers/contact.js"
+        controller: "contact"
     })
 
     .otherwise({

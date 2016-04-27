@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<input<!DOCTYPE html>
 <html ng-app="myApp">
   <head>
     <title>AngularJS App Base</title>
@@ -18,29 +18,61 @@
 
     <!-- our JS -->
     <script src="app.js"></script>
+    <script src="/api/ngresources/app"></script>
+    <script src="controllers/contact.js"></script>
+    <script src="controllers/showFast.js"></script>
+    <!--<script src="controllers/home.js"></script>
+    
+    <script src="controllers/seller.js"></script>-->
 
     <!-- all CSS -->
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  
+    
   </head>
 
   <body>
-    
-    <div class="container-fluid">
-        <div class="row">
 
-            <div class="color1 col-sm-5 col-md-offset-3">            
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+    <div class="row">
+        
+
+        <!-- Logo -->
+        <div class="col-md-8 col-md-offset-3 col-md-6">
+
+        <h2><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr & Rumson</h2></a>
+        </div>
+        <!-- <a href="/"> -->
+
+        
+        <!-- Sökrutan -->
+        <!-- <div class="col-sm-5 col-md-offset-7"> -->
+
+        <div class="col-sm-5 col-md-offset-7">
+            <div class="form-group">
+                <h3><label for="exampleSearch">Sök Område</label></h3> 
+                    <input type="text" class="form-control" id="exampleSearch" placeholder="Search">   
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    
+
+  <!--   <div class="container-fluid">
+        <div class="row">
+ -->
+           <!--  <div class="color1 col-sm-5 col-md-offset-3">            
             <h2 class="bg-info"><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr &  Rumson</h2></a>
 
-            </div>
-            <div class="col-sm-5 col-md-offset-7">
-                <div class="form-group">
-                    <h3 class="bg-info"><label for="exampleSearch">Sök Bostad</label></h3> 
-                    <input type="text" class="form-control" id="exampleSearch" placeholder="Search">   
-                </div>
-            </div>
-            <div class="color1 col-sm-5 col-md-offset-3">         
+            </div> -->
+           
+
+            <div class="col-sm-5 col-md-offset-3">         
                 <a href="/contact">Kontakta oss</a></h2>
             </div>
         </div>
@@ -58,20 +90,5 @@
 
     <ng-view> </ng-view>
 
-    <!-- just testing that the app works -->
-   <!--  <form novalidate name="testForm">
-      <div class="form-group">
-        <label>Input text</label>
-        <input
-        type="text"
-        name="testInput"
-        class="form-control"
-        placeholder="Something..."
-        ng-model="test"
-        >
-      </div>x
-    </form>
-    <h2>The input contains:</h2>
-    <p>{{test}}</p> -->
   </body>
 </html>
