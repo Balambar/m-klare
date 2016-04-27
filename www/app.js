@@ -21,12 +21,14 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: ""
     })
     .when("/sellers",{  
+
+    templateUrl: "templates/fastigheter.html"
       // templateUrl: "",
       // controller: ""
     })
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
-      controller: "fast"
+      controller: "fastigheter"
     })
      .when("/villor",{
       templateUrl: "templates/villor.html"
