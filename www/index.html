@@ -1,5 +1,6 @@
 <input<!DOCTYPE html>
-<html ng-app="myApp">
+  <html ng-app="myApp">
+
   <head>
     <title>AngularJS App Base</title>
     <meta charset="utf-8">
@@ -20,86 +21,82 @@
     <script src="app.js"></script>
     <script src="/api/ngresources/app"></script>
     <script src="controllers/contact.js"></script>
-    <script src="controllers/showFast.js"></script>
-    <script src="controllers/seller.js"></script>
-    <script src="controllers/testHomes.js"></script>
-    <!--<script src="controllers/home.js"></script>
     
+    <script src="controllers/seller.js"></script>
+
+    <script src="controllers/testHomes.js"></script>
+    <!--<script src="controllers/home.js"></script>-->
+    
+    
+     <!-- directives -->
+    <script src="/directives/headerNav.js"></script>
+
+
     <script src="controllers/seller.js"></script>-->
 
     <!-- all CSS -->
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
-    <!-- all bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
-    </script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-    </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
 
   <body>
 
-
-  <div class="jumbotron jumbotron-fluid" style="background-color:#3385ff">
-    <div class="container">
-    <div class="row">
-        
-
-        <!-- Logo -->
-        <div class="col-md-8 col-md-offset-3 col-md-6">
-
-        <h2 style="background-color: black"><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr & Rumson</a></h2>
-        </div>
-        <!-- <a href="/"> -->
-
-        
-        <!-- Sökrutan -->
-        <!-- <div class="col-sm-5 col-md-offset-7"> -->
-
-        <div class="col-sm-5 col-md-offset-7">
-            <div class="form-group">
-                <h3><label for="exampleSearch">Sök Område</label></h3> 
-                    <input type="text" class="form-control" id="exampleSearch" placeholder="Search">   
-            </div>
-        </div>
-
-       <div class="col-sm-5 col-md-offset-3">         
-            <a href="/kontakt" style="background-color: black">Kontakta oss</a></h2>
-        </div>
-        <div class="col-sm-5 col-md-offset-3">         
-            <a href="/maklare" style="background-color: black">Välja Mäklare</a></h2>
-        </div>
-    </div>
-    </div>
-    </div>
-
-
-    
-
-  <!--   <div class="container-fluid">
-        <div class="row">
- -->
-           <!--  <div class="color1 col-sm-5 col-md-offset-3">            
-            <h2 class="bg-info"><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr &  Rumson</h2></a>
-
-            </div> -->
-           
-        </div>
-    </div>
-       <div class="navbar navbar-default navbar-fixed-bottom" style="background-color:#3385ff">
-     <div class="container">  
-
-     </div>
-    
-    </div>  
-
-    <ng-view> </ng-view> 
- 
-
   
+    <div class="jumbotron jumbotron-fluid" style="background-color: #f8f8f8">
+      <!-- style="background-color:#3385ff -->
+      <div class="container">
+        <div class="row">
+
+          <!-- Logo -->
+
+          
+          <div class="col-sm-24 col-md-6">
+
+            <h2><a href="/"></i>DYHR & RUMSON</a></h2>
+          </div>
+
+          <!-- Sökrutan -->
+          <div class="col-sm-24 col-md-offset-7 col-md-8">
+
+            <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Sök på bostadstyp, adress" id="sokf">
+                      <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Sök Bostad</button>
+                      </span>
+                    </div>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <ng-view> </ng-view>
+
+
+    <div class="navbar navbar-default navbar-fixed-bottom">
+      <!-- style="background-color:#3385ff -->
+      <div class="container">
+
+        <!--  <div class="col-sm-24 col-md-offset-3">
+            <a href="/contact">Kontakta oss</a></h2>
+          </div>
+          <div class="col-sm-24 col-md-offset-3">
+            <a href="/sellers">Välja Mäklare</a></h2>
+          </div> -->
+
+      </div>
+
+    </div>
+
+
+
+
+
 
   </body>
 
-</html>
+  </html>
