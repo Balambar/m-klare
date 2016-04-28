@@ -9,7 +9,7 @@ app.controller("contact", ["Contact", function(Contact){
 			Contact.create({
 				name: angular.element("#contactName").val(),
 				email: angular.element("#contactEmail").val(),
-				telefon: angular.element("#contactTelefon").val(),
+				phone: angular.element("#contactTelefon").val(),
 				message: angular.element("#contactMessage").val()
 			}, function(){
 				alert("Tack för din meddelande!");

@@ -3,7 +3,7 @@ module.exports = function(mongoose){
   // Create a new mongoose schema
   var OwnerSchema = mongoose.Schema({
     name: {type: String, required: true},
-    telefon: {type: Number, required: true},
+    phone: {type: Number, required: true},
     email: {type: String, required: true},
   });
 

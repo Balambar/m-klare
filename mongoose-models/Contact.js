@@ -4,7 +4,7 @@ module.exports = function(mongoose){
   var ContactSchema = mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true},
-    telefon: {type: Number, required: false},
+    phone: {type: Number, required: false},
     message: {type: String, required: true}
   });
 
