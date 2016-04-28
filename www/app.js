@@ -29,7 +29,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       
       // controller: ""
     })
-     .when("/appartments",{
+     .when("/lagenhet",{
       templateUrl: "templates/appartments.html",
       // controller: ""
     }) 
@@ -37,15 +37,15 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // templateUrl: "",
       // controller: ""
     })
-    .when("/appartment/:id",{  
+    .when("/lagenhet/:id",{  
       // templateUrl: "",
       // controller: ""
     })
-    .when("/contact",{  
+    .when("/kontakt",{  
         templateUrl: "templates/contact.html",
         controller: "contact"
     })
-    .when("/sellers",{  
+    .when("/maklare",{  
         templateUrl: "templates/seller.html",
         controller: "seller"
     })
