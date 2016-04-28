@@ -1,0 +1,18 @@
+<div class="container">
+	<div ng-repeat="home in homes">
+		<h4>address: {{home.address}}</h4>
+		<h4>area: {{home.area}}</h4>
+		<h4>size: {{home.size}} m2</h4>
+		<h4>rum: {{home.rooms}}</h4>
+		<h4>toa: {{home.toilets}}</h4>
+		<h4>garden: {{home.garden}}</h4>
+		<h4>balcon: {{home.balcony}}</h4>
+		<h4>pris: {{home.price}} kr</h4>
+		<img src={{home.img[0].url}}>
+		<img src={{home.img[1].url}}>
+		<h4>owner: {{home.owner.name}}</h4>
+		<h4>seller: {{home.seller.name}}</h4>
+		<!--<h4 ng-model="myOwner">owner: {{myOwner}}</h4>
+		<h4 ng-model="mySeller">seller: {{mySeller}}</h4>--><br><br><br>
+	</div>
+</div>
