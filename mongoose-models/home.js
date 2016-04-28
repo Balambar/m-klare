@@ -39,10 +39,10 @@ module.exports = function(mongoose){
   });
 
   //after GET we populate the required fields
-  HomeSchema.post('find', function(docs, next) {
+  /*HomeSchema.post('find', function(docs, next) {
       populatePosts(docs, next, 'owner');
       populatePosts(docs, next, 'seller');
-    });
+    });*/
 
   // Return the model
   return mongoose.model("Home", HomeSchema);

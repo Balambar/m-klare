@@ -49,6 +49,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
         templateUrl: "templates/seller.html",
         controller: "seller"
     })
+    .when("/testHomes",{  
+        templateUrl: "templates/testHomes.html",
+        controller: "testHomes"
+    })
 
     .otherwise({
       templateUrl: "templates/404.html"
