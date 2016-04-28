@@ -1,4 +1,4 @@
-app.controller("contact", ["$scope", "Contact", function($scope, Contact){
+app.controller("contact", ["Contact", function(Contact){
 
 	$('#sendContact').click(function(){
 
