@@ -1,5 +1,6 @@
 module.exports = function(mongoose) {
 
+	
 	var AboutSchema = mongoose.Schema({
 
 		title: {type: String, required: true},
