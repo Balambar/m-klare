@@ -1,6 +1,6 @@
 app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 
-	/*Home.create({
+	Home.create({
 		address: "My Beautiful Street 69",
 	    area: "Dalaplan",
 	    type: "Lägenhet",
@@ -10,7 +10,6 @@ app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 	    garden: false,
 	    balcony: true,
 	    price: 1000000,
-	    shown: false,
 	    img: [{
 	      name: "Photo1",
 	      url: "imgs/homes/test1.jpg"
@@ -19,9 +18,8 @@ app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 	      name: "Photo2",
 	      url: "imgs/homes/test2.jpg"
 	    }],
-	    owner: Owner.get({_id:"57220610c4ea0288206063cf",_populate:"owner"}),
-	    seller: Seller.get({_id:"572205d4c4ea0288206063ce",_populate:"seller"})
-	});*/
+	    seller: "572205d4c4ea0288206063ce"
+	});
 
 	Home.get(function(allhomes){
 		console.log(allhomes);
