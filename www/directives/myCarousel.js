@@ -11,13 +11,13 @@ app.directive('myCarousel', [function(){
 
 			Home.get(function(data){
 
-				for (var i = 0; i < data.length; i++) {
+				for (var i = 0; i < data[0].img.length; i++) {
 
-					console.log(data[i], 'loaded from db');
+					console.log(data[0].img[i], 'loaded from db');
 
 					slides.push({
-				      image: data[i].url,
-				      text: data[i].name,
+				      image: data[0].img[i].url,
+				      text: data[0].img[i].name,
 				      id: currIndex++
 					});
 
