@@ -1,0 +1,43 @@
+<!-- "vanilla" bootstrap modal-content html -->
+<div class="modal-header">
+  <h3 class="modal-title">Seller Name</h3>
+</div>
+<div class="modal-body">
+  <p>Seller email</p>
+  <p>Seller phone</p>
+  <p>Seller position</p>
+  <p>Seller about</p>
+  <div class="row">
+    <div class="col-xs-24 col-sm-20">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="contactName">*Namn</label>
+          <input type="text" class="form-control" ng-model="contactNameSeller" placeholder="Namn">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">*Email: </label>
+          <input type="email" class="form-control" ng-model="contactEmailSeller" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="contactTelefon">Telefonnummer: </label>
+          <input type="text" class="form-control" ng-model="contactPhoneMSeller" placeholder="Telefonnummer">
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">*Meddelande: </label>
+          <textarea type="text" rows="5" class="form-control" ng-model="contactMessageSeller" placeholder="Meddelande"></textarea>
+        </div>
+        <button type="submit" id="sendContactSeller" class="btn btn-default">Skicka</button>
+      </form><br>
+      <div><i>* Obligatoriska rutor att fylla i</i></div>
+    </div>  
+  </div>
+<div class="modal-footer">
+  <!-- "Ok" button is disabled if user has not selected an option! -->
+  <button
+  class="btn btn-primary"
+  type="button"
+  ng-click="ok()"
+  ng-disabled="!selectedOption"
+  >OK</button>
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>

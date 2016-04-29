@@ -5,11 +5,11 @@
         </div>
 			<div ng-repeat="seller in sellers">
 				<div class="col-xs-24 col-md-6">
-					<img src={{seller.img}} width="230px" height="240px"><br>
+					<img ng-src={{seller.img}} width="230px" height="240px"><br>
 					<b>Namn: </b><p>{{seller.name}}</p>
 					<b>Email: </b><p>{{seller.email}}</p>
 					<b>Telefon: </b><p>+46{{seller.phone}}</p>
-					<b>Om mig själv: </b><p>{{seller.about}}</p>
+					<my-modal-seller></my-modal-seller>
 				</div>	 
 			</div>
 		</div>
