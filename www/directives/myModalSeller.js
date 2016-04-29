@@ -3,10 +3,10 @@
 app.directive('myModalSeller', [function() {
 
   return {
-    templateUrl: '/directives/myModalSeller.html',
+    //templateUrl: '/directives/myModalSeller.html',
     controller: ['$scope', '$uibModal', function($scope, $uibModal) {
       // opens our modal on ng-click!
-      $scope.openModal = function() {
+      $scope.openModal = function(sellerObj) {
 
         // create a new modal with the following settings
         var modalInstance = $uibModal.open({
@@ -18,7 +18,10 @@ app.directive('myModalSeller', [function() {
           // prevent dismissing by clicking on backdrop
           backdrop: 'static',
           // make our modal large
-          size: 'lg'
+          size: 'lg',
+          resolve: {
+            seller: sellerObj
+          }
         });
 
         modalInstance.result.then(

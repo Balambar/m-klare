@@ -1,7 +1,7 @@
 // the controller for the modal itself
 // (separate from underlying view/directive)
-app.controller('mySellerModalInstance', ['$scope', '$uibModalInstance', function($scope, $uibModalInstance) {
-
+app.controller('mySellerModalInstance', ['$scope', '$uibModalInstance', 'seller', function($scope, $uibModalInstance, seller) {
+  console.log("selected seller", seller)
   $scope.ok = function() {
     // user approves om seleted option
     // so send the selected option back to the myModal directive
