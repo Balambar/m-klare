@@ -19,11 +19,6 @@ module.exports = function(mongoose){
       name: {type: String, required: true},
       url: {type: String, required: true}
     }],
-    owner: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Owner',
-      required: true
-    },
     seller: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Seller',
@@ -39,10 +34,9 @@ module.exports = function(mongoose){
   });
 
   //after GET we populate the required fields
-  /*HomeSchema.post('find', function(docs, next) {
-      populatePosts(docs, next, 'owner');
-      populatePosts(docs, next, 'seller');
-    });*/
+  HomeSchema.post('find', function(docs, next) {
+    populatePosts(docs, 'seller', next);
+  });
 
   // Return the model
   return mongoose.model("Home", HomeSchema);
