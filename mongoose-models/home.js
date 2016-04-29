@@ -14,7 +14,6 @@ module.exports = function(mongoose){
     garden: {type: Boolean, required: true},
     balcony: {type: Boolean, required: true},
     price: {type: Number, required: true},
-    shown: {type: Boolean, required: true},
     img: [{
       name: {type: String, required: true},
       url: {type: String, required: true}
