@@ -16,7 +16,7 @@ app.directive('myModalSeller', [function() {
           // use this controller (src: /modals/myModalInstance.js)
           controller: 'mySellerModalInstance',
           // prevent dismissing by clicking on backdrop
-          backdrop: 'static',
+          //backdrop: 'static',
           // make our modal large
           size: 'lg',
           resolve: {

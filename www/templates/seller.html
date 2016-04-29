@@ -3,18 +3,13 @@
 		<div class="col-xs-24">
             <h1 class="page-header">HITTA MÄKLARE</h1>                
         </div>
-			<div ng-repeat="seller in sellers">
-				<div class="col-xs-24 col-md-6">
+			<div ng-repeat="seller in sellers" my-modal-seller>
+				<div class="col-xs-24 col-md-6" ng-click="openModal(seller)">
 					<img ng-src={{seller.img}} width="230px" height="240px"><br>
-					<b>Namn: </b><p>{{seller.name}}</p>
-					<b>Email: </b><p>{{seller.email}}</p>
-					<b>Telefon: </b><p>+46{{seller.phone}}</p>
-					<my-modal-seller></my-modal-seller>
 					<h2><p>{{seller.name}}</p></h2>
 					<h4>{{seller.position}}</h4>				
 					<b>Telefon: </b><p>+46{{seller.phone}}</p>
 					<h4><b>Email: </b><p>{{seller.email}}</p><h4>
-					<a href="kontakt">Read more about me...</a>
 				</div>	 
 			</div>
 		</div>
