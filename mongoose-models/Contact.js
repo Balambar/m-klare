@@ -5,7 +5,8 @@ module.exports = function(mongoose){
     name: {type: String, required: true},
     email: {type: String, required: true},
     phone: {type: Number, required: false},
-    message: {type: String, required: true}
+    message: {type: String, required: true},
+    type: {type: String, required: true}
   });
 
   //enforce the schema required key even when the PUT method is used

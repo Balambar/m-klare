@@ -10,7 +10,8 @@ app.controller("contact", ["$scope", "Contact", function($scope, Contact){
 				name: $scope.contactName,
 				email: $scope.contactEmail,
 				phone: $scope.contactPhone,
-				message: $scope.contactMessage
+				message: $scope.contactMessage,
+				type: "Regular Contact"
 			}, function(){
 				alert("Tack för din meddelande!");
 				$scope.contactName = undefined;

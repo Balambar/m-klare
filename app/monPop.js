@@ -1,6 +1,6 @@
 //node module that populates mongoose schemas
 module.exports = {
-  populatePosts: function(docs, next, key){
+  populatePosts: function(docs, key, next){
     //if the docs  does not exist (is an array)
     if(docs.constructor.name != "Array"){
       //set docs to an array of docs
