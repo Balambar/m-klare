@@ -5,9 +5,9 @@
 
   		<div class="col-md-12"> 				
 				<div class="well well-lg" id="sok">
-					<h2>Vart vill du köpa? </h2>
+					<h2>Hitta din bostad!</h2>
 					<div class="input-group">
-				      <input type="text" class="form-control" placeholder="Sök på bostadstyp, adress" id="sokf">
+				      <input type="text" class="form-control" placeholder="Sök på bostadstyp, adress" id="sokbar">
 				      <span class="input-group-btn">
 				        <button class="btn btn-primary" type="button">Sök!</button>
 				      </span>
@@ -19,16 +19,21 @@
 			<!-- Dropdown -->
 			<div class="col-md-12"> 
 			 	<div class="well well-lg" id="ddown">
-					<h2>Vill du sälja?</h2>
+					<h2>Navigera!</h2>
 					<!-- Single button -->
 					<div class="btn-group">
 					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    Vad vill du sälja?<span class="caret"></span>
+					    Köp/Sälj!<span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu">
-					   	<li><a href="#">Värdera din bostad</a></li>
-   				  		<li><a href="#">Säljguide</a></li>
-    					<li><a href="#">Kontakta vår mäklare</a></li>
+					  	<li class="dropdown-header">Vill du köpa?</li>
+					   	<li><a class="kopa" href="/lagenhet">Bostad</a></li>
+					   	<li class="dropdown-header">Vill du Sälja?</li>
+					   	<li><a class="kopa" href="lagenhet">Bostad</a></li>
+					   	<li role="separator" class="divider"></li>
+					   	<li><a href="/about">Om Oss</a></li>
+    					<li><a href="/kontakt">Kontakta vår mäklare</a></li>
+    					
 					  </ul>
 					</div>
   					
