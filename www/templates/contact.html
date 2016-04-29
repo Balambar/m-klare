@@ -1,23 +1,28 @@
 <br>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-24 col-xs-offset-0 col-md-8 col-md-offset-7">
+    <div class="col-xs-24 col-xs-offset-0 col-md-10 col-md-offset-7">
+      <h4>Har du några frågor? Fyll gärna i formuläret så att vi kan kontakta dig så snart som möjligt!</h4><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-24 col-xs-offset-0 col-md-6 col-md-offset-7">
       <form>
         <div class="form-group">
           <label for="contactName">*Namn: </label>
-          <input type="text" class="form-control" id="contactName" placeholder="Namn">
+          <input type="text" class="form-control" ng-model="contactName" placeholder="Namn">
         </div>
         <div class="form-group">
           <label for="contactEmail">*Email: </label>
-          <input type="email" class="form-control" id="contactEmail" placeholder="Email">
+          <input type="email" class="form-control" ng-model="contactEmail" placeholder="Email">
         </div>
         <div class="form-group">
           <label for="contactTelefon">Telefonnummer: </label>
-          <input type="text" class="form-control" id="contactTelefon" placeholder="Telefonnummer">
+          <input type="text" class="form-control" ng-model="contactPhone" placeholder="Telefonnummer">
         </div>
         <div class="form-group">
           <label for="contactMessage">*Meddelande: </label>
-          <textarea type="text" rows="5" class="form-control" id="contactMessage" placeholder="Meddelande"></textarea>
+          <textarea type="text" rows="5" class="form-control" ng-model="contactMessage" placeholder="Meddelande"></textarea>
         </div>
         <button type="submit" id="sendContact" class="btn btn-default">Skicka</button>
       </form><br>

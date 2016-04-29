@@ -1,25 +1,23 @@
-app.controller("contact", ["Contact", function(Contact){
+app.controller("contact", ["$scope", "Contact", function($scope, Contact){
 
 	$('#sendContact').click(function(){
 
-		if ($("#contactName").val() == "" || $("#contactEmail").val() == "" || $("#contactMessage").val() == "") {
+		if ($scope.contactName == undefined || $scope.contactEmail == undefined || $scope.contactMessage == undefined) {
 			alert("Du måste fylla i alla obligatoriska rutor!");
 		}
 		else
 			Contact.create({
-				name: $("#contactName").val(),
-				email: $("#contactEmail").val(),
-				telefon: $("#contactTelefon").val(),
-				message: $("#contactMessage").val()
+				name: $scope.contactName,
+				email: $scope.contactEmail,
+				phone: $scope.contactPhone,
+				message: $scope.contactMessage
 			}, function(){
 				alert("Tack för din meddelande!");
+				$scope.contactName = undefined;
+				$scope.contactEmail = undefined;
+				$scope.contactPhone = undefined;
+				$scope.contactMessage = undefined;
 			});
-
-			$("#contactName").val("");
-			$("#contactEmail").val("");
-			$("#contactTelefon").val("");
-			$("#contactMessage").val("");
-
 	});
 
 	Contact.get(function(allContacts){

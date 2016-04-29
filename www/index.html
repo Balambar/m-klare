@@ -1,101 +1,69 @@
-<input<!DOCTYPE html>
+<!DOCTYPE html>
 <html ng-app="myApp">
+
   <head>
-    <title>AngularJS App Base</title>
-    <meta charset="utf-8">
-    <!-- base href for Angular (HTML5 mode) -->
-    <base href="/">
-    <!-- meta tag for bootstrap (mobile devices) -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>AngularJS App Base</title>
+      <meta charset="utf-8">
+      <!-- base href for Angular (HTML5 mode) -->
+      <base href="/">
+      <!-- meta tag for bootstrap (mobile devices) -->
+      <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- JS libs -->
-    <script src="libs/jquery.min.js"></script>
-    <script src="libs/angular.min.js"></script>
-    <script src="libs/angular-touch.min.js"></script>
-    <script src="libs/angular-route.min.js"></script>
-    <script src="libs/angular-resource.min.js"></script>
-    <script src="libs/ui-bootstrap-tpls.min.js"></script>
+      <!-- JS libs -->
+      <script src="libs/jquery.min.js"></script>
+      <script src="libs/angular.min.js"></script>
+      <script src="libs/angular-touch.min.js"></script>
+      <script src="libs/angular-route.min.js"></script>
+      <script src="libs/angular-resource.min.js"></script>
+      <script src="libs/ui-bootstrap-tpls.min.js"></script>
 
-    <!-- our JS -->
-    <script src="app.js"></script>
-    <script src="/api/ngresources/app"></script>
-    <script src="controllers/contact.js"></script>
-    <script src="controllers/showFast.js"></script>
-    <script src="controllers/seller.js"></script>
-    <!--<script src="controllers/home.js"></script>
-    
-    <script src="controllers/seller.js"></script>-->
-
-    <!-- Directives -->
-    <script src="directives/infoTable.js"></script>
-
-    <!-- all CSS -->
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    
-  </head>
-
-  <body>
+      <!-- our JS -->
+      <script src="app.js"></script>
+      <script src="/api/ngresources/app"></script>
+      <script src="controllers/contact.js"></script>
+      <script src="controllers/seller.js"></script>
+      <script src="controllers/testHomes.js"></script>
+      <script src="controllers/fastigheter.js"></script>
+      <!--<script src="controllers/home.js"></script>-->
 
 
-  <div class="jumbotron jumbotron-fluid" style="background-color:#3385ff">
-    <div class="container">
-    <div class="row">
-        
+      <!-- directives -->
+      <script src="/directives/objektShow.js"></script>
+      <script src="/directives/headerNav.js"></script>
+      <script src="controllers/seller.js"></script>
+      <script src="directives/infoTable.js"></script>
 
-        <!-- Logo -->
-        <div class="col-md-8 col-md-offset-3 col-md-6">
 
-        <h2 style="background-color: black"><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr & Rumson</a></h2>
-        </div>
-        <!-- <a href="/"> -->
+      <!-- all CSS -->
+      <link rel="stylesheet" href="css/all.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-        
-        <!-- Sökrutan -->
-        <!-- <div class="col-sm-5 col-md-offset-7"> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
 
-        <div class="col-sm-5 col-md-offset-7">
-            <div class="form-group">
-                <h3><label for="exampleSearch">Sök Område</label></h3> 
-                    <input type="text" class="form-control" id="exampleSearch" placeholder="Search">   
+    <body>
+
+     <div id="background-carousel">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active" style="background-image:url(imgs/Home/bild1.jpg)"></div>
+              <div class="item" style="background-image:url(imgs/Home/bild2.jpg)"></div>
+              <div class="item" style="background-image:url(imgs/Home/bild3.jpg)"></div>
+              <div class="item" style="background-image:url(imgs/Home/bild4.jpg)"></div>
+              <div class="item" style="background-image:url(imgs/Home/bild5.jpg)"></div>
             </div>
+          </div>
         </div>
+        
+        <header-nav></header-nav>        
+        <ng-view> </ng-view>
 
-       <div class="col-sm-5 col-md-offset-3">         
-            <a href="/contact" style="background-color: black">Kontakta oss</a></h2>
-        </div>
-        <div class="col-sm-5 col-md-offset-3">         
-            <a href="/sellers" style="background-color: black">Välja Mäklare</a></h2>
-        </div>
-    </div>
-    </div>
-    </div>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+  </div>
+</nav>
 
-
-    
-
-  <!--   <div class="container-fluid">
-        <div class="row">
- -->
-           <!--  <div class="color1 col-sm-5 col-md-offset-3">            
-            <h2 class="bg-info"><a href="/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dyhr &  Rumson</h2></a>
-
-            </div> -->
-           
-        </div>
-    </div>
-       <div class="navbar navbar-default navbar-fixed-bottom" style="background-color:#3385ff">
-     <div class="container">  
-
-     </div>
-    
-    </div>  
-
-    <ng-view> </ng-view> 
- 
-
-  
-
-  </body>
+</body>
 
 </html>

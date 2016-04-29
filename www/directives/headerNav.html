@@ -1,0 +1,43 @@
+<nav class="navbar navbar-inverse" id="navb" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      
+      <!-- use ng-init + ng-click to make nav collapsible -->
+      <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="nava" href="/">DYHR & RUMSON</a>
+    </div> <!-- end navbar-header -->
+    
+   <!-- ng-class assigns the collapsed "in" class whenever appropriate -->
+    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+      
+      <ul class="nav navbar-nav navbar-left">
+        
+      </ul>
+      
+      <form class="navbar-form">
+        <div class="form-group col-md-offset-5" style="display:inline;">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Sök" id="sokf">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+          </div>
+
+        </div>
+         <div class="navbar-form navbar-right btn-group">
+        
+        <ul class="nav navbar-nav navbar-right">
+      <li><a href="/kontakt"><span class="glyphicon glyphicon-user"></span> Contact Us</a></li>
+      <li><a href="/about"><span class="glyphicon glyphicon-log-in"></span> About Us</a></li>
+    </ul>
+      </div>
+      </form>
+      
+    </div>
+    
+  </div>
+</nav>
+
