@@ -1,7 +1,7 @@
 /*
-  mongresto 0.19
+  mongresto 0.2.92
 
-  June 2015 Nodebite AB, Thomas Frank
+  April 2016 Nodebite AB, Thomas Frank
 
   MIT Licensed - use anywhere you want!
 
@@ -26,7 +26,7 @@
 */
 
 
-var mongresto = module.exports = (function _mongresto(){ return {
+var mongresto = (function _mongresto(){ return {
 
   defaults: {
  
@@ -35,6 +35,14 @@ var mongresto = module.exports = (function _mongresto(){ return {
 
     // The path to the rest api
     apiPath: "/api",
+
+    // A path to a static folder
+    staticFolder: "./www",
+
+    // The root file of the Angular app
+    // (use for all urls in staticFolder that doesn't 
+    //  resolve to a filename)
+    angularRoot: "index.html",
     
     // The path where you should put your Mongoose models
     modelPath: "./mongoose-models/",
@@ -49,7 +57,6 @@ var mongresto = module.exports = (function _mongresto(){ return {
     
     // A function written by you - it gets access to the current question
     // and can deny Mongresto permission to run it
-    
     permissionToAsk:
       function(modelName, method, query, req){ return true; },
     
@@ -58,20 +65,19 @@ var mongresto = module.exports = (function _mongresto(){ return {
     permissionToAnswer:
       function(modelName, method, query, req, result){ return true; },
 
+    // Custom routes (see documentation)
     customRoutes: [
       // {path: "", controller:""}
     ]
   },
 
-  init: function(app,options){
+  init: function(app,options,m){
 
     console.log("Mongresto: Initializing!");
 
     // Use defaults if no option is set
-    options = options || {};
-    for(var i in this.defaults){
-      this[i] = options[i] || this.defaults[i];
-    }
+    options = Object.assign(this.defaults, options);
+    Object.assign(this,options);
 
     // Connect to DB and load mongoose models
     this.connectToDb();
@@ -84,7 +90,7 @@ var mongresto = module.exports = (function _mongresto(){ return {
 
     // Setup any custom routes
     var me = this;
-    this.customRoutes.forEach(function(route) {
+    this.customRoutes.forEach(function(route) {
       app[route.method](me.apiPath + '/' + route.path, route.controller(me.mongoose));
     });
 
@@ -92,6 +98,19 @@ var mongresto = module.exports = (function _mongresto(){ return {
     app.all(this.apiPath + '/*', function (req, res) {
       mongresto.apiCall(req,res);
     });
+
+    // Set up static folder
+    if(m && options.staticFolder){
+      options.staticFolder = m.path.normalize(
+        m.approotpath + '/' + options.staticFolder
+      );
+      app.use(m.express.static(options.staticFolder));
+      if(options.angularRoot){
+        app.get('*', function (req, res) {
+          res.sendFile(options.angularRoot, {root: options.staticFolder});
+        });
+      }
+    }
 
   },
 
@@ -151,6 +170,12 @@ var mongresto = module.exports = (function _mongresto(){ return {
   },
 
   getFileNames: function(path,callback){
+
+    var mpath = require("path"),
+        appRoot = '' + require('app-root-path');
+
+    path = mpath.normalize(appRoot + '/' + path);
+
     // Read a folder recursively looking for js files
     var fs = require('fs'), base = {__count:0, arr: []};
     recursiveReadDir(path);
@@ -169,7 +194,9 @@ var mongresto = module.exports = (function _mongresto(){ return {
             base.arr.push(path + i);
           }
         }
-        if(base.__count === 0){callback(base.arr);}
+        if(base.__count === 0){
+          callback(base.arr);
+        }
       });
     }
   },
@@ -209,21 +236,17 @@ var mongresto = module.exports = (function _mongresto(){ return {
       .replace(/:(\s*\/[^\}^,]*\w{0,1})/g,':"~regexpstart~$1~regexpend~"');
     var s3 = s2, temp;
     try {
-      s3 = JSON.parse(s2);
-      var t;
-      // convert strings containing reg exps to real reg exps
-      for(var i in s3){
-        t = s3[i];
-        if(t.indexOf('~regexpstart~')===0){
+      s3 = JSON.parse(s2,function(key,t){
+        if((t+'').indexOf('~regexpstart~')===0){
           t = t.replace(/~regexpstart~/g,'').replace(/~regexpend~/,'');
           t = t.split("/");
           t.shift();
-          s3[i] = new RegExp(t[0],t[1] || "");
+          t = new RegExp(t[0],t[1] || "");
         }
-      }
+        return t;
+      });
     } catch(e){}
     search = s3;
-    
     return typeof search == "object" ?
       search : (search ? {_id:search} : {});
   },
@@ -240,7 +263,7 @@ var mongresto = module.exports = (function _mongresto(){ return {
       this.search = {_id: { $in: b.__idsToLookFor__} };
       delete b.__idsToLookFor__;
       for(var i in b){
-        // if the "foreing key" is an array then
+        // if the "foreign key" is an array then
         // change from replacing it to adding to it
         if(this.model.schema.paths[i].instance == "Array"){
           b["$addToSet"] = b["$addToSet"] || {};
@@ -273,7 +296,7 @@ var mongresto = module.exports = (function _mongresto(){ return {
 
   checkPermission: function(type,result){
     // Check if we have permission to ask or answer
-    // a question, usig user defined functions from init options
+    // a question, using user defined functions from init options
     var method = this["permissionTo"+type];
     if(typeof method != "function"){return true;}
     if(method(
@@ -294,15 +317,23 @@ var mongresto = module.exports = (function _mongresto(){ return {
     // Make responder remember "this"
     // - important since this is not the original mongresto object
     // but rather a clone of it (look in the apiCall method)
-    var that = this, responder = function(){that.responder.apply(that,arguments);};
+    var i, r, that = this, responder = function(){that.responder.apply(that,arguments);};
+
+    // Special operators like _populate, _sort, _skip, _limit;
+    this.search._populate = this.populate;
+    var specialNames = ["_populate","_sort","_skip","_limit"], specials = {};
+    for(i in this.search){
+      if(specialNames.indexOf(i) < 0){ continue; }
+      if(this.search[i] !== undefined){
+        specials[i.substr(1)] = this.search[i];
+      }
+      delete this.search[i];
+    }
 
     if(this.method == "GET"){
-      if(!this.populate){
-        this.model.find(this.search,responder);
-      }
-      else {
-        this.model.find(this.search).populate(this.populate).exec(responder);
-      }
+      r = this.model.find(this.search);
+      for(i in specials){ r = r[i](specials[i]); }
+      r.exec(responder);
     }
 
     if(this.method == "DELETE"){
@@ -316,7 +347,8 @@ var mongresto = module.exports = (function _mongresto(){ return {
     if(this.method == "POST"){
       var b = this.req.body;
       b = b.push ? b : [b];
-      var l = b.length, r = [], anyError = false;
+      var l = b.length, anyError = false;
+      r = [];
       var f = function(err,result){
         if(anyError){return;}
         if(err){responder(err,false);anyError = true;return;}
@@ -324,7 +356,7 @@ var mongresto = module.exports = (function _mongresto(){ return {
         l--;
         if(l===0){responder(false,r);}
       };
-      for(var i = 0; i < l; i++){
+      for(i = 0; i < l; i++){
         new this.model(b[i]).save(f);
       }
     }
@@ -531,3 +563,31 @@ var mongresto = module.exports = (function _mongresto(){ return {
   }, // end ng methods
 
 };})();
+
+// Start up
+function pub(options){
+
+  var m = {};
+  [
+    "path",
+    "express",
+    "body-parser",
+    "app-root-path"
+  ].forEach(function(x){
+    // store required modules in m
+    m[x.replace(/\W/g,'')] = require(x);
+  });
+
+  var app = m.express();
+  app.use(m.bodyparser.json());
+  app.use(m.bodyparser.urlencoded({ extended: false }));
+  mongresto.init(app,options,m);
+  return app;
+}
+
+// The old init method (deprecated but supported for a while)
+pub.init = function(app,options){
+  return mongresto.init.apply(mongresto,[app,options]);
+};
+
+module.exports = pub;
