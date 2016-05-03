@@ -5,4 +5,4 @@ app.controller("seller", ["$scope", "Seller", function($scope, Seller){
 		$scope.sellers = allSellers;
 	});
 
-}]);
+}]); 
