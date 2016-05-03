@@ -4,7 +4,7 @@
             <h1 class="page-header">HITTA MÄKLARE</h1>                
         </div>
 			<div ng-repeat="seller in sellers" my-modal-seller>
-				<div class="col-xs-24 col-xs-offset-4 col-md-6 col-md-offset-0" ng-click="openModal(seller)">
+				<div class="col-xs-24 col-xs-offset-4 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-0" ng-click="openModal(seller)">
 					<img ng-src={{seller.img}} width="230px" height="240px" class="img-thumbnail"><br>
 					<h2><p>{{seller.name}}</p></h2>
 					<h4>{{seller.position}}</h4>				
@@ -12,7 +12,8 @@
 					<h4><b>Email: </b><p>{{seller.email}}</p><h4><br>
 				</div>	 
 			</div>
-		</div>
+		</div>	
 	</div>
 </div>
 
+	

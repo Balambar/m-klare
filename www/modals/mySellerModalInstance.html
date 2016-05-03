@@ -1,49 +1,45 @@
 <!-- "vanilla" bootstrap modal-content html -->
-<div class="modal-header">
-  <h3 class="modal-title">{{seller.name}}</h3>
-</div>
+
 <div class="modal-body">
   <div class="container-fluid">
     <div class="row">
-      <img ng-src={{seller.img}} width="460px" height="480px" class="img-thumbnail" style="float:right">
-      <p>{{seller.position}}</p>
-      <p>+46{{seller.phone}}</p>
-      <p>{{seller.email}}</p>
-      <h4><i>"{{seller.about}}"</i></h4>
+      <div class="col-xs-24"><button class="btn pull-right" type="button" ng-click="cancel()">X</button></div>
+      <br><br><div class="col-xs-24 col-md-12">
+        <img ng-src={{seller.img}} width="420px" height="440px" class="img-thumbnail">
+      </div>
+      <div class="col-xs-24 col-md-12">
+        <h4>Kontakta {{seller.name}} härifrån</h4>
+        <form>
+          <div class="form-group">
+            <label for="contactName">*Namn: </label>
+            <input type="text" class="form-control" ng-model="contactNameSeller" placeholder="Namn">
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">*Email: </label>
+            <input type="email" class="form-control" ng-model="contactEmailSeller" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="contactTelefon col-xs-24 col-md-12">Telefonnummer: </label>
+            <input type="text" class="form-control" ng-model="contactPhoneMSeller" placeholder="Telefonnummer">
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">*Meddelande: </label>
+            <textarea type="text" rows="5" class="form-control" ng-model="contactMessageSeller" placeholder="Meddelande"></textarea>
+          </div>
+          <button type="submit" id="sendContactSeller" class="btn btn-default">Skicka</button>
+        </form><br>
+        <div><i>* Obligatoriska rutor att fylla i</i></div>
+      </div>
     </div>
-  </div>    
-  <div class="row">
-    <div class="col-xs-24 col-sm-8">
-      <h4>Kontakta vår mäklare härifrån</h4>
-      <form class="form-inline" role="form">
-        <div class="form-group">
-          <label for="contactName">*Namn: </label>
-          <input type="text" class="form-control" ng-model="contactNameSeller" placeholder="Namn">
-        </div>
-        <div class="form-group">
-          <label for="contactEmail">*Email: </label>
-          <input type="email" class="form-control" ng-model="contactEmailSeller" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="contactTelefon">Telefonnummer: </label>
-          <input type="text" class="form-control" ng-model="contactPhoneMSeller" placeholder="Telefonnummer">
-        </div>
-        <div class="form-group">
-          <label for="contactMessage">*Meddelande: </label>
-          <textarea type="text" rows="5" class="form-control" ng-model="contactMessageSeller" placeholder="Meddelande"></textarea>
-        </div>
-        <button type="submit" id="sendContactSeller" class="btn btn-default">Skicka</button>
-      </form><br>
-      <div><i>* Obligatoriska rutor att fylla i</i></div>
-    </div>  
-  </div>
-<div class="modal-footer">
-  <!-- "Ok" button is disabled if user has not selected an option! -->
-  <!--<button
-  class="btn btn-primary"
-  type="button"
-  ng-click="ok()"
-  ng-disabled="!selectedOption"
-  >OK</button>-->
+    <div class="row" style="background-color: #f5f5f5">
+      <div class="col-xs-24">
+        <h1>{{seller.name}}</h1>
+        <h3>{{seller.position}}</h3><br>
+        <h4>+46{{seller.phone}} - {{seller.email}}</h4><br>
+        <h3><i>"{{seller.about}}"</i></h3><br>
+      </div>  
+    </div>
+  </div>  
+<!--<div class="modal-footer">
   <button class="btn btn-warning" type="button" ng-click="cancel()">Stänga</button>
-</div>
+</div>-->
