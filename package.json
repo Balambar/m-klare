@@ -12,6 +12,7 @@
     "mongo-express": "*",
     "mongoose": "*",
     "nodemon": "^1.9.1",
-    "serve-favicon": "*"
+    "serve-favicon": "*",
+    "mongresto":"*"
   }
 }

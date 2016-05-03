@@ -1,6 +1,6 @@
 app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 
-	Home.create({
+	/*Home.create({
 		address: "My Beautiful Street 69",
 	    area: "Dalaplan",
 	    type: "Lägenhet",
@@ -19,7 +19,7 @@ app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 	      url: "imgs/homes/test2.jpg"
 	    }],
 	    seller: "572205d4c4ea0288206063ce"
-	});
+	});*/
 
 	Home.get(function(allhomes){
 		console.log(allhomes);
