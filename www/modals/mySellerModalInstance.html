@@ -3,11 +3,15 @@
   <h3 class="modal-title">{{seller.name}}</h3>
 </div>
 <div class="modal-body">
-  <p>{{seller.position}}</p>
-  <p>+46{{seller.phone}}</p>
-  <p>{{seller.email}}</p>
-  <h4><i>"{{seller.about}}"</i></h4>
-  <img ng-src={{seller.img}} width="460px" height="480px">
+  <div class="container-fluid">
+    <div class="row">
+      <img ng-src={{seller.img}} width="460px" height="480px" class="img-thumbnail" style="float:right">
+      <p>{{seller.position}}</p>
+      <p>+46{{seller.phone}}</p>
+      <p>{{seller.email}}</p>
+      <h4><i>"{{seller.about}}"</i></h4>
+    </div>
+  </div>    
   <div class="row">
     <div class="col-xs-24 col-sm-8">
       <h4>Kontakta vår mäklare härifrån</h4>
