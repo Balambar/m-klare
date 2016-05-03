@@ -2,19 +2,19 @@
 	<!-- <div ng-repeat="item in items"> -->
 	    <div class="row"> 
 	  		<div class="col-md-12"> 				
-					<div class="well well-lg">
-						<img src={{item.img}} class="img-responsive" alt="Responsive image">
-					</div><!-- close well-->
-			</div><!-- close col-->
-	  	
-			
+				<div class="well well-lg">
+					<div ng-repeat="about in abouts">
+						<img src={{about.img}} class="img-responsive" alt="Responsive image">
+					<!-- close well-->
+			<!-- close col-->
 				<div class="col-md-12"> 
 				 	<div class="well well-lg">
-						<h2>{{item.title}}</h2>
-							<p>{{item.content}}</p>
+						<h2>{{about.title}}</h2>
+						<p>{{about.content}}</p>
+					</div>
+				</div>	
 					</div>
 				</div>
+			</div>	
 		</div>
-	</div>	
 </div>
-
