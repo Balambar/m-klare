@@ -8,7 +8,7 @@ app.directive('enfastInfo', [function () {
       // using $resource!
       Home.get(function(data){
 
-        $scope.info = data[0];
+        $scope.info = data[1];
 
         
       });
