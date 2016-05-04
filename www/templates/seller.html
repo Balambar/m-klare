@@ -1,19 +1,21 @@
-<div class="container">
-	<div class="row">
-		<div class="col-xs-24 col-xs-offset-2 col-md-offset-0">
-            <h1 class="page-header">HITTA MÄKLARE</h1>                
+<div class="container-fluid">
+	<div class="row myPage-header">
+		<div class="col-xs-24">
+            <h1>HITTA MÄKLARE</h1><hr>              
         </div>
-			<div ng-repeat="seller in sellers" my-modal-seller>
-				<div class="col-xs-24 col-xs-offset-4 col-sm-10 col-sm-offset-2 col-md-6 col-md-offset-0" ng-click="openModal(seller)">
+		<div ng-repeat="seller in sellers" my-modal-seller>
+			<div class="col-xs-24 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-0 myMouseOver" ng-click="openModal(seller)">
+				<div><br>
 					<img ng-src={{seller.img}} width="230px" height="240px" class="img-thumbnail"><br>
 					<h2><p>{{seller.name}}</p></h2>
 					<h4>{{seller.position}}</h4>				
 					<b>Telefon: </b><p>+46{{seller.phone}}</p>
-					<h4><b>Email: </b><p>{{seller.email}}</p><h4><br>
-				</div>	 
-			</div>
-		</div>	
-	</div>
+					<h4><b>Email: </b><p>{{seller.email}}</p></h4><br>
+				</div>	
+			</div>	 
+		</div>
+	</div><br><br><br>
 </div>
+
 
 	
