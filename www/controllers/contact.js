@@ -1,7 +1,6 @@
 app.controller("contact", ["$scope", "Contact", function($scope, Contact){
 
-	$('#sendContact').click(function(){
-
+	$scope.sendContact = function(){
 		if ($scope.contactName == undefined || $scope.contactEmail == undefined || $scope.contactMessage == undefined) {
 			alert("Du måste fylla i alla obligatoriska rutor!");
 		}
@@ -19,10 +18,6 @@ app.controller("contact", ["$scope", "Contact", function($scope, Contact){
 				$scope.contactPhone = undefined;
 				$scope.contactMessage = undefined;
 			});
-	});
-
-	Contact.get(function(allContacts){
-		console.log(allContacts);
-	});
+	};
 
 }]);

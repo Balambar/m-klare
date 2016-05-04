@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="row myPage-header">
 		<div class="col-xs-24">
             <h1>HITTA MÄKLARE</h1><hr>              
         </div>
 		<div ng-repeat="seller in sellers" my-modal-seller>
-			<div class="col-xs-24 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-0 myClass" ng-click="openModal(seller)">
+			<div class="col-xs-24 col-xs-offset-0 col-sm-12 col-sm-offset-0 col-md-6 col-md-offset-0 myMouseOver" ng-click="openModal(seller)">
 				<div><br>
 					<img ng-src={{seller.img}} width="230px" height="240px" class="img-thumbnail"><br>
 					<h2><p>{{seller.name}}</p></h2>
