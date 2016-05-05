@@ -105,7 +105,7 @@ app.directive('insertObject', [function(){
           "price" : 5456700,
           "img" : [{
             "name" : "hus6",
-            "url" : "imgs/objekt/hus6.jpg"
+            "url" : "imgs/objekt/ext/hus6.jpg"
           }
           ],
           "seller" : "5729f4b74137f86818cd6eb2"
@@ -224,7 +224,7 @@ app.directive('insertObject', [function(){
           "price" : 3456789,
           "img" : [{
             "name" : "hus13",
-            "url" : "imgs/objekt/hus13.jpg"
+            "url" : "imgs/objekt/ext/hus13.jpg"
           }
           ],
           "seller" : "5729f4b74137f86818cd6eaf"
@@ -292,7 +292,7 @@ app.directive('insertObject', [function(){
           "price" : 4545000,
           "img" : [{
             "name" : "hus17",
-            "url" : "imgs/objekt/hus17.jpg"
+            "url" : "imgs/objekt/ext/hus17.jpg"
           }
           ],
           "seller" : "5729f4b74137f86818cd6eb3"
@@ -479,7 +479,7 @@ app.directive('insertObject', [function(){
           "price" : 2100500,
           "img" : [{
             "name" : "lagenhet11",
-            "url" : "imgs/objek/ext/lag11.jpg"
+            "url" : "imgs/objekt/ext/lag11.jpg"
           }
           ],
           "seller" : "5729f4b74137f86818cd6ead"
