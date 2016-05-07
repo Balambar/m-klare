@@ -21,14 +21,14 @@ app.directive('insertSeller', [function(){
           "phone" : 456123789,
           "email" : "Anna@maklare.se",
           "about" : "xxxxx",
-          "img" : "img/sellers/bild4.jpg"
+          "img" : "imgs/sellers/bild4.png"
         },
         {
           "name": "Evangelina",
           "position": "Mäklare",
           "phone" : 456123789,
           "email" : "Evangelina@maklare.se",
-          "about" : "Jag heter Evangeline och jag är fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
+          "about" : "Jag heter Evangelina och jag är fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
           "img" : "imgs/sellers/bild3.png"
         },
         {
@@ -37,7 +37,7 @@ app.directive('insertSeller', [function(){
           "phone" : 564963456,
           "email" : "Katte@maklare.se",
           "about" : "xxxxx",
-          "img" : "imgs/sellers/bild5.jpg"
+          "img" : "imgs/sellers/bild5.png"
         },
         {
           "name": "Fatima",
