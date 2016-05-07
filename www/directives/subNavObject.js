@@ -1,16 +1,12 @@
 app.directive('subNav', [function(){
 	// Runs during compile
 	return {
-		templateUrl: '/directives/subNavObject.html'
-    // controller: ['$scope', 'Download', function($scope, download) {
-//  Download.get({
-//   species: "rabbit",
-//   _sort: {name: 1},
-//   _skip: 10,
-//   _limit: 5
-// });
- 
-    // }]
-  // };
+		templateUrl: '/directives/subNavObject.html',
+    controller: ('MenuCntl', ['$scope','$route', '$routeParams', '$location', 
+   function MenuCntl($scope, $route, $routeParams, $location) {
+   $scope.$route = $route;
+   $scope.$location = $location;
+   $scope.$routeParams = $routeParams;
+}])
 	};
 }]);

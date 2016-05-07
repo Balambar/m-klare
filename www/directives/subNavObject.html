@@ -1,5 +1,6 @@
-<ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="fastigheter">Alla</a></li>
-  <li role="presentation"><a href="villor">Villor</a></li>
-  <li role="presentation"><a href="lagenheter">Lägenheter</a></li>
+<ul class="nav nav-pills ">
+  <li role="presentation" ng-class="{active: ($location.path() === '/fastigheter') }"><a ng-href="fastigheter">Alla</a></li>
+  <li role="presentation" ng-class="{active: ($location.path() === '/villor') }"><a ng-href="villor">Villor</a></li>
+  <li role="presentation" ng-class="{active: ($location.path() === '/lagenheter') }"><a ng-href="lagenheter">Lägenheter</a></li>
 </ul>
+
