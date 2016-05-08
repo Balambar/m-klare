@@ -9,16 +9,26 @@ app.directive('objektShow', [function(){
 			},function(data){
 				$scope.information = data;
 			})
-		}]
-    // controller: ['$scope', 'Download', function($scope, download) {
-//  Download.get({
-//   species: "rabbit",
-//   _sort: {name: 1},
-//   _skip: 10,
-//   _limit: 5
-// });
- 
-    // }]
-  // };
+		}],
+		link: function(scope, elem, attrs) {
+ 		// scope is an Angular scope object.
+	      // element is the base element for this directive
+	      // (attrs - not within the scope of this course)
+
+	      // scope is called "scope" rather than "$scope"
+	      // here just out of convention...
+
+	      // If jQuery is loaded before angular
+	      // angular.element IS jQuery
+	      // (otherwise it is jqLite)
+	      var $ = angular.element;
+
+	      // A function to show/hide wells
+	      // create ordinary jQuery code 
+	      scope.toggleWells = function(){
+
+	      }
+	   }
+   
 	};
 }]);

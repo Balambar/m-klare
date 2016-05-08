@@ -5,11 +5,12 @@
 
   		<div class="col-md-12"> 				
 				
-			<div class="well well-lg ">
+			<div class="well well-lg " ng-mouseover="toggleWells()">
+          
 					<a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="bild in info.img">
 		            	<img src="{{bild.url}}"  alt="{{bild.name}}" />
 		            </a>
-				{{info.img[url]}}
+				
 			</div><!-- close well-->
 		</div><!-- close col-->
   	
