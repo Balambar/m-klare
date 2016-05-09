@@ -20,7 +20,8 @@ app.directive('insertSeller', [function(){
           "position": "Mäklare",
           "phone" : 456123789,
           "email" : "Anna@maklare.se",
-          "about" : "xxxxx",
+          "about" : "Jag heter Anna och jag är fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
+          
           "img" : "imgs/sellers/bild4.png"
         },
         {
@@ -36,7 +37,8 @@ app.directive('insertSeller', [function(){
           "position": " REG MÄKLARE",
           "phone" : 564963456,
           "email" : "Katte@maklare.se",
-          "about" : "xxxxx",
+          "about" : "Jag heter Katte och jag är fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
+          
           "img" : "imgs/sellers/bild5.png"
         },
         {
@@ -60,7 +62,7 @@ app.directive('insertSeller', [function(){
           "position": "REG MÄKLARE",
           "phone" : 365987123,
           "email" : "Jacob@maklare.se",
-          "about" : "Jag heter Jakob och jag är reg. fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
+          "about" : "Jag heter Jacob och jag är reg. fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!",
           "img" : "imgs/sellers/bild7.png"
         },
         {
