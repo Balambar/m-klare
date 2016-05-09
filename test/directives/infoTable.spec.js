@@ -1,4 +1,4 @@
-describe('appSidebar', function() {
+describe('infoTable', function() {
   var $compile,
       $rootScope;
 
@@ -19,7 +19,7 @@ describe('appSidebar', function() {
 
   
 
-  it('Replaces the element with the "Lorem ipsum..." content', function() {
+  it('should contain element', function() {
     // Compile a piece of HTML containing the directive
     var element = $compile("<info-table></info-table>")($rootScope);
 
@@ -27,7 +27,9 @@ describe('appSidebar', function() {
     $rootScope.$digest();
 
     // Check that the compiled element contains the templated content
-    xexpect(element.html()).toContain("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+    expect(element.html()).toMatch('<div class="container-fluid">');
+    expect(element.html()).toMatch('<div class="well">');
+      
 
   });
 });
