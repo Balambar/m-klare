@@ -1,6 +1,6 @@
-slideit()
+// slideit()
 
-    $('#myCarousel').carousel({
-    	interval:7000,
-        pause: 'false'
-	})
+//     $('#myCarousel').carousel({
+//     	interval:7000,
+//         pause: 'false'
+// 	})
