@@ -17,8 +17,8 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       //controller: "home"
     })
     .when("/about",{
-      templateUrl: "templates/about.html"
-      // controller: ""
+      templateUrl: "templates/about.html",
+      controller: "about"
     })
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
@@ -29,8 +29,8 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       
       // controller: ""
     })
-     .when("/lagenhet",{
-      templateUrl: "templates/appartments.html",
+     .when("/lagenheter",{
+      templateUrl: "templates/lagenheter.html",
       // controller: ""
     })
     .when("/enfastighet",{

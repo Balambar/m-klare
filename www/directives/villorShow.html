@@ -1,0 +1,27 @@
+
+<div class="container" ng-repeat="info in information">  
+  		
+    <div class="row"> 
+
+  		<div class="col-md-12"> 				
+				
+			<div class="well well-lg">
+					<a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="bild in info.img">
+		            	<img src="{{bild.url}}"  alt="{{bild.name}}" />
+		            </a>
+				{{info.img[url]}}
+			</div><!-- close well-->
+		</div><!-- close col-->
+  	
+
+
+      <div class="col-md-12">         
+        
+      <div class="well well-lg">
+          <a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="url in info.img">
+                  <img src="{{url.url}}"  alt="..." />
+                </a>
+        {{info.img[url]}}
+      </div><!-- close well-->
+    </div><!-- close col-->
+			

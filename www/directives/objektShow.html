@@ -1,104 +1,20 @@
 
 <div class="container">  
+      
+      <div class="col-md-12" ng-repeat="info in information">         
     <div class="row"> 
-  		
 
-  		<div class="col-md-12"> 				
-				
-			<div class="well well-lg">
-					<a href="/fastigheter/" class="thumbnail bilder img-circle" >
-		            	<img src="imgs/objekt/int/bed.jpg"  alt="..." />
-		            </a>
-				
-			</div><!-- close well-->
-		</div><!-- close col-->
-  	
-			
-	
-			<div class="col-md-12"> 
-			 	<div class="well well-lg" >
-				<a href="/fastigheter/" class="thumbnail bilder">
-		            	<img src="imgs/objekt/int/bedroom-1.jpg" alt="..." />
-		            </a>
-				</div>
-  							
-  				
-			</div>
-			<div class="row"> 
-  		
-
-  		<div class="col-md-12"> 				
-				
-			<div class="well well-lg">
-					<a href="/fastigheter/" class="thumbnail bilder img-circle" >
-		            	<img src="imgs/objekt/int/bed.jpg"  alt="..." />
-		            </a>
-				
-			</div><!-- close well-->
-		</div><!-- close col-->
-  	
-			
-	
-			<div class="col-md-12"> 
-			 	<div class="well well-lg" >
-				<a href="/fastigheter/" class="thumbnail bilder">
-		            	<img src="imgs/objekt/int/bedroom-1.jpg" alt="..." />
-		            </a>
-				</div>
-  							
-  				
-			</div>
-	</div>	
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-xs-6 col-md-10">
-            <a href="/fastigheter/" class="thumbnail">
-            <img src="../imgs/objekt/int/bed.jpg" alt="..." />
-            </a>
-        </div>
-        <div class="col-xs-3 col-md-10">
-             <a href="#" class="thumbnail">
-            <img src="../imgs/objekt/int/bedroom-2.jpg" alt="..." />
-            </a>
-        </div>
-
-        </div>
-        <div class="row">
-        <div class="col-xs-6">
-            <a href="#" class="thumbnail">
-            <img src="http://placehold.it/400x200" alt="..." />
-            </a>
-        </div>
-        <div class="col-xs-6">
-            <a href="#" class="thumbnail">
-            <img src="http://placehold.it/400x200" alt="..." />
-            </a>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col-xs-6">
-            <a href="#" class="thumbnail">
-            <img src="http://placehold.it/400x200" alt="..." />
-            </a>
-        </div>
-        <div class="col-xs-3">
-             <a href="#" class="thumbnail">
-            <img src="http://placehold.it/300x150" alt="..." />
-            </a>
-        </div>
-		</div>
-		<div class="row">
-         <div class="col-xs-3">
-             <a href="#" class="thumbnail">
-            <img src="http://placehold.it/300x150" alt="..." />
-            </a>
-        </div>
-         <div class="col-xs-3">
-             <a href="#" class="thumbnail">
-            <img src="http://placehold.it/300x150" alt="..." />
-            </a>
-        </div>
-    </div>
-</div> -->
+        
+      <div class="well well-lg " ng-mouseover="toggleWells()">
+          
+          <a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="bild in info.img">
+                  <img src="{{bild.url}}"  alt="{{bild.name}}" />
+                </a>
+        
+    </div><!-- close col-->
+      </div><!-- close well-->
+    
 
 
+
+      <!-- .col-xs-  .col-sm-  .col-md-  .col-lg-  .col-xl-     sizes smalest to biggest screen size-->  

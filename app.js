@@ -7,7 +7,7 @@ var m = {};
   "cookie-parser",
   "body-parser",
   "gulp",
-  "./mongresto"
+  "mongresto"
 ].forEach(function(x){
   // store required modules in m
   m[x.replace(/\W/g,'')] = require(x);

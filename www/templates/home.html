@@ -1,20 +1,17 @@
 <!-- jason  blaupunkt-->
 <div class="container">  
-    <div class="row"> 
+    <div class="row moreMargin"> 
   		
-
-  		<div class="col-md-12"> 				
-				<div class="well well-lg" id="sok">
-					<h2>Hitta din bostad!</h2>
-					<div class="input-group">
-				      <input type="text" class="form-control" placeholder="Sök på bostadstyp, adress" id="sokbar">
-				      <span class="input-group-btn">
-				        <button class="btn btn-primary" type="button">Sök!</button>
-				      </span>
-				    </div><!-- /input-group -->
-				</div><!-- close well-->
-		</div><!-- close col-->
-  	
+			<div class="col-md-12">
+        	<form class="well well-lg" id="theSearchForm" name="theSearchForm" role="search" method="get">
+            	<h2>Hitta din bostad!</h2>
+            	<div class="input-group">
+                    <input type="text" class="form-control" placeholder="Sök på bostadstyp, adress...">
+                        <div class="input-group-btn">
+                            <a class="btn btn-primary" ng-href="javascript:document.theSearchForm.submit();"><i class="glyphicon glyphicon-search"></i></a>
+                        </div>
+                </div>
+			</div>
 			
 			<!-- Dropdown -->
 			<div class="col-md-12"> 
@@ -27,21 +24,15 @@
 					  </button>
 					  <ul class="dropdown-menu">
 					  	<li class="dropdown-header">Vill du köpa?</li>
-					   	<li><a class="kopa" href="/lagenhet">Bostad</a></li>
+					   	<li><a class="kopa" ng-href="/fastigheter">Bostad</a></li>
 					   	<li class="dropdown-header">Vill du Sälja?</li>
-					   	<li><a class="kopa" href="lagenhet">Bostad</a></li>
-					   	<li role="separator" class="divider"></li>
-					   	<li><a href="/about">Om Oss</a></li>
-    					<li><a href="/kontakt">Kontakta vår mäklare</a></li>
-    					
+					   	<li><a class="kopa" ng-href="/maklare">Kontakta vår mäklare</a></li>
+					   	<li role="separator" class="divider"></li>				
 					  </ul>
-					</div>
-  					
-				</div>
-  							
-  				
+					</div>		
+				</div>	
 			</div>
-	</div>	
-		
-	
+	</div>
+			
+	</div>			
 </div>
