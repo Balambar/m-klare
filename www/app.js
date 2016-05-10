@@ -38,7 +38,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       // controller: ""
     })  
     .when("/objekt/:id",{
-      // templateUrl: "",
+      templateUrl: "templates/enfastighet.html",
       // controller: ""
     })
     .when("/kontakt",{  
