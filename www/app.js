@@ -22,7 +22,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     })
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
-      controller: "fastigheter"
+      // controller: ""
     })
      .when("/villor",{
       templateUrl: "templates/villor.html"
@@ -37,11 +37,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
       templateUrl: "templates/enfastighet.html",
       // controller: ""
     })  
-    .when("/villor/:id",{
-      // templateUrl: "",
-      // controller: ""
-    })
-    .when("/lagenhet/:id",{  
+    .when("/objekt/:id",{
       // templateUrl: "",
       // controller: ""
     })
