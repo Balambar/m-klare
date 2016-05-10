@@ -5,7 +5,7 @@ app.directive('objektShow', [function(){
 		controller : ['$scope', 'Home', function($scope, Home){
 			Home.get({
 				_sort: {address: 1},
-				_limit : 3
+				_limit : 6
 			},function(data){
 				$scope.information = data;
 			})
