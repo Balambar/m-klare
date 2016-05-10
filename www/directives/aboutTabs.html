@@ -1,0 +1,28 @@
+<form name="outerForm" class="tab-form-demo">
+  <uib-tabset active="activeJustified" justified="true">
+
+    <uib-tab index="0" heading="Om Dyhr & Rumson">
+      <h2><small>{{about.content}}</small></h2>
+        <ng-form name="nestedForm">
+          </ng-form>
+    </uib-tab>
+  
+    <uib-tab index="1" heading="Vår Vision">
+      <h2><small>{{about.contents}}</small></h2>
+    </uib-tab>
+      
+    <uib-tab index="2" heading="Kontakt">
+      More Tab Content
+    </uib-tab>
+  </uib-tabset>
+</form>
+
+<style type="text/css">
+  form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+  }
+
+  .nav-tabs > li > a {
+    font-size: 20px;
+  }
+</style>
