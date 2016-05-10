@@ -1,9 +1,9 @@
 
-<div class="container" ng-repeat="info in information">  
+<div class="container">  
   		
+  		<div class="col-md-12" ng-repeat="info in information"> 				
     <div class="row"> 
 
-  		<div class="col-md-12"> 				
 				
 			<div class="well well-lg " ng-mouseover="toggleWells()">
           
@@ -11,20 +11,10 @@
 		            	<img src="{{bild.url}}"  alt="{{bild.name}}" />
 		            </a>
 				
-			</div><!-- close well-->
 		</div><!-- close col-->
+      </div><!-- close well-->
   	
 
 
-      <div class="col-md-12">         
-        
-      <div class="well well-lg">
-          <a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="url in info.img">
-                  <img src="{{url.url}}"  alt="..." />
-                </a>
-        {{info.img[url]}}
-      </div><!-- close well-->
-    </div><!-- close col-->
-			
 
       <!-- .col-xs-  .col-sm-  .col-md-  .col-lg-  .col-xl-     sizes smalest to biggest screen size-->  
