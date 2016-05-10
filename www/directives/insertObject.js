@@ -11,7 +11,7 @@ app.directive('insertObject', [function(){
         Seller.get(function(data){
           allSellers = data;
           init();
-        })
+        });
 
         function getNumber(number){
           return allSellers[number];
@@ -23,7 +23,7 @@ app.directive('insertObject', [function(){
           Home.create([
           {
             "address": "Hammarvägen 95",
-            "area" : "Kirseberga",
+            "area" : "Kirseberg",
             "type" : "Villor",
             "size" : 100,
             "rooms" : 7,
@@ -108,7 +108,7 @@ app.directive('insertObject', [function(){
           },
           {
             "address": "Messlingen 26",
-            "area" : "Kirseberga",
+            "area" : "Kirseberg",
             "type" : "Villor",
             "size" : 400,
             "rooms" : 10,
@@ -176,7 +176,7 @@ app.directive('insertObject', [function(){
           },
           {
             "address": "Kaptensgränd 71",
-            "area" : "Kirseberga",
+            "area" : "Kirseberg",
             "type" : "Villor",
             "size" : 346,
             "rooms" : 10,
@@ -363,7 +363,7 @@ app.directive('insertObject', [function(){
           },
           {
             "address": "Vansövägen 81",
-            "area" : "Kirseberga",
+            "area" : "Kirseberg",
             "type" : "Lägenhet",
             "size" : 140,
             "rooms" : 5,
@@ -465,7 +465,7 @@ app.directive('insertObject', [function(){
           },
           {
             "address": "Västra Husby Häggetorp 38",
-            "area" : "Kirseberga",
+            "area" : "Kirseberg",
             "type" : "Lägenhet",
             "size" : 80,
             "rooms" : 5,
