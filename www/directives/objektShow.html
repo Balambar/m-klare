@@ -5,13 +5,13 @@
 
 
 
-    <div class="col-md-12 bo-lol" ng-repeat="info in information" > 
+    <div class="col-xs-24 col-md-12 bo-lol" ng-repeat="info in information" > 
 
 
 
         <div class="img-list">
         <a href="/objekt/{{info._id}}"  ng-repeat="bild in info.img">
-        <img src="{{bild.url}}"  alt="{{bild.name}}"width="559" height="374"/>
+        <img src="{{bild.url}}" class="img-responsive" alt="{{bild.name}}" width="559" height="374"/>
     
 
 
