@@ -31,10 +31,23 @@ app.directive('insertObject', [function(){
             "garden" : true,
             "balcony" : true,
             "price" : 2000000,
-            "img" : [{
-              "name" : "hus1",
-              "url" : "imgs/objekt/ext/hus1.jpg"
-            }
+            "img" : [
+              {
+                "name" : "hus1",
+                "url" : "imgs/objekt/ext/hus1.jpg"
+              },
+              {
+                "name" : "int1",
+                "url" : "imgs/objekt/int/apartment-966185_1920.jpg"
+              },
+              {
+                "name" : "int2",
+                "url" : "imgs/objekt/int/bed.jpg"
+              },
+              {
+                "name" : "int3",
+                "url" : "imgs/objekt/int/villa1.jpg"
+              }
             ],
             "seller" : getNumber(4)
           },
@@ -48,10 +61,23 @@ app.directive('insertObject', [function(){
             "garden" : true,
             "balcony" : true,
             "price" : 12000000,
-            "img" : [{
-              "name" : "hus2",
-              "url" : "imgs/objekt/ext/hus2.jpg"
-            }
+            "img" : [
+              {
+                "name" : "hus2",
+                "url" : "imgs/objekt/ext/hus2.jpg"
+              },
+              {
+                "name" : "int1",
+                "url" : "imgs/objekt/int/doorway.jpg"
+              },
+              {
+                "name" : "int2",
+                "url" : "imgs/objekt/int/bed.jpg"
+              },
+              {
+                "name" : "int3",
+                "url" : "imgs/objekt/int/villa1.jpg"
+              }
             ],
             "seller" : getNumber(3)
           },
@@ -65,10 +91,27 @@ app.directive('insertObject', [function(){
             "garden" : false,
             "balcony" : false,
             "price" : 4000000,
-            "img" : [{
-              "name" : "hus3",
-              "url" : "imgs/objekt/ext/hus3.jpg"
-            }
+            "img" : [
+              {
+                "name" : "hus3",
+                "url" : "imgs/objekt/ext/hus3.jpg"
+              },
+              {
+                "name" : "hus2",
+                "url" : "imgs/objekt/ext/hus2.jpg"
+              },
+              {
+                "name" : "int1",
+                "url" : "imgs/objekt/int/doorway.jpg"
+              },
+              {
+                "name" : "int2",
+                "url" : "imgs/objekt/int/bed.jpg"
+              },
+              {
+                "name" : "int3",
+                "url" : "imgs/objekt/int/villa1.jpg"
+              }
             ],
             "seller" : getNumber(7)
           },
