@@ -7,10 +7,10 @@ app.directive('enfastInfo', [function () {
     
     //sets default values
     if(!myTrue){
-      myTrue = 'yes';
+      myTrue = 'Ja';
     }
     if(!myFalse){
-      myFalse = 'no';
+      myFalse = 'Nej';
     }
 
     //string to be returned
@@ -41,7 +41,7 @@ app.directive('enfastInfo', [function () {
 
         //hex for square meter symbol (the miniature and raised 2)
         $scope.info.size += ' M\xB2';
-        $scope.info.price += ' SEK';
+        $scope.info.price += ' kr';
 
       });
 
