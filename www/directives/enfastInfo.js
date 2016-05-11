@@ -3,16 +3,10 @@ app.directive('enfastInfo', [function () {
 
   return {
     templateUrl: '/directives/enfastInfo.html',
-    controller: ['$scope', 'Home', function($scope, Home) {
-      // this data should come from our backend
-      // using $resource!
-      Home.get(function(data){
-
-        $scope.info = data[1];
-
-        
-      });
-
+    controller: ['$scope', '$routeParams', 'Home', function($scope, $routeParams, Home) {
+      
+      $scope.info = Home.getById({id:$routeParams.id});
+      
     }]
   };
 }]);
