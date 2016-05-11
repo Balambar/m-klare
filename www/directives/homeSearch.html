@@ -17,7 +17,7 @@
 
                     <div class="form-group">
 
-                      <select ng-model="type" class="form-control">
+                      <select ng-model="townSel" class="form-control">
                         <option value="" selected>Bostadstyp</option>
                         <option value="">Alla</a></option>
                         <option value="villor">Villor</option>
@@ -29,7 +29,7 @@
 
                     <div class="form-group">
 
-                      <select ng-model="area" class="form-control">
+                      <select ng-model="minAreaSel" class="form-control">
                         <option value="" selected>Area</option>
                         <option value="Kirseberga">Kirseberga</option>
                         <option value="Dalaplan">Dalaplan</option>
@@ -43,34 +43,34 @@
                       <select ng-model="minPriceSel" class="form-control">
 
                         <option value="" selected>Lowest Price</option>
-                        <option value="100000">100 000</option>
+                 <!--        <option value="100000">100 000</option>
                         <option value="200000">200 000</option>
-                        <option value="300000">300 000</option>
+                        <option value="300000">300 000</option> -->
                         <option value="400000">400 000</option>
                         <option value="500000">500 000</option>
                         <option value="750000">750 000</option>
                         <option value="1000000">1 000 000</option>
                         <option value="1250000">1 250 000</option>
-                        <option value="1500000">1 500 000</option>
+                        <option value="1500000">1 500 000</option><!-- 
                         <option value="1750000">1 750 000</option>
                         <option value="2000000">2 000 000</option>
                         <option value="2250000">2 250 000</option>
-                        <option value="2500000">2 500 000</option>
+                        <option value="2500000">2 500 000</option>-->
                         <option value="3000000">3 000 000</option>
                         <option value="3500000">3 500 000</option>
-                        <option value="4000000">4 000 000</option>
+                        <!-- <option value="4000000">4 000 000</option>
                         <option value="4500000">4 500 000</option>
-                        <option value="5000000">5 000 000</option>
+                        <option value="5000000">5 000 000</option> -->
                         <option value="5500000">5 500 000</option>
-                        <option value="6000000">6 000 000</option>
+                        <!-- <option value="6000000">6 000 000</option>
                         <option value="7000000">7 000 000</option>
                         <option value="8000000">8 000 000</option>
                         <option value="9000000">9 000 000</option>
                         <option value="10000000">10 000 000</option>
                         <option value="15000000">11 000 000</option>
-                        <option value="20000000">20 000 000</option>
+                        <option value="20000000">20 000 000</option> -->
                         <option value="25000000">25 000 000</option>
-                        <option value="30000000">30 000 000</option>
+                        <!-- <option value="30000000">30 000 000</option> -->
                         <option value="35000000">35 000 000</option>
                       </select>
 
@@ -83,34 +83,34 @@
                       <select ng-model="maxPriceSel" class="form-control">
 
                         <option value="" selected>Highest Price</option>
-                        <option value="100000">100 000</option>
+                        <!-- <option value="100000">100 000</option>
                         <option value="200000">200 000</option>
-                        <option value="300000">300 000</option>
+                        <option value="300000">300 000</option> -->
                         <option value="400000">400 000</option>
                         <option value="500000">500 000</option>
                         <option value="750000">750 000</option>
                         <option value="1000000">1 000 000</option>
                         <option value="1250000">1 250 000</option>
                         <option value="1500000">1 500 000</option>
-                        <option value="1750000">1 750 000</option>
+                        <!-- <option value="1750000">1 750 000</option>
                         <option value="2000000">2 000 000</option>
                         <option value="2250000">2 250 000</option>
                         <option value="2500000">2 500 000</option>
-                        <option value="3000000">3 000 000</option>
+                        <option value="3000000">3 000 000</o -->ption>
                         <option value="3500000">3 500 000</option>
                         <option value="4000000">4 000 000</option>
                         <option value="4500000">4 500 000</option>
                         <option value="5000000">5 000 000</option>
-                        <option value="5500000">5 500 000</option>
+                        <!-- <option value="5500000">5 500 000</option>
                         <option value="6000000">6 000 000</option>
                         <option value="7000000">7 000 000</option>
-                        <option value="8000000">8 000 000</option>
+                        <option value="8000000">8 000 000</option> -->
                         <option value="9000000">9 000 000</option>
                         <option value="10000000">10 000 000</option>
-                        <option value="15000000">11 000 000</option>
+                        <!-- <option value="15000000">11 000 000</option>
                         <option value="20000000">20 000 000</option>
                         <option value="25000000">25 000 000</option>
-                        <option value="30000000">30 000 000</option>
+                        <option value="30000000">30 000 000</option> -->
                         <option value="35000000">35 000 000</option>
                       </select>
 
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="form-group">
-                      <select ng-model="rooms" class="form-control">
+                      <select ng-model="maxRoomSel" class="form-control">
 
                         <option value="" selected>Rooms</option>
                         <option value="1">minst 1 rum</option>
@@ -144,7 +144,7 @@
                     </div>
 
                     <div class="form-group">
-                      <select ng-model="size" class="form-control">
+                      <select ng-model="minSizeSel" class="form-control">
 
                         <option value="">Boarea</option>
                         <option value="30">minst 30 m2</option>
@@ -173,8 +173,8 @@
                     </div>
 
                     
-
-                    <button type="submit" class="btn btn-primary" ng-click="resetQuery()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <!-- resetQuery knapp -->
+                    <button type="submit" class="btn btn-primary" ng-click="resetQuery()"><span class="fa fa-refresh" aria-hidden="true"></span></button>
                   </form>
                 </div>
               </div>
@@ -224,6 +224,9 @@
             <th>
               Rum
             </th>
+            <th>
+            Bo yta
+            </th>
           </tr>
           <tr ng-repeat="result in results">
             <td>
@@ -237,6 +240,10 @@
             </td>
             <td>
               {{result.rooms}}
+            </td>
+            <td>
+            
+              {{result.size}} kvm
             </td>
           </tr>
         </table>

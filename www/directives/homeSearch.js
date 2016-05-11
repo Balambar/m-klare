@@ -39,7 +39,6 @@ app.directive('homeSearch', [function () {
           operator: "$eq"
         },
 
-
         minPriceSel: {
           modelHome: "price",
           type: Number,
@@ -51,11 +50,13 @@ app.directive('homeSearch', [function () {
           type: Number,
           operator: "$lte"
         },
-        minSizeSel: {
+        
+          minSizeSel: {
           modelHome: "size",
           type: Number,
           operator: "$gte"
         },
+        
         maxRoomSel: {
           modelHome: "rooms",
           type: Number,
