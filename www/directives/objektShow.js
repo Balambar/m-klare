@@ -41,20 +41,23 @@ app.directive('objektShow', [function(){
 				// return array;
 				// };
 
-				// function space(number){
-
-				// 	alteredNumber = number.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1 ');
-				// 	alteredNumber = alteredNumber.replace('.', ' ');
-				// 	console.log(alteredNumber);
-				// 	return alteredNumber;
 
 // _________________________________________________
 // for ( var i = 0; i < a.length; i++){
 // a[i] = space(a[i]);
 // }
+					
+				// function space(number){
+
+				// 	alteredNumber = number.toFixed(0).replace(/(\d)(?=(\d{3})+\.)/g, '$1 ');
+				// 	alteredNumber = alteredNumber.replace('.', ' ');
+				// 	console.log(alteredNumber);
+				// 	return alteredNumber;
+
 
 
 				// }
+
 				$scope.information = data;
 			})
 		}],

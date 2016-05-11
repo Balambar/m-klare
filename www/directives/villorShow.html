@@ -1,27 +1,124 @@
 
-<div class="container" ng-repeat="info in information">  
-  		
-    <div class="row"> 
+<div class="container">  
+  <div class="row"> 
+    <div class="col-xs-24 col-md-12" ng-repeat="info in information"> 
+        <div class="imglist">
+          <a href="/objekt/{{info._id}}"  ng-repeat="bild in info.img">
+          <img src="{{bild.url}}" class="img-responsive" alt="{{bild.name}}" style="width:560px;height:400px "/>
+          <div class="panel panel-default hej img-responsive">
+            <div class="panel-body img-responsive">
+              <span>{{info.address}}
+                <br>
+              {{info.price}} KR</span>
+            </div>
+          </div>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
 
-  		<div class="col-md-12"> 				
-				
-			<div class="well well-lg">
-					<a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="bild in info.img">
-		            	<img src="{{bild.url}}"  alt="{{bild.name}}" />
-		            </a>
-				{{info.img[url]}}
-			</div><!-- close well-->
-		</div><!-- close col-->
-  	
-
-
-      <div class="col-md-12">         
         
-      <div class="well well-lg">
-          <a href="/fastigheter/" class="thumbnail bilder img-circle" ng-repeat="url in info.img">
-                  <img src="{{url.url}}"  alt="..." />
-                </a>
-        {{info.img[url]}}
-      </div><!-- close well-->
-    </div><!-- close col-->
-			
+
+       <!--  <div>
+        <p class="text-justify"><span class="hej">{{info.address}}</span></p>
+        </a>
+        </div>
+  <div class="panel-footer">Panel footer</div>
+</div> -->
+
+
+
+
+<style>
+
+.img-responsive {
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
+
+.hej {
+    bottom:10px ;
+    left:15px;
+    color: white;
+    position: absolute;
+    background-color: rgba(51, 133, 255, 0.6);
+    border: none;
+    border-radius: 0;
+    width: 555px;
+
+}
+
+/*span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+ 
+  left: 0;
+  position: absolute;
+  top: 0;
+  
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+
+  left: 0;
+  position: absolute;
+  top: 0;
+ 
+  opacity: 0;
+}
+
+.img-list img:hover span.text-content {
+  opacity: 1;
+}*/
+
+/*#myMouseOver:hover{
+  background-color: rgba(51,133,255, 0.6); 
+  cursor: hand;
+  cursor: pointer;
+
+}
+
+#log:hover{
+  background-color: rgba(51,133,255, 0.6); 
+  color: white;
+}*/
+
+/*.img-list img{
+border-radius: 10px;
+}
+.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}*/
+
+/*.img-list img {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  position: relative;
+}
+
+
+
+
+
+</style>
+
+
+      <!-- .col-xs-  .col-sm-  .col-md-  .col-lg-  .col-xl-     sizes smalest to biggest screen size-->  
+<!-- class="thumbnail bilder img-circle" -->

@@ -4,9 +4,9 @@ app.directive('getVillor', [function(){
 		templateUrl: '/directives/villorShow.html',
 		controller : ['$scope', 'Home', function($scope, Home){
 			Home.get({
-				type: "Villor",
-				_sort: {address: 1},
-				_limit : 3
+				type: "Villor"
+				// _sort: {address: 1},
+				// _limit : 3
 			},function(data){
 				$scope.information = data;
 			})
