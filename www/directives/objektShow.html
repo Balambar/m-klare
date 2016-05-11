@@ -1,64 +1,55 @@
 
 <div class="container">  
   <div class="row"> 
-
-
-
-
-    <div class="col-xs-24 col-md-12 bo-lol" ng-repeat="info in information" > 
-
-
-
-        <div class="img-list">
-        <a href="/objekt/{{info._id}}"  ng-repeat="bild in info.img">
-        <img src="{{bild.url}}" class="img-responsive" alt="{{bild.name}}" width="559" height="374"/>
-    
-
-
-
-        <div class="panel panel-default hej">
-  <div class="panel-body img-responsive" >
-   {{info.address}}
-   <br>
-   {{info.price}}
+    <div class="col-xs-24 col-md-12" ng-repeat="info in information"> 
+        <div class="imglist">
+          <a href="/objekt/{{info._id}}"  ng-repeat="bild in info.img">
+          <img src="{{bild.url}}" class="img-responsive" alt="{{bild.name}}" style="width:560px;height:400px "/>
+          <div class="panel panel-default hej img-responsive">
+            <div class="panel-body img-responsive">
+              <span>{{info.address}}
+                <br>
+              {{info.price}} KR</span>
+            </div>
+          </div>
+          </a>
+      </div>
+    </div>
   </div>
-  </div>
-  <!-- <div class="panel-footer">Panel footer</div>
-</div> -->
-</a>
-        <!-- <div>
-        <p class="text-justify"><span class="hej">{{info.address}}</span></p>
-        </a>
-        </div> -->
+</div>
 
         
-      </div><!-- close col-->
-    </div><!-- close well-->
-  </div><!-- close well-->
-</div><!-- close well-->
+
+       <!--  <div>
+        <p class="text-justify"><span class="hej">{{info.address}}</span></p>
+        </a>
+        </div>
+  <div class="panel-footer">Panel footer</div>
+</div> -->
+
 
 
 
 <style>
 
-.img-list img{
-border-radius: 10px;
-}
-.img-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  margin-bottom: 30px;
+.img-responsive {
+  padding-bottom: 30px;
+  border-radius: 5px;
 }
 
-/*.img-list img {
-  display: inline-block;
-  margin: 0 1em 1em 0;
-  position: relative;
+.hej {
+    bottom:10px ;
+    left:15px;
+    color: white;
+    position: absolute;
+    background-color: rgba(51, 133, 255, 0.6);
+    border: none;
+    border-radius: 0;
+    width: 555px;
+
 }
 
-span.text-content {
+/*span.text-content {
   background: rgba(0,0,0,0.5);
   color: white;
   cursor: pointer;
@@ -91,34 +82,41 @@ span.text-content {
 
 .img-list img:hover span.text-content {
   opacity: 1;
-}
-
-span.text-content {
-  background: rgba(0,0,0,0.5);
-  color: white;
-  cursor: pointer;
-  display: table;
-  
-  left: 0;
-  position: absolute;
-  top: 0;
-
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
 }*/
 
-.hej {
-    bottom:10px ;
-    left:20px;
-    color: white;
-    position: absolute;
-    background-color: rgba(51, 133, 255, 0.6);
-   
+/*#myMouseOver:hover{
+  background-color: rgba(51,133,255, 0.6); 
+  cursor: hand;
+  cursor: pointer;
 
 }
+
+#log:hover{
+  background-color: rgba(51,133,255, 0.6); 
+  color: white;
+}*/
+
+/*.img-list img{
+border-radius: 10px;
+}
+.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}*/
+
+/*.img-list img {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  position: relative;
+}
+
+
+
+
+
 </style>
 
 

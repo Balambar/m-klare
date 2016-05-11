@@ -7,6 +7,40 @@ app.directive('objektShow', [function(){
 				// _sort: {address: 1}, 
 				// _limit : 6
 			},function(data){
+			// xxx (million) xxx (hundredthousand) xxx(thousand)
+			var priceArray = [];
+			for(var i = 0; i < data.length; i++){
+			priceArray.push(data[i].price);
+			}
+
+			
+// 			gul = n.toFixed(2).replace(/./g, function(c, i, a) {
+//     return i && c !== "." && ((a.length - i) % 3 === 0) ? ' ' + c : c;
+// }); --> troligvis inte 
+
+// ____________________________________________________________
+// alterNumber = n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1 ');
+// alterNumber = alterNumber.replace('.', ' ');
+
+
+// lasdigit = gul.lastIndexOf("0");
+// gul = gul[lasdigit].replace("0","");
+// _____________________________________________________________
+
+
+
+
+// 				function destroyDigits(removeDigit){
+					 
+// 				};
+
+				function space(number){
+
+					alteredNumber = number.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1 ');
+					alteredNumber = alteredNumber.replace('.', ' ');
+					console.log(alteredNumber);
+					
+				}
 				$scope.information = data;
 			})
 		}],
