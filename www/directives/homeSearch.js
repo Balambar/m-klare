@@ -8,6 +8,8 @@ app.directive('homeSearch', [function () {
       scope.highlight = function() {
         var className = scope.results.length > 0 ? 'has-success' : 'has-error';
 
+        console.log(scope.results);
+
         // find my <form>, and add the class
         elem.find('form').addClass(className);
 
@@ -98,7 +100,6 @@ app.directive('homeSearch', [function () {
           // run the "highlight" function from link
           // to show users if the search worked or not
           $scope.highlight();
-          console.log(query);
         });
       };
 
