@@ -103,12 +103,15 @@ app.directive('homeSearch', [function () {
       };
 
       // Watch the variables for changes
-      $scope.$watchGroup(toWatch, function(){
+      /*$scope.$watchGroup(toWatch, function(){
         // build and send our query
         $scope.sendQuery();
-      });
+      });*/
 
       // reset all form inputs
+      $scope.startQuery = function() {
+        $scope.sendQuery();
+      };
       $scope.resetQuery = function() {
         for (var i in options) {
           $scope[i] = ''; // set ng-model to empty string (nothing)
