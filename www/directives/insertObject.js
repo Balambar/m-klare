@@ -37,7 +37,7 @@ app.directive('insertObject', [function(){
             'Rosengård',
             'Centrum'
           ],
-          types =['Lägenhet', 'Villa'],
+          types =['Lägenhet', 'Villor'],
           sizes = [40, 50, 55, 60, 75, 100, 120, 125, 130, 150, 200, 800],
           rooms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
           toilets =[1, 2, 3, 4, 5],
