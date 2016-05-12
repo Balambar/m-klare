@@ -6,7 +6,15 @@ app.directive('insertObject', [function(){
 
       Home.get(function(x){
         if(x.length)return;
-        var urlArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+
+        function returnObject(){
+          var randomNumber = Math.floor(Math.random() * 20) + 0 ;
+           return {
+                "name" : "int" + randomNumber,
+                "url" : "imgs/objekt/int/" + randomNumber +".jpg"
+              }
+        }
+
         var allSellers;
         Seller.get(function(data){
           allSellers = data;
@@ -37,21 +45,15 @@ app.directive('insertObject', [function(){
                 "name" : "hus1",
                 "url" : "imgs/objekt/ext/hus1.jpg"
               },
-              {
-                "name" : "int1",
-                "url" : "imgs/objekt/int/apartment-966185_1920.jpg"
-              },
-              {
-                "name" : "int2",
-                "url" : "imgs/objekt/int/bed.jpg"
-              },
-              {
-                "name" : "int3",
-                "url" : "imgs/objekt/int/villa1.jpg"
-              }
+              returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject()
             ],
             "seller" : getNumber(4)
           },
+
           {
             "address": "Skärpinge 84",
             "area" : "Dalaplan",
@@ -67,21 +69,15 @@ app.directive('insertObject', [function(){
                 "name" : "hus2",
                 "url" : "imgs/objekt/ext/hus2.jpg"
               },
-              {
-                "name" : "int1",
-                "url" : "imgs/objekt/int/doorway.jpg"
-              },
-              {
-                "name" : "int2",
-                "url" : "imgs/objekt/int/bed.jpg"
-              },
-              {
-                "name" : "int3",
-                "url" : "imgs/objekt/int/villa1.jpg"
-              }
+returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject()
             ],
             "seller" : getNumber(3)
           },
+
           {
             "address": "Gökst 4",
             "area" : "Limhamn",
@@ -97,21 +93,15 @@ app.directive('insertObject', [function(){
                 "name" : "hus3",
                 "url" : "imgs/objekt/ext/hus3.jpg"
               },
-              {
-                "name" : "int1",
-                "url" : "imgs/objekt/int/doorway.jpg"
-              },
-              {
-                "name" : "int2",
-                "url" : "imgs/objekt/int/bed.jpg"
-              },
-              {
-                "name" : "int3",
-                "url" : "imgs/objekt/int/villa1.jpg"
-              }
+              returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject(),
+              returnObject()
             ],
             "seller" : getNumber(7)
           },
+
           {
             "address": "Luddingsbo Mekanikusv 11",
             "area" : "Rosengård",
@@ -129,6 +119,7 @@ app.directive('insertObject', [function(){
             ],
             "seller" : getNumber(2)
           },
+
           {
             "address": "Sandlyckan 59",
             "area" : "Centrum",
@@ -146,6 +137,7 @@ app.directive('insertObject', [function(){
             ],
             "seller" : getNumber(0)
           },
+
           {
             "address": "Messlingen 26",
             "area" : "Kirseberg",
@@ -159,10 +151,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus6",
               "url" : "imgs/objekt/ext/hus6.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(5)
           },
+
           {
             "address": "Skolspåret 39",
             "area" : "Limhamn",
@@ -180,6 +178,7 @@ app.directive('insertObject', [function(){
             ],
             "seller" : getNumber(1)
           },
+
           {
             "address": "Anders Sadelmakares Gränd 57",
             "area" : "Dalaplan",
@@ -193,10 +192,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus8",
               "url" : "imgs/objekt/ext/hus8.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(6)
           },
+
           {
             "address": "Barkargatan 39",
             "area" : "Rosengård",
@@ -210,10 +215,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus9",
               "url" : "imgs/objekt/ext/hus9.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(3)
           },
+
           {
             "address": "Kaptensgränd 71",
             "area" : "Kirseberg",
@@ -227,10 +238,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus10",
               "url" : "imgs/objekt/ext/hus10.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(7)
           },
+
           {
             "address": "Kantorsvägen 29",
             "area" : "Limhamn",
@@ -244,10 +261,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus11",
               "url" : "imgs/objekt/ext/hus11.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(0)
           },
+
           {
             "address": "Hagagatan 24",
             "area" : "Centrum",
@@ -261,10 +284,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus12",
               "url" : "imgs/objekt/ext/hus12.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(3)
           },
+
           {
             "address": "Klubbvägen 58",
             "area" : "Dalaplan",
@@ -278,10 +307,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus13",
               "url" : "imgs/objekt/ext/hus13.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(2)
           },
+
           {
             "address": "Loftaheden 86",
             "area" : "Rosengård",
@@ -295,10 +330,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus14",
               "url" : "imgs/objekt/ext/hus14.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(4)
           },
+
           {
             "address": "Dyvik 32",
             "area" : "Rosengård",
@@ -312,10 +353,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus15",
               "url" : "imgs/objekt/ext/hus15.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(5)
           },
+
           {
             "address": "Gamla Svedalavägen 12",
             "area" : "Centrum",
@@ -329,10 +376,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus16",
               "url" : "imgs/objekt/ext/hus16.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(1)
           },
+
           {
             "address": "Djursbo 20",
             "area" : "Limhamn",
@@ -346,10 +399,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "hus17",
               "url" : "imgs/objekt/ext/hus17.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(6)
           },
+
           {
             "address": "Löberöd 69",
             "area" : "Dalaplan",
@@ -363,10 +422,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet1",
               "url" : "imgs/objekt/ext/lag1.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(6)
           },
+
           {
             "address": "Nittsjö Kvarngatu 5",
             "area" : "Centrum",
@@ -380,10 +445,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet2",
               "url" : "imgs/objekt/ext/lag2.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(1)
           },
+
           {
             "address": "Överhogdal 39",
             "area" : "Limhamn",
@@ -397,10 +468,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet3",
               "url" : "imgs/objekt/ext/lag3.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(5)
           },
+
           {
             "address": "Vansövägen 81",
             "area" : "Kirseberg",
@@ -414,10 +491,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet4",
               "url" : "imgs/objekt/ext/lag4.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(7)
           },
+
           {
             "address": "Kantorsvägen 10",
             "area" : "Rosengård",
@@ -431,10 +514,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet5",
               "url" : "imgs/objekt/ext/lag5.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(0)
           },
+
           {
             "address": "Bottna Knutsgård 97",
             "area" : "Limhamn",
@@ -448,10 +537,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet6",
               "url" : "imgs/objekt/ext/lag6.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(2)
           },
+
           {
             "address": "Lillesäter 59",
             "area" : "Dalaplan",
@@ -465,10 +560,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet7",
               "url" : "imgs/objekt/ext/lag7.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(4)
           },
+
           {
             "address": "Gamla Svedalavägen 77",
             "area" : "Centrum",
@@ -482,10 +583,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet8",
               "url" : "imgs/objekt/ext/lag8.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(2)
           },
+
           {
             "address": "Korsträsk 57",
             "area" : "Limhamn",
@@ -499,10 +606,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet9",
               "url" : "imgs/objekt/ext/lag9.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(4)
           },
+
           {
             "address": "Västra Husby Häggetorp 38",
             "area" : "Kirseberg",
@@ -516,10 +629,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet10",
               "url" : "imgs/objekt/ext/lag10.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(3)
           },
+
           {
             "address": "Gulleråsen Västabäcksgatu 99",
             "area" : "Dalaplan",
@@ -533,10 +652,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet11",
               "url" : "imgs/objekt/ext/lag11.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(0)
           },
+
           {
             "address": "Lillesäter 73",
             "area" : "Rosengård",
@@ -550,10 +675,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet12",
               "url" : "imgs/objekt/ext/lag12.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(7)
           },
+
           {
             "address": "Violvägen 78",
             "area" : "Dalaplan",
@@ -567,10 +698,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet13",
               "url" : "imgs/objekt/ext/lag13.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(5)
           },
+
           {
             "address": "Fuglie 8",
             "area" : "Centrum",
@@ -584,10 +721,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet14",
               "url" : "imgs/objekt/ext/lag14.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(6)
           },
+
           {
             "address": "Västerviksgatan 50",
             "area" : "Dalaplan",
@@ -601,10 +744,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet15",
               "url" : "imgs/objekt/ext/lag15.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(1)
           },
+
           {
             "address": "Granträsk 9",
             "area" : "Rosengård",
@@ -618,10 +767,16 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet16",
               "url" : "imgs/objekt/ext/lag16.jpg"
-            }
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(7)
           },
+          
           {
             "address": "Enbackagården 9",
             "area" : "Limhamn",
@@ -635,8 +790,12 @@ app.directive('insertObject', [function(){
             "img" : [{
               "name" : "lagenhet17",
               "url" : "imgs/objekt/ext/lag17.jpg"
-            }
-
+            },
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject(),
+            returnObject()
             ],
             "seller" : getNumber(0)
           }
