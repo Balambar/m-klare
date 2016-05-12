@@ -9,6 +9,9 @@
     <!-- meta tag for bootstrap (mobile devices) -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <!-- APIs -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCvNqSM9RevYUHAqxSOnEsmdAjasyYBb8c"></script>
+
     <!-- JS libs -->
     <script src="libs/jquery.min.js"></script>
     <script src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
@@ -17,7 +20,9 @@
     <script src="libs/angular-route.min.js"></script>
     <script src="libs/angular-resource.min.js"></script>
     <script src="libs/ui-bootstrap-tpls.min.js"></script>
-
+    <script src="libs/ng-maps.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.5/i18n/angular-locale_sv-se.js"></script>
+    
     <!-- our JS -->
     <script src="app.js"></script>
     <script src="/api/ngresources/app"></script>
@@ -45,6 +50,7 @@
     <script src="directives/insertObject.js"></script>
     <script src="directives/insertAbout.js"></script>
     <script src="directives/homeSearch.js"></script>
+    <script src="directives/myMap.js"></script>
 
     <!-- our modal controller is special -->
     <script src="/modals/mySellerModalInstance.js"></script>
@@ -56,27 +62,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
+  
+  <body>
+    
+    <div id="wrapper">
+      
+      <div id="header">
 
-    <body>
-      <header-carousel></header-carousel>
-      <header-nav></header-nav>  
-      <ng-view> </ng-view>
 
-    <!--   <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">
-          <footer class="footer">
-            <p class="text-muted">Org 554433-6666<br>
-                Tel 040 - 12 34 567<br>info@Dyhr_rumson.se</p>
-              <p>Ansvarig utgivare: Grupp Mäklare!</p>
+        <header-nav></header-nav>
+        <header-carousel></header-carousel>
+      
+      </div><!-- #header -->
+    
+      <div id="content">
+       
+        <ng-view> </ng-view>
+        <insert-about></insert-about>
+        <insert-seller></insert-seller> 
+        <insert-object></insert-object> 
+     
+      </div><!-- #content -->
+    
+      <div id="footer">
+        
+        <div>
+          <h2>DYHR & RUMSON</h2>
         </div>
-          </footer>
-      </nav> -->
+      </div><!-- #footer -->
+    
+    </div><!-- #wrapper -->
 
-      <!-- insert data into database script - no visualisation on the screen -->
-      <insert-about></insert-about>
-      <insert-seller></insert-seller>  
-      <insert-object></insert-object> 
+     
+      
+
+      
+
+
    
+  
     </body>
+
+    
 
 </html>

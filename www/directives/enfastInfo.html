@@ -1,7 +1,8 @@
 <uib-accordion>
   <!-- create an accordion group for each question -->
   <uib-accordion-group
-  heading="Info"
+  heading=""
+  is-open = "true"
   >
     Adress: {{info.address}}<br>
     Område: {{info.area}}<br>
@@ -11,7 +12,7 @@
     Toaletter: {{info.toilets}}<br>
     Trädgård: {{info.garden}}<br>
     Balkong/Uteplats: {{info.balcony}}<br>
-    Pris: {{info.price}}<br>
+    Pris: {{info.price | currency: "KR" : 0}}<br>
     Säljare: {{info.seller.name}}
   </uib-accordion-group>
 </uib-accordion>

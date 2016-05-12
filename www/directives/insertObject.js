@@ -6,12 +6,13 @@ app.directive('insertObject', [function(){
 
       Home.get(function(x){
         if(x.length)return;
-
+        var urlArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
         var allSellers;
         Seller.get(function(data){
           allSellers = data;
           init();
         });
+
 
         function getNumber(number){
           return allSellers[number];

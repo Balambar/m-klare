@@ -1,15 +1,14 @@
-
 <div class="container">  
   <div class="row"> 
     <div class="col-xs-24 col-md-12" ng-repeat="info in information"> 
         <div class="imglist">
-          <a href="/objekt/{{info._id}}">
-          <img src="{{info.img[0].url}}" class="img-responsive" alt="{{info.img[0].name}}" style="width:560px;height:400px "/>
-          <div class="panel panel-default hej img-responsive">
+          <a ng-href="/objekt/{{info._id}}">
+          <img src="{{info.img[0].url}}" id="bildSize" class="img-responsive" alt="{{info.img[0].name}}"/>
+          <div id="textOver"class="panel panel-default img-responsive">
             <div class="panel-body img-responsive">
               <span>{{info.address}}
                 <br>
-              {{info.price}} KR</span>
+              {{info.price | currency: "KR" : 0 }}</span>
             </div>
           </div>
           </a>
@@ -18,17 +17,29 @@
   </div>
 </div>
 
-        
 
-       <!--  <div>
-        <p class="text-justify"><span class="hej">{{info.address}}</span></p>
-        </a>
-        </div>
-  <div class="panel-footer">Panel footer</div>
-</div> -->
+<style>
+  
+#bildSize {
+  width: 550px;
+  height: 400px;
+}
 
+.img-responsive {
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
 
+#textOver {
+  bottom:10px ;
+  left:15px;
+  color: white;
+  position: absolute;
+  background-color: rgba(51, 133, 255, 0.6);
+  border: none;
+  border-radius: 0;
+  width: 555px;
+  height: 20%;
+}
 
-
-      <!-- .col-xs-  .col-sm-  .col-md-  .col-lg-  .col-xl-     sizes smalest to biggest screen size-->  
-<!-- class="thumbnail bilder img-circle" -->
+</style> 
