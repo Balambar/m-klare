@@ -6,7 +6,8 @@ var app = angular.module("myApp", [
   'ngRoute',
   'ngResource',
   'ngTouch',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngMaps'
 ]);
 
 app.config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
