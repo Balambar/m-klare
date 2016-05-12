@@ -66,7 +66,7 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
         maxRoomSel: {
           modelHome: "rooms",
           type: Number,
-          operator: "$lte"
+          operator: "$gte"
         }
       };
 
