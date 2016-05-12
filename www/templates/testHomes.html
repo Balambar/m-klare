@@ -1,21 +1,29 @@
 <div class="container">
-	<!--<div ng-repeat="home in homes">
-		<h4>address: {{home.address}}</h4>
-		<h4>area: {{home.area}}</h4>
-		<h4>size: {{home.size}} m2</h4>
-		<h4>rum: {{home.rooms}}</h4>
-		<h4>toa: {{home.toilets}}</h4>
-		<h4>garden: {{home.garden}}</h4>
-		<h4>balcon: {{home.balcony}}</h4>
-		<h4>pris: {{home.price}} kr</h4>
-		<h4>seller: {{home.seller.name}}</h4>
-		<img src={{home.img[0].url}}>
-		<img src={{home.img[1].url}}>
+	<div class="row"> 
+		<div class="pull-left">
+			<button type="submit" class="btn btn-primary" ng-click="minToMax()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> minsta till högsta pris</button>
+			<button type="submit" class="btn btn-primary" ng-click="maxToMin()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> högsta till minsta pris</button>
+		</div>
+		<div class="pull-right">
+  			<home-search></home-search>
+  		</div>	
 	</div>
-	<div ng-model="homes">
-	{{homes}}
-	</div>-->
-	<div ng-model="results">
-		{{results}}
-	</div>
+</div><br><br>
+<div class="container">
+  <div class="row">	
+    <div class="col-xs-24 col-md-12" ng-repeat="info in results"> 
+        <div class="imglist">
+          <a ng-href="/objekt/{{info._id}}">
+          <img src="{{info.img[0].url}}" class="bildSize1 img-responsive1" alt="{{info.img[0].name}}"/>
+          <div class="textOver1 panel panel-default img-responsive1">
+            <div class="panel-body img-responsive1">
+              <span>{{info.address}}
+                <br>
+              {{info.price | currency: "KR" : 0 }}</span>
+            </div>
+          </div>
+          </a>
+      </div>
+    </div>
+  </div>
 </div>
