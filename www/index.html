@@ -9,6 +9,9 @@
     <!-- meta tag for bootstrap (mobile devices) -->
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <!-- APIs -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCvNqSM9RevYUHAqxSOnEsmdAjasyYBb8c"></script>
+
     <!-- JS libs -->
     <script src="libs/jquery.min.js"></script>
     <script src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
@@ -17,7 +20,9 @@
     <script src="libs/angular-route.min.js"></script>
     <script src="libs/angular-resource.min.js"></script>
     <script src="libs/ui-bootstrap-tpls.min.js"></script>
-
+    <script src="libs/ng-maps.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.5/i18n/angular-locale_sv-se.js"></script>
+    
     <!-- our JS -->
     <script src="app.js"></script>
     <script src="/api/ngresources/app"></script>
@@ -45,6 +50,7 @@
     <script src="directives/insertObject.js"></script>
     <script src="directives/insertAbout.js"></script>
     <script src="directives/homeSearch.js"></script>
+    <script src="directives/myMap.js"></script>
 
     <!-- our modal controller is special -->
     <script src="/modals/mySellerModalInstance.js"></script>
@@ -63,6 +69,7 @@
       
       <div id="header">
 
+
         <header-nav></header-nav>
         <header-carousel></header-carousel>
       
@@ -72,7 +79,8 @@
        
         <ng-view> </ng-view>
         <insert-about></insert-about>
-        <insert-seller></insert-seller>  
+        <insert-seller></insert-seller> 
+        <insert-object></insert-object> 
      
       </div><!-- #content -->
     
@@ -91,10 +99,6 @@
       
 
 
-
-
-      <!-- insert data into database script - no visualisation on the screen -->
-     
    
   
     </body>

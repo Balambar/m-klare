@@ -8,7 +8,7 @@
             <div class="panel-body img-responsive">
               <span>{{info.address}}
                 <br>
-              {{info.price}} KR</span>
+              {{info.price | currency: "KR" : 0 }}</span>
             </div>
           </div>
           </a>
