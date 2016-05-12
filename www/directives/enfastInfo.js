@@ -41,7 +41,7 @@ app.directive('enfastInfo', [function () {
 
         //hex for square meter symbol (the miniature and raised 2)
         $scope.info.size += ' M\xB2';
-        $scope.info.price += ' kr';
+        // $scope.info.price += ' kr';
 
       });
 
