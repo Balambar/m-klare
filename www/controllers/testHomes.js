@@ -22,9 +22,10 @@ app.controller("testHomes", ["$scope", "Home", function($scope, Home){
 	});*/
 
 	Home.get(function(allhomes){
-		console.log(allhomes);
+		//console.log(allhomes);
 		$scope.homes = allhomes;
 	});
 
+	//$scope.results = results;
 
 }]);
