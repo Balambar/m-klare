@@ -16,7 +16,7 @@ app.directive('insertObject', [function(){
         function getNumber(number){
           return allSellers[number];
         }
-
+        
 
         function init(){
 
