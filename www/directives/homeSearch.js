@@ -1,4 +1,4 @@
-app.directive('homeSearch', [function () {
+app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $location) {
   
   return {
     templateUrl: '/directives/homeSearch.html',
@@ -9,6 +9,10 @@ app.directive('homeSearch', [function () {
         var className = scope.results.length > 0 ? 'has-success' : 'has-error';
 
         console.log(scope.results);
+
+        $rootScope.results = scope.results;
+
+        $location.path("/testHomes");
 
         // find my <form>, and add the class
         elem.find('form').addClass(className);
