@@ -4,7 +4,7 @@
         <div class="imglist">
           <a ng-href="/objekt/{{info._id}}">
           <img src="{{info.img[0].url}}" id="bildSize" class="img-responsive" alt="{{info.img[0].name}}"/>
-          <div id="textOver"class="panel panel-default img-responsive">
+          <div class="textOver" class="panel panel-default img-responsive">
             <div class="panel-body img-responsive">
               <span>{{info.address}}
                 <br>
@@ -16,30 +16,3 @@
     </div>
   </div>
 </div>
-
-
-<style>
-  
-#bildSize {
-  width: 550px;
-  height: 400px;
-}
-
-.img-responsive {
-  padding-bottom: 30px;
-  border-radius: 5px;
-}
-
-#textOver {
-  bottom:10px ;
-  left:15px;
-  color: white;
-  position: absolute;
-  background-color: rgba(51, 133, 255, 0.6);
-  border: none;
-  border-radius: 0;
-  width: 555px;
-  height: 20%;
-}
-
-</style> 
