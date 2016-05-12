@@ -3,8 +3,8 @@
   <div class="row"> 
     <div class="col-xs-24 col-md-12" ng-repeat="info in information"> 
         <div class="imglist">
-          <a href="/objekt/{{info._id}}"  ng-repeat="bild in info.img">
-          <img src="{{bild.url}}" class="img-responsive" alt="{{bild.name}}" style="width:560px;height:400px "/>
+          <a href="/objekt/{{info._id}}">
+          <img src="{{info.img[0].url}}" class="img-responsive" alt="{{info.img[0].name}}" style="width:560px;height:400px "/>
           <div class="panel panel-default hej img-responsive">
             <div class="panel-body img-responsive">
               <span>{{info.address}}
