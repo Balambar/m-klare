@@ -97,10 +97,6 @@ app.directive('insertObject', [function(){
                 "url" : "imgs/objekt/ext/hus3.jpg"
               },
               {
-                "name" : "hus2",
-                "url" : "imgs/objekt/ext/hus2.jpg"
-              },
-              {
                 "name" : "int1",
                 "url" : "imgs/objekt/int/doorway.jpg"
               },
