@@ -56,26 +56,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
+  
+  <body>
+    
+    <div id="wrapper">
+      
+      <div id="header">
 
-    <body>
-      <header-carousel></header-carousel>
-      <header-nav></header-nav>  
-      <ng-view> </ng-view>
-
-      <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">
-         <!--  <footer class="footer">
-            <p class="text-muted">Org 554433-6666<br>
-                Tel 040 - 12 34 567<br>info@Dyhr_rumson.se</p>
-              <p>Ansvarig utgivare: Grupp Mäklare!</p>
+        <header-nav></header-nav>
+        <header-carousel></header-carousel>
+      
+      </div><!-- #header -->
+    
+      <div id="content">
+       
+        <ng-view> </ng-view>
+        <insert-about></insert-about>
+        <insert-seller></insert-seller>  
+     
+      </div><!-- #content -->
+    
+      <div id="footer">
+        
+        <div>
+          <h2>DYHR & RUMSON</h2>
         </div>
-          </footer> -->
-      </nav>
+      </div><!-- #footer -->
+    
+    </div><!-- #wrapper -->
+
+     
+      
+
+      
+
+
+
 
       <!-- insert data into database script - no visualisation on the screen -->
-      <insert-about></insert-about>
-      <insert-seller></insert-seller>  
+     
    
+  
     </body>
+
+    
 
 </html>
