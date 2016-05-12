@@ -114,7 +114,7 @@ app.directive('insertObject', [function(){
           return;
         }
         else{
-          init(100);
+          init(250);
         }
       });
 
