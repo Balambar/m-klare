@@ -22,7 +22,7 @@ app.directive('myCarousel', [function(){
 			$scope.stylify = function(slide) {
 				return {
 					'background-image': 'url(' + slide.image + ')',
-					height: "305px"
+					height: "500px"
 				};
 			}
 		}]
