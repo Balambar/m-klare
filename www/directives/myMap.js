@@ -36,14 +36,14 @@ app.directive('myMap', [function () {
       	$scope.marker = {
     		position: [myCords.lat, myCords.lon]
   		};
-  		
+
     	$scope.map = {
     		center: [myCords.lat, myCords.lon],
     		options: function(){
     			return{
     				scrollwheel: false,
-    				zoom: 15,
-    				draggable: false
+    				zoom: 18,
+    				draggable: true
     			}
     		}
   		};
