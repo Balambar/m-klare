@@ -60,13 +60,13 @@ app.directive('myMap', [function () {
     		}
   		};
   		
-		//this timeout fixes a bug that causes the map to turn grey 
-		//if the whole page isnt reloaded
-	 	setTimeout(function(){
-	 		window.dispatchEvent(new Event('resize'));
-	 	},0);
+  		//this timeout fixes a bug that causes the map to turn grey 
+  		//if the whole page isnt reloaded
+  	 	setTimeout(function(){
+  	 		window.dispatchEvent(new Event('resize'));
+  	 	},0);
 	      
-		}]
+	  }]
 
-  	};
+	};
 }]);

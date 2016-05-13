@@ -1,7 +1,6 @@
 app.directive('insertSeller', [function(){
 
   return {
-    templateUrl: '/directives/insertSeller.html',
     controller: ['$scope','Seller' ,'$interval', function($scope, Seller, $interval) {
 
       //list of possbile sellers
@@ -38,6 +37,11 @@ app.directive('insertSeller', [function(){
         {
           name: "Mark",
           img: "imgs/sellers/bild6.png"
+        },
+        {
+          name: "Martin",
+          position: "VD/Mäklare",
+          img: "imgs/sellers/bild9.png"
         }
       ];
 
@@ -104,17 +108,16 @@ app.directive('insertSeller', [function(){
             Seller.create([
               createSellerObject(
                 sellers[i].name,
-                false,
+                sellers[i].position,
                 randomPhoneNumber(9),
-                false,
-                false,
-                sellers[i].img 
+                sellers[i].email,
+                sellers[i].about,
+                sellers[i].img
                 )
             ]);
           }
         }
       });
-
     }]
   };
 }]);
