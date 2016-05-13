@@ -137,7 +137,7 @@ app.directive('insertObject', [function(){
           //but if it is empty (has no length)
           else{
             //we call our init!
-            init(250);
+            init(40);
           }
         });
 
