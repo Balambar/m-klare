@@ -2,15 +2,11 @@
   "name": "angularAppbase",
   "version": "0.0.1",
   "dependencies": {
-    "app-root-path": "^1.0.0",
-    "body-parser": "*",
     "cookie-parser": "*",
     "debug": "*",
-    "express": "*",
     "gulp": "*",
     "gulp-less": "*",
     "mongo-express": "*",
-    "mongoose": "*",
     "nodemon": "^1.9.1",
     "serve-favicon": "*",
     "mongresto":"*"
