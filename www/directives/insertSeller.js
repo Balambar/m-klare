@@ -54,7 +54,7 @@ app.directive('insertSeller', [function(){
         //specifies default values
         if(!name){ name = 'John Doe'; }
         if(!position){ position = 'Mäklare'; }
-        if(!phone){ phone = 123456789; }
+        if(!phone){ phone = randomPhoneNumber(9); }
         if(!email){ email = name + '@maklare.se'; }
         if(!about){ about = "Jag heter " +name+ " och jag är fastighetsmäklare på DYHR & RUMSON. Jag är högskoleutbildad, ansvarsförsäkrad och registrerad hos FMI. Kontakta mig så tar vi tillsammans fram det upplägg som fungerar bäst för just dig och din bostad!"; }
         if(!img){ img = "imgs/sellers/bild2.png"; }
@@ -109,7 +109,7 @@ app.directive('insertSeller', [function(){
               createSellerObject(
                 sellers[i].name,
                 sellers[i].position,
-                randomPhoneNumber(9),
+                sellers[i].phone,
                 sellers[i].email,
                 sellers[i].about,
                 sellers[i].img
