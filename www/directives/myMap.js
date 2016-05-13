@@ -5,11 +5,12 @@ app.directive('myMap', [function () {
     controller: ['$scope', function($scope) {
 
     	$scope.map = {
-    center: [40.7, -74]
-  }
-  $scope.marker = {
-    position: [40.7, -74]
-  }
+    		center: [40.7, -74]
+  		}
+  		
+  		$scope.marker = {
+    		position: [40.7, -74]
+  		}
      setTimeout(function(){window.dispatchEvent(new Event('resize'))},0);
       
     }]

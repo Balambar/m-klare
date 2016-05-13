@@ -12,6 +12,11 @@ app.directive('headerNav', [function(){
       // // if we don't use angulars $interval
       // // $scope wont realize that there is an updated value!
       // $interval(currentTime, 1000);
+      $scope.navExpanded = false;
+      $scope.$on('$routeChangeStart', function() {
+        console.log("broadcast args", arguments);
+        $scope.navExpanded = false;
+      });
     }]
   };
 }]);
