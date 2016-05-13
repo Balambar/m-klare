@@ -1,7 +1,6 @@
 app.directive('insertSeller', [function(){
 
   return {
-    templateUrl: '/directives/insertSeller.html',
     controller: ['$scope','Seller' ,'$interval', function($scope, Seller, $interval) {
 
       //list of possbile sellers
@@ -114,7 +113,6 @@ app.directive('insertSeller', [function(){
           }
         }
       });
-
     }]
   };
 }]);

@@ -1,7 +1,6 @@
 app.directive('insertObject', [function(){
 
   return {
-    templateUrl: '/directives/insertObject.html',
     controller: ['$scope','Home' ,'Seller', function($scope, Home, Seller) {
 
       //array of possible adresses

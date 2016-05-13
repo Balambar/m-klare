@@ -1,7 +1,6 @@
 app.directive('insertAbout', [function(){
 
   return {
-    templateUrl: '/directives/insertAbout.html',
     controller: ['$scope','About' ,'$interval', function($scope, About, $interval) {
       
       About.get(function(x){
