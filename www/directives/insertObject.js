@@ -4,6 +4,7 @@ app.directive('insertObject', [function(){
     templateUrl: '/directives/insertObject.html',
     controller: ['$scope','Home' ,'Seller', function($scope, Home, Seller) {
 
+      //array of possible adresses
       var adresses = [
             'Hammarvägen 95', 
             'kärpinge 84', 
@@ -30,6 +31,7 @@ app.directive('insertObject', [function(){
             'Bottna Knutsgård 97',
             'Lillesäter 59'
           ],
+          //array of possible areas
           areas = [
             'Kirseberg',
             'Dalaplan',
@@ -37,13 +39,21 @@ app.directive('insertObject', [function(){
             'Rosengård',
             'Centrum'
           ],
+          //array of possible types
           types =['Lägenhet', 'Villor'],
+          //array of possible sizes
           sizes = [40, 50, 55, 60, 75, 100, 120, 125, 130, 150, 200, 800, 1000, 1500, 2000],
+          //array of possible number of rooms
           rooms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 50],
+          //array of possible number of toilets
           toilets =[1, 2, 3, 4, 5],
+          //either there is a garden or there isnt one
           garden = [true, false],
+          //either there is a balcony or there isnt one
           balcony =[true, false],
+          //array of possible prices
           prices = [50, 200000, 500000, 800000, 1000000, 1500000, 2000000, 2450000, 5000000, 100000000],
+          //array of possible images for houses
           frontImagesH =[
             'hus1',
             'hus2',
@@ -63,6 +73,7 @@ app.directive('insertObject', [function(){
             'hus16',
             'hus17'
           ],
+          //array of possible images for appartements
           frontImagesL =[
             'lag1',
             'lag2',
@@ -82,6 +93,7 @@ app.directive('insertObject', [function(){
             'lag16',
             'lag17' 
           ],
+          //array of possible interior images
           intImages =[
             '0',
             '1',
@@ -105,34 +117,50 @@ app.directive('insertObject', [function(){
             '19',
             '20'
           ],
+          //array of possible sellers, we get this from our database
           sellers = [] = Seller.get();
 
-          function getRandomItem(arr){
-            return arr[Math.floor(Math.random()*arr.length)];
+        //function that return one item in an array
+        function getRandomItem(arr){
+          //uses the length of the array used as the maximum number
+          return arr[Math.floor(Math.random()*arr.length)];
+        }
+
+        //Since we only want to add our dummydata to the database if its already empty,
+        //we need to check wheter or not it already contains some data.
+        //load from DB (GET)
+        Home.get(function(x){
+          //if it has a length (if its not empty), we do nothing.
+          if(x.length){
+            return;
           }
+          //but if it is empty (has no length)
+          else{
+            //we call our init!
+            init(250);
+          }
+        });
 
-      Home.get(function(x){
-        if(x.length){
-          return;
-        }
-        else{
-          init(250);
-        }
-      });
+        //init function, used to create dummydata, takes a itterations argument
+        //that determines how many posts it will create
+        function init(itterations){
 
-        
-       function init(itterations){
-
+        //loop through the specified number of itterations
         for (var i = 0; i < itterations; i++) {
 
-          var t = getRandomItem(types);
-          var extImg;
+          //since the exterior image is depending on the type, we set this first
+          var t = getRandomItem(types),
+              extImg = null;
+
+          //if the type is an appartement, choose a random image from the appartement array
           if(t === 'Lägenhet'){
             extImg = getRandomItem(frontImagesL);
+          //else choose a random image from the house array
           } else {
             extImg = getRandomItem(frontImagesH);
           }
-          console.log(t, extImg);
+
+          //in each itteration, we want to create a new object and store it in the DB
           Home.create([
             {
                 "address": getRandomItem(adresses),
