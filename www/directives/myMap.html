@@ -1,13 +1,11 @@
 
 <uib-accordion>
-  <!-- create an accordion group for each question -->
-  <uib-accordion-group
-  heading=""
-  is-open = "true"
-  >
-  <map ng-transclude class='google-map' center='map.center'> 
-  <marker position='marker.position'></marker>
-</map>
-  </uib-accordion-group>
+	<uib-accordion-group
+	heading=""
+	is-open = "true"
+	>
+		<map ng-transclude class='google-map' center='map.center' options='map.options'> 
+			<marker position='marker.position'></marker>
+		</map>
+	</uib-accordion-group>
 </uib-accordion>
-</div>
