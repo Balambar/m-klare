@@ -1,28 +1,51 @@
 <form name="outerForm" class="tab-form-demo">
   <uib-tabset active="activeJustified" justified="true">
 
+    <!-- Om Dyhr -->
     <uib-tab index="0" heading="Om Dyhr & Rumson">
       <h2><small>{{about.content}}</small></h2>
         <ng-form name="nestedForm">
           </ng-form>
     </uib-tab>
-  
+    
+    <!-- Vår vision -->
     <uib-tab index="1" heading="Vår Vision">
       <h2><small>{{about.contents}}</small></h2>
     </uib-tab>
-      
+    
+    <!-- Kontakt --> 
     <uib-tab index="2" heading="Kontakt">
-      More Tab Content
+      <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-24 col-xs-offset-0 col-md-10 col-md-offset-7">
+      <h4>Har du några frågor? Fyll gärna i formuläret så att vi kan kontakta dig så snart som möjligt!</h4><br>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-24 col-xs-offset-0 col-md-9 col-md-offset-7">
+      <form>
+        <div class="form-group">
+          <label for="contactName">*Namn: </label>
+          <input type="text" class="form-control" ng-model="contactName" placeholder="Namn">
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">*Email: </label>
+          <input type="email" class="form-control" ng-model="contactEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="contactTelefon">Telefonnummer: </label>
+          <input type="text" class="form-control" ng-model="contactPhone" placeholder="Telefonnummer">
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">*Meddelande: </label>
+          <textarea type="text" rows="5" class="form-control" ng-model="contactMessage" placeholder="Meddelande"></textarea>
+        </div>
+        <button type="submit" ng-click="sendContact()" class="btn btn-default">Skicka</button>
+      </form><br>
+      <div><i>* Obligatoriska rutor att fylla i</i></div>
+    </div>  
+  </div>
+</div>   
     </uib-tab>
   </uib-tabset>
 </form>
-
-<style type="text/css">
-  form.tab-form-demo .tab-pane {
-    margin: 20px 20px;
-  }
-
-  .nav-tabs > li > a {
-    font-size: 20px;
-  }
-</style>
