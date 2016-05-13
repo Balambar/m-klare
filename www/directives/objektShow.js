@@ -10,7 +10,7 @@ app.directive('objektShow', [function(){
 			// _sort: {address: 1}, 
 			_limit : 6
 			},function(data){
-				// console.log(Math.ceil(data.length/6));
+				
 				$scope.information = data;
 			})
 		}],
