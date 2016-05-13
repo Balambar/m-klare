@@ -12,9 +12,9 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
         elem.find('.dropdown-menu').slideToggle(700);
         
          //Change button text (example of using "elem")
-        var btn = elem.find('button');
+        var btn = elem.find('.dropdown-toggle');
         btn.html(
-          btn.html().indexOf('Hide') >= 0 ? 'Show wells': 'Hide wells'
+          btn.html().indexOf('Hide') >= 0 ? 'Visa search!': 'Gömm search!'
         );
          
       };
