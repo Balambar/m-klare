@@ -8,7 +8,7 @@ app.directive('objektShow', [function(){
 
 			Home.get({
 			// _sort: {address: 1}, 
-			_limit : 6
+			// _limit : 6
 			},function(data){
 				
 				$scope.information = data;
