@@ -44,7 +44,7 @@ app.directive('insertObject', [function(){
           garden = [true, false],
           balcony =[true, false],
           prices = [50, 200000, 500000, 800000, 1000000, 1500000, 2000000, 2450000, 5000000, 100000000],
-          frontImages =[
+          frontImagesH =[
             'hus1',
             'hus2',
             'hus3',
@@ -61,7 +61,9 @@ app.directive('insertObject', [function(){
             'hus14',
             'hus15',
             'hus16',
-            'hus17',
+            'hus17'
+          ],
+          frontImagesL =[
             'lag1',
             'lag2',
             'lag3',
@@ -122,12 +124,20 @@ app.directive('insertObject', [function(){
        function init(itterations){
 
         for (var i = 0; i < itterations; i++) {
-          
+
+          var t = getRandomItem(types);
+          var extImg;
+          if(t === 'Lägenhet'){
+            extImg = getRandomItem(frontImagesL);
+          } else {
+            extImg = getRandomItem(frontImagesH);
+          }
+          console.log(t, extImg);
           Home.create([
             {
                 "address": getRandomItem(adresses),
                 "area" : getRandomItem(areas),
-                "type" : getRandomItem(types),
+                "type" : t,
                 "size" : getRandomItem(sizes),
                 "rooms" : getRandomItem(rooms),
                 "toilets" : getRandomItem(toilets),
@@ -137,7 +147,7 @@ app.directive('insertObject', [function(){
                 "img" : [
                   {
                     "name": "extBild",
-                    "url": "imgs/objekt/ext/" + getRandomItem(frontImages) + ".jpg"
+                    "url": "imgs/objekt/ext/" + extImg + ".jpg"
                   },
                   {
                     "name": "intBild",
