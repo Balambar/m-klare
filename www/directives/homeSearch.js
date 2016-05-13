@@ -4,6 +4,21 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
     templateUrl: '/directives/homeSearch.html',
     link: function(scope, elem, attrs) {
       // add "has-success" or "has-error" after each search
+
+      // A function to show/hide wells
+      scope.toggleDropdown = function(){
+        //Hide/show wells
+        //slideToggle is a jQuery method to hide/show elements
+        elem.find('.dropdown-menu').slideToggle(700);
+        
+         //Change button text (example of using "elem")
+        var btn = elem.find('button');
+        btn.html(
+          btn.html().indexOf('Hide') >= 0 ? 'Show wells': 'Hide wells'
+        );
+         
+      };
+
       // depending on if we got results
       scope.highlight = function() {
         var className = scope.results.length > 0 ? 'has-success' : 'has-error';
@@ -112,6 +127,8 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
         // build and send our query
         $scope.sendQuery();
       });*/
+
+      
 
       // reset all form inputs
       $scope.startQuery = function() {
