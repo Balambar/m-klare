@@ -9,7 +9,7 @@ app.directive('objektShow', [function(){
 			Home.get({
 			// _sort: {address: 1}, 
 			// _skip: 10,
-  			// _limit: 1
+  			_limit: 2
 			},function(data){
 				
 				$scope.information = data;
