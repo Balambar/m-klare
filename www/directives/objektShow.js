@@ -18,7 +18,7 @@ $scope.go = function(capsulate) {
 			// _sort: {address: 1}, 
 			_skip: skip,
   			_limit: limit
-			},function(data,arg){
+			},function(data){
 				
 
 				$scope.updown = capsulate;

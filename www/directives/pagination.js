@@ -7,6 +7,7 @@ app.directive("paginationList", [function(){
 $scope.badge = function(){
 	Home.get(function(data){
 		$scope.allBadge = data.length;
+		console.log(data.length);
 	});
 	Home.get({
 		type: 'Villor'
