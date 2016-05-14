@@ -5,14 +5,21 @@
           <a ng-href="/objekt/{{info._id}}">
           <img src="{{info.img[0].url}}" id="bildSize" class="img-responsive" alt="{{info.img[0].name}}"/>
           <div class="textOver" class="panel panel-default img-responsive">
-            <div class="panel-body img-responsive">
+           
               <span>{{info.address}}
                 <br>
               {{info.price | currency: "KR" : 0 }}</span>
-            </div>
+           
           </div>
           </a>
       </div>
+
     </div>
   </div>
+  <div class="row"> 
+    <div class="col-xs-24 col-md-24"> 
+   <pagination-list></pagination-list>
+
+    </div>
 </div>
+         

@@ -1,24 +1,8 @@
-<!-- <nav >
-  <ul class="pagination pagination-lg">
-    <li>
-      <a click="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li ng-repeat="oneNumber in pageNumbers"><a ng-click="#">{{oneNumber}}</a></li>
-    
-    <li>
-      <a click="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav> -->
 
 <div class="btn-group" role="group" aria-label="..."  >
    
   <button type="button" class="btn btn-default" ng-click="go(updown-1)" ><span aria-hidden="true">&laquo;</span></button>
-  <button type="button" class="btn btn-default" ng-click="go(oneNumber-1)" ng-repeat="oneNumber in pageNumbers">{{oneNumber}}</button>
+  <button type="button" class="btn btn-default " ng-click="go(oneNumber-1)" ng-repeat="oneNumber in pageNumbers">{{oneNumber}}</button>
   <button type="button" class="btn btn-default" ng-click="go(updown+1)" ><span aria-hidden="true">&raquo;</span></button>
   
 </div>

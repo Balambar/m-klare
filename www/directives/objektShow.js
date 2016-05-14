@@ -30,10 +30,7 @@ $anchorScroll()
   }
 $scope.go(0)
 
-//   $scope.$on("$locationChangeSuccess",
-// function(event, current, previous, rejection) {
-//   $window.scrollTo(0,0);
-// });
+
 
 		}]}
 
