@@ -5,35 +5,33 @@ app.directive('objektShow', [function(){
 		controller : ['$scope', 'Home', function($scope, Home){
 
 
+// göra om till en funktion som både kallas på i "siduppstart" samt när den får ett klickevent med attribut. 
+// function go(skip){});
 
+$scope.go = function(capsulate) {
+    console.log(capsulate);
+    
+  			var limit = 6;
+			var skip = capsulate * limit;
+    console.log(skip);
 			Home.get({
 			// _sort: {address: 1}, 
-			// _skip: 10,
-  			_limit: 2
-			},function(data){
+			_skip: skip,
+  			_limit: limit
+			},function(data,arg){
 				
+
+				$scope.updown = capsulate;
 				$scope.information = data;
 			})
-		}],
-		link: function(scope, elem, attrs) {
-			// scope is an Angular scope object.
-			// element is the base element for this directive
-			// (attrs - not within the scope of this course)
-			
-			// scope is called "scope" rather than "$scope"
-			// here just out of convention...
-			
-			// If jQuery is loaded before angular
-			// angular.element IS jQuery
-			// (otherwise it is jqLite)
-			var $ = angular.element;
-			
-			// A function to show/hide wells
-			// create ordinary jQuery code 
-			scope.toggleWells = function(){
-			
-			}
-		}
 
-	};
-}]);
+  }
+
+  $scope.$on("$locationChangeSuccess",
+function(event, current, previous, rejection) {
+  $window.scrollTo(0,0);
+});
+
+		}]}
+
+	}]);
