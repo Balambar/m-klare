@@ -14,7 +14,7 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
          //Change button text (example of using "elem")
         var btn = elem.find('.dropdown-toggle');
         btn.html(
-          btn.html().indexOf('Hide') >= 0 ? 'Visa search!': 'Gömm search!'
+          btn.html().indexOf('Hide') >= 0 ? 'Visa search!': 'Göm search!'
         );
          
       };
