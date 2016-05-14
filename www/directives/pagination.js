@@ -3,8 +3,23 @@ app.directive("paginationList", [function(){
 		templateUrl : '/directives/pagination.html',
 		controller : ['$scope', 'Home','$route', '$routeParams', '$location', function($scope, Home, $route, $routeParams, $location){
 			
-console.log($location.$$path);
 
+$scope.badge = function(){
+	Home.get(function(data){
+		$scope.allBadge = data.length;
+	});
+	Home.get({
+		type: 'Villor'
+	},function(data){
+		$scope.villorBadge = data.length;
+	});
+	Home.get({
+		type: 'Lägenhet'
+	},function(data){
+		$scope.lagenhetBadge = data.length;
+	});
+}
+	
 
 $scope.all = function() {
 	Home.get(function(data){
@@ -36,6 +51,7 @@ $scope.villor = function() {
 					// console.log(numberArray);
 				}
 				// console.log(fullNumber);
+
 				$scope.pageNumbers = numberArray;
 				// [1,2,3,4,5];
 			})
@@ -59,7 +75,7 @@ $scope.lagenheter = function() {
 			})
 
 };
-
+$scope.badge();
 if($location.$$path === '/fastigheter'){
 	$scope.all();
 }
