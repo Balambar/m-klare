@@ -1,7 +1,7 @@
 app.directive('myMap', [function () {
 
   return {
-    templateUrl: '/directives/myMap.html',
+    templateUrl: '/directives/detailedObject/myMap.html',
     controller: ['$scope', function($scope) {
 
     	//array of possible coordinates that our map will show

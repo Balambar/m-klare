@@ -1,7 +1,7 @@
 app.directive('myCarousel', [function(){
 
 	return{
-		templateUrl: '/directives/myCarousel.html',
+		templateUrl: '/directives/detailedObject/myCarousel.html',
 		controller: ['$scope', '$routeParams', 'Home', function($scope, $routeParams, Home){
 			$scope.active = 0;
 			$scope.slides = [];

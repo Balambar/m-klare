@@ -1,7 +1,7 @@
 app.directive("paginationList", [
   function() {
     return {
-      templateUrl: '/directives/pagination.html',
+      templateUrl: '/directives/objects/pagination.html',
       controller: ['$scope', 'Home', '$route', '$routeParams', '$location',
         function($scope, Home, $route, $routeParams, $location) {
           $scope.badge = function() {
