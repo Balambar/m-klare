@@ -1,7 +1,7 @@
 app.directive('getVillor', [function(){
 	// Runs during compile
 	return {
-		templateUrl: '/directives/villorShow.html',
+		templateUrl: '/directives/objects/villorShow.html',
 		controller : ['$scope','$anchorScroll' ,'Home', function($scope, $anchorScroll, Home){
 $scope.go = function(capsulate) {
     console.log(capsulate);

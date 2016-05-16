@@ -2,7 +2,7 @@
 app.directive('getAppart', [function(){
 	// Runs during compile
 	return {
-		templateUrl: '/directives/lagenheterShow.html',
+		templateUrl: '/directives/objects/lagenheterShow.html',
 		controller : ['$scope','$anchorScroll' ,'Home', function($scope, $anchorScroll, Home){
 			$scope.go = function(capsulate) {
     console.log(capsulate);
