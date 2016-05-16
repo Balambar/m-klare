@@ -17,15 +17,14 @@
       <div class="well well-lg" id="ddown">
         <h2>Navigera!</h2>
         <!-- Single button -->
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Köp/Sälj!<span class="caret"></span>
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+          <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">Köp/Sälj! <span class="caret"></span>
           </button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" uib-dropdown-menu role="menu">
             <li class="dropdown-header">Vill du köpa?</li>
-            <li><a class="kopa" href="/fastigheter">Bostad</a></li>
+            <li><a class="kopa" ng-href="/fastigheter">Bostad</a></li>
             <li class="dropdown-header">Vill du Sälja?</li>
-            <li><a class="kopa" href="/maklare">Kontakta vår mäklare</a></li>
+            <li><a class="kopa" ng-href="/maklare">Kontakta vår mäklare</a></li>
             <li role="separator" class="divider"></li>
           </ul>
         </div>
@@ -33,3 +32,4 @@
     </div>
   </div>
 </div>  
+
