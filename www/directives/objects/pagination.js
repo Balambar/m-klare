@@ -1,4 +1,5 @@
 app.directive("paginationList", [
+
   function() {
     return {
       templateUrl: '/directives/objects/pagination.html',
@@ -22,18 +23,30 @@ app.directive("paginationList", [
           $scope.all = function() {
             Home.get(function(data) {
               // console.log(data);
-              var numberArray = [];
-              var fullNumber = Math.ceil(data.length / 6);
-              // console.log(fullNumber);
-              for (var i = 1; i <= fullNumber; i++) {
-                numberArray.push(i);
-                // console.log(numberArray);
-              }
-              // console.log(fullNumber);
-              $scope.first = 0;
-              $scope.last = fullNumber;
-              $scope.pageNumbers = numberArray;
-              // [1,2,3,4,5];
+              $scope.totalItems = 64;
+              // $scope.currentPage = 4;
+
+              $scope.setPage = function(pageNo) {
+                $scope.currentPage = pageNo;
+              };
+
+              $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
+              $scope.bigTotalItems = 1000;  //total number of objects in db. 
+              $scope.bigCurrentPage = 1; // startingpoint for active 
+              
+
+              // var numberArray = [];
+            //   var fullNumber = Math.ceil(data.length / 6);
+            //   // console.log(fullNumber);
+            //   for (var i = 1; i <= fullNumber; i++) {
+            //     numberArray.push(i);
+            //     // console.log(numberArray);
+            //   }
+            //   // console.log(fullNumber);
+            //   $scope.first = 0;
+            //   $scope.last = fullNumber;
+            //   $scope.pageNumbers = numberArray;
+            //   // [1,2,3,4,5];
             })
           };
           $scope.villor = function() {
@@ -81,10 +94,10 @@ app.directive("paginationList", [
             $scope.lagenheter();
           }
           // // Hugos while loop
-          // 	// var i = 0;
-          // 	// while (i++ < fullNumber) {
-          // 	// 	numberArray.push(i);
-          // 	// }
+          //  // var i = 0;
+          //  // while (i++ < fullNumber) {
+          //  //  numberArray.push(i);
+          //  // }
   }]
     }
 }]);
