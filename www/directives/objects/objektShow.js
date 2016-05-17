@@ -9,7 +9,7 @@ app.directive('objektShow', [
           // function go(skip){});
           $scope.go = function(capsulate) {
             // console.log(capsulate);
-            var limit = 1;
+            var limit = 6;
             var skip = capsulate * limit;
             $scope.check = capsulate;
             Home.get({
