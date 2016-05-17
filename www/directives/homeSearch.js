@@ -1,4 +1,4 @@
-app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $location) {
+app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootScope, $location, Home) {
   
   return {
     templateUrl: '/directives/homeSearch.html',
@@ -23,11 +23,45 @@ app.directive('homeSearch', ['$rootScope', '$location', function ($rootScope, $l
       scope.highlight = function() {
         var className = scope.results.length > 0 ? 'has-success' : 'has-error';
 
-        console.log(scope.results);
+        var myResult = scope.results;
 
         $rootScope.results = scope.results;
 
-        $location.path("/testHomes");
+        Home.get(function(allHomes){
+
+          var villa = [];
+          var lgh = [];
+          var myVilla = [];
+          var myLgh = [];
+
+          for (var i = 0; i < allHomes.length; i++) {
+            if (allHomes[i].type == "Villor") {
+              villa.push(i);
+            }
+            else 
+              lgh.push(i);
+          }
+
+          for (var i = 0; i < myResult.length; i++) {
+            if (myResult[i].type == "Villor") {
+              myVilla.push(i);
+            }
+            else
+              myLgh.push(i);
+          }
+
+          if (myResult.length === allHomes.length) {
+            $location.path("/fastigheter");
+          }
+          else if (villa.length === myVilla.length) {
+            $location.path("/villor");
+          }
+          else if (lgh.length === myLgh.length) {
+            $location.path("/lagenheter");
+          }
+          else
+            $location.path("/testHomes");
+        });
 
         // find my <form>, and add the class
         elem.find('form').addClass(className);
