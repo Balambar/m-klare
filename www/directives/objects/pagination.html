@@ -8,7 +8,8 @@
 </div>
 
  -->
-	
+	{{bigTotalItems}} 
+	{{bigCurrentPage}}
 
-    <uib-pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-md" boundary-link-numbers="true"  items-per-page="1" force-ellipses="true" rotate="false"></uib-pagination>
+    <uib-pagination total-items="bigTotalItems"  ng-model="bigCurrentPage" max-size="maxSize" class="pagination-md" boundary-link-numbers="true" ng-click="go(bigCurrentPage-1)" items-per-page="6" force-ellipses="true" rotate="false"></uib-pagination>
 

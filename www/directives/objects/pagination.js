@@ -20,18 +20,28 @@ app.directive("paginationList", [
               $scope.lagenhetBadge = data.length;
             });
           }
+
+
+
+
           $scope.all = function() {
             Home.get(function(data) {
               // console.log(data);
-              $scope.totalItems = 64;
+              // $scope.totalItems = 64;  
               // $scope.currentPage = 4;
 
-              $scope.setPage = function(pageNo) {
-                $scope.currentPage = pageNo;
-              };
+              // $scope.setPage = function(pageNo) {
+
+              //   $scope.currentPage = pageNo;
+              // };
+
+
+              $scope.consol = function(page){
+                console.log(page-1);
+              }
 
               $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
-              $scope.bigTotalItems = 1000;  //total number of objects in db. 
+              $scope.bigTotalItems = data.length;  //total number of objects in db. 
               $scope.bigCurrentPage = 1; // startingpoint for active 
               
 
