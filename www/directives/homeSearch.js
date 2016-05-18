@@ -14,7 +14,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
          //Change button text (example of using "elem")
         var btn = elem.find('.dropdown-toggle');
         btn.html(
-          btn.html().indexOf('Hide') >= 0 ? 'Visa search!': 'Göm search!'
+          btn.html().indexOf('Sök') >= 0 ? 'Göm search!': 'Sök här!'
         );
          
       };
@@ -38,7 +38,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
             if (allHomes[i].type == "Villor") {
               villa.push(i);
             }
-            else 
+            else
               lgh.push(i);
           }
 
