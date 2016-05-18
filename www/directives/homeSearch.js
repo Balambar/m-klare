@@ -5,6 +5,10 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
     link: function(scope, elem, attrs) {
       // add "has-success" or "has-error" after each search
 
+      if ($location.path() == "/") {
+        elem.find('.dropdown-menu').addClass('dropdown-menu-center');
+      }
+
       // A function to show/hide wells
       scope.toggleDropdown = function(){
         //Hide/show wells

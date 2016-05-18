@@ -2,11 +2,11 @@
 <div class="btn-group" role="group">
   <div class="dropdown dropdown-lg">
   	<!-- dropdown knappen ng-click="toggleWells()"--> 
-    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false" ng-click="toggleDropdown()">Sök här!<span class="caret"></span></button>
+    <button type="button" class="btn btn-success dropdown-toggle minSize" data-toggle="dropdown" aria-expanded="false" ng-click="toggleDropdown()">Sök här!<span class="caret"></span></button>
 
 
 
-    <div class="dropdown-menu dropdown-menu-center" role="menu" id="dropsearch">
+    <div class="dropdown-menu" role="menu" id="dropsearch">
       <form class="form-horizontal"  role="form">
 
         <div class="form-group">
@@ -140,55 +140,3 @@
     </div>
   </div>
 </div>
-
-<!-- Split button -->
-
-<!--
-<div class="col-xs-24">
-      <h3>Query results ({{results.length}} items)</h3>
-      <div class="panel panel-info">
-        results from search 
-        <table class="table table-hover">
-          <tr>
-            <th>
-              Adress
-            </th>
-            <th>
-              Område
-            </th>
-            <th>
-              Pris
-            </th>
-            <th>
-              Rum
-            </th>
-            <th>
-            Bo yta
-            </th>
-          </tr>
-          <tr ng-repeat="result in results">
-            <td>
-              {{result.address}}
-            </td>
-            <td>
-              {{result.area}}
-            </td>
-            <td>
-              {{result.price}}
-            </td>
-            <td>
-              {{result.rooms}}
-            </td>
-            <td>
-            
-              {{result.size}} kvm
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-
-
-</div>-->
