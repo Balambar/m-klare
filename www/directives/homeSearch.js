@@ -60,7 +60,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
             $location.path("/lagenheter");
           }
           else
-            $location.path("/testHomes");
+            $location.path("/bostadSokning");
         });
 
         // find my <form>, and add the class

@@ -50,7 +50,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
         templateUrl: "templates/seller.html",
         controller: "seller"
     })
-    .when("/testHomes",{  
+    .when("/bostadSokning",{  
         templateUrl: "templates/testHomes.html",
         controller: "testHomes"
     })
