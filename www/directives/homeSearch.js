@@ -5,6 +5,13 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
     link: function(scope, elem, attrs) {
       // add "has-success" or "has-error" after each search
 
+      if ($location.path() == "/") {
+        elem.find('.dropdown-menu').addClass('dropdown-menu-center');
+      }
+      else if ($location.path() == "/fastigheter" || $location.path() == "/villor" || $location.path() == "/lagenheter") {
+        elem.find('.dropdown-menu').addClass('dropdown-menu-right');
+      }
+
       // A function to show/hide wells
       scope.toggleDropdown = function(){
         //Hide/show wells
