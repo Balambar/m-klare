@@ -32,28 +32,31 @@
     <script src="controllers/testHomes.js"></script>
     <script src="controllers/fastigheter.js"></script>
     <script src="controllers/about.js"></script>
-    <!--<script src="controllers/home.js"></script>-->
-
-
+    
     <!-- directives -->
+    <script src="/directives/headerNav.js"></script>
+    <script src="/directives/footerSticky.js"></script>
+    <script src="/directives/headerCarousel.js"></script>
+    <script src="/directives/homeSearch.js"></script>
+    <script src="/directives/aboutTabs.js"></script>
+    <script src="/directives/subNavObject.js"></script>
+    <script src="/directives/buttonDirectives.js"></script>
+
     <script src="/directives/objects/objektShow.js"></script>
     <script src="/directives/objects/villorShow.js"></script>
     <script src="/directives/objects/lagenheterShow.js"></script>
-    <script src="/directives/subNavObject.js"></script>
-    <script src="/directives/buttonDirectives.js"></script>
-    <script src="/directives/headerCarousel.js"></script>
-    <script src="/directives/headerNav.js"></script>
-    <script src="/directives/aboutTabs.js"></script>
+    <script src="/directives/objects/pagination.js"></script>
+
     <script src="/directives/myModalSeller.js"></script>
+
     <script src="/directives/detailedObject/myCarousel.js"></script>
     <script src="/directives/detailedObject/enfastInfo.js"></script>
+    <script src="/directives/detailedObject/myMap.js"></script>
+
     <script src="/directives/dbInsertion/insertSeller.js"></script>
     <script src="/directives/dbInsertion/insertObject.js"></script>
     <script src="/directives/dbInsertion/insertAbout.js"></script>
-    <script src="/directives/homeSearch.js"></script>
-    <script src="/directives/detailedObject/myMap.js"></script>
-    <script src="/directives/objects/pagination.js"></script>
-
+    
     <!-- our modal controller is special -->
     <script src="/modals/mySellerModalInstance.js"></script>
 
@@ -61,70 +64,32 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   </head>
-  
+    
   <body>
     
     <div id="wrapper">
-      
-      
-
-
-        <header-nav></header-nav>
-        <header-carousel></header-carousel>
-      
     
-    
-      <div id="content">
-       
-        <ng-view> </ng-view>
-        <insert-about></insert-about>
-        <insert-seller></insert-seller> 
-        <insert-object></insert-object>
-
-     
-      </div><!-- #content -->
-    
-      <footer>
-        <div class="row">
-            
-            <div id="footerContent" class="col-xs-offset-5 col-md-offset-10"   >
-                <a class="btn btn-social-icon btn-lg btn-facebook">
-                <span class="fa fa-facebook"></span>
-                </a>
-
-                  <a class="btn btn-social-icon btn-lg btn-github">
-                <span class="fa fa-github"></span>
-                </a>
-
-                <a class="btn btn-social-icon btn-lg btn-instagram">
-                <span class="fa fa-instagram"></span>
-                </a>
-
-                <a class="btn btn-social-icon btn-lg btn-linkedin">
-                <span class="fa fa-linkedin"></span>
-                </a>
-
-                 <a class="btn btn-social-icon btn-lg btn-vimeo">
-                <span class="fa fa-vimeo"></span>
-                </a>
-            </div>
-
-              
-            </div>
+            <header-nav></header-nav>
+            <header-carousel></header-carousel>
         
-        </div> <!-- #row -->
-      </footer><!-- #footer -->
-    
+        <div class="container ng-scope">
+        
+            <ng-view> </ng-view>
+            <insert-about></insert-about>
+            <insert-seller></insert-seller> 
+            <insert-object></insert-object>
 
-    </div><!-- #wrapper -->
-          
-
-
-     
+        </div>
       
-  
+        <footer>
+
+            <footer-sticky></footer-sticky>
+        
+        </footer>
+        
+    </div>
+      
     </body>
 
-    
-
 </html>
+       
