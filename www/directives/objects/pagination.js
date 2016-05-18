@@ -3,22 +3,44 @@ app.directive("paginationList", [
   function() {
     return {
       templateUrl: '/directives/objects/pagination.html',
-      controller: ['$scope', 'Home', '$route', '$routeParams', '$location',
-        function($scope, Home, $route, $routeParams, $location) {
+      controller: ['$scope', 'Home', '$route', '$routeParams', '$location', '$http',
+        function($scope, Home, $route, $routeParams, $location, $http) {
           $scope.badge = function() {
-            Home.get(function(data) {
-              $scope.allBadge = data.length;
+            /*
+              keys -> $scope properties
+              values -> type to filter
+            */
+            var counts = {
+              allBadge: '',
+              villorBadge: 'Villor',
+              lagenhetBadge: 'Lägenhet'
+            };
+
+            Object.keys(counts).forEach(function(key) {
+              var url = '/api/objekt-count';
+              // if we have a type to filter with
+              if (counts[key]) {
+                url += '?type=' + counts[key]
+              }
+              $http.get(url).then(function(data) {
+                console.log("count for " + key, data);
+                $scope[key] = data.data;
+              });
             });
-            Home.get({
-              type: 'Villor'
-            }, function(data) {
-              $scope.villorBadge = data.length;
-            });
-            Home.get({
-              type: 'Lägenhet'
-            }, function(data) {
-              $scope.lagenhetBadge = data.length;
-            });
+
+            // Home.get(function(data) {
+            //   $scope.allBadge = data.length;
+            // });
+            // Home.get({
+            //   type: 'Villor'
+            // }, function(data) {
+            //   $scope.villorBadge = data.length;
+            // });
+            // Home.get({
+            //   type: 'Lägenhet'
+            // }, function(data) {
+            //   $scope.lagenhetBadge = data.length;
+            // });
           };
 
 
@@ -26,7 +48,7 @@ app.directive("paginationList", [
 
           $scope.all = function() {
             Home.get(function(data) {
-            
+              
               $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
               $scope.bigTotalItems = data.length;  //total number of objects in db. 
               $scope.bigCurrentPage = 1; // startingpoint for active 
