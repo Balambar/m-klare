@@ -47,32 +47,31 @@ app.directive("paginationList", [
 
 
           $scope.all = function() {
-            Home.get(function(data) {
-              
-              $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
-              $scope.bigTotalItems = data.length;  //total number of objects in db. 
+            var url = '/api/objekt-count';
+            $http.get(url).then(function(data) {
+                console.log(data);
+                 $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
+              $scope.bigTotalItems = data.data;  //total number of objects in db. 
               $scope.bigCurrentPage = 1; // startingpoint for active 
-              
-
-            })
+              });
           };
           $scope.villor = function() {
-            Home.get({
-              type: 'Villor'
-            }, function(data) {
-                $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
-              $scope.bigTotalItems = data.length;  //total number of objects in db. 
+             var url = '/api/objekt-count?type="Villor"';
+            $http.get(url).then(function(data) {
+                console.log(data);
+                 $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
+              $scope.bigTotalItems = data.data;  //total number of objects in db. 
               $scope.bigCurrentPage = 1; // startingpoint for active 
-            })
+              });
           };
           $scope.lagenheter = function() {
-            Home.get({
-              type: 'Lägenhet'
-            }, function(data) {
-               $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
-              $scope.bigTotalItems = data.length;  //total number of objects in db. 
+             var url = '/api/objekt-count?type="Lägenhet';
+            $http.get(url).then(function(data) {
+                console.log(data);
+                 $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
+              $scope.bigTotalItems = data.data;  //total number of objects in db. 
               $scope.bigCurrentPage = 1; // startingpoint for active 
-            })
+              });
           };
           $scope.badge();
           if ($location.$$path === '/fastigheter') {
