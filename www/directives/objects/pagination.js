@@ -19,7 +19,7 @@ app.directive("paginationList", [
             }, function(data) {
               $scope.lagenhetBadge = data.length;
             });
-          }
+          };
 
 
 
