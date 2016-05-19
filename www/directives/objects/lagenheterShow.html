@@ -5,8 +5,9 @@
         <a ng-href="/objekt/{{info._id}}">
           <img src="{{info.img[0].url}}" class="img-responsive" alt="{{info.img[0].name}}"/>
             <div class="textOver" class="img-responsive">
-              <span>{{info.address}}<br>
-              {{info.price | currency: "KR" : 0 }}</span>
+
+              <h2>{{info.address}}
+              <small>{{info.price | currency: "KR" : 0 }}<small><h2>
             </div>
         </a>
       </div>
