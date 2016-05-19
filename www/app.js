@@ -7,15 +7,19 @@ var app = angular.module("myApp", [
   'ngResource',
   'ngTouch',
   'ui.bootstrap',
-  'ngMaps'
+  'uiGmapgoogle-maps'
 ]);
 
-app.config(["$routeProvider", "$locationProvider", function($routeProvider, $locationProvider) {
+app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider", function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
 
+  uiGmapGoogleMapApiProvider.configure({
+    //    key: 'your api key',
+    v: '3.22', //defaults to latest 3.X anyhow
+    libraries: 'weather,geometry,visualization'
+  });
   $routeProvider
     .when("/", {
       templateUrl: "templates/home.html"
-      //controller: "home"
     })
     .when("/about",{
       templateUrl: "templates/about.html",
@@ -23,24 +27,18 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
     })
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
-      // controller: ""
     })
      .when("/villor",{
       templateUrl: "templates/villor.html"
-      
-      // controller: ""
     })
      .when("/lagenheter",{
       templateUrl: "templates/lagenheter.html",
-      // controller: ""
     })
     .when("/enfastighet",{
       templateUrl: "templates/enfastighet.html",
-      // controller: ""
     })  
     .when("/objekt/:id",{
       templateUrl: "templates/enfastighet.html",
-      // controller: ""
     })
     .when("/kontakt",{  
         templateUrl: "templates/contact.html",
