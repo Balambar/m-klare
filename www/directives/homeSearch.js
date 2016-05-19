@@ -21,7 +21,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
          //Change button text (example of using "elem")
         var btn = elem.find('.dropdown-toggle');
         btn.html(
-          btn.html().indexOf('Sök') >= 0 ? 'Göm search!': 'Sök här!'
+          btn.html().indexOf('Sök') >= 0 ? 'Göm sök!': 'Sök här!'
         );
          
       };
