@@ -42,6 +42,11 @@ app.directive('insertSeller', [function(){
           name: "Martin",
           position: "VD/Mäklare",
           img: "imgs/sellers/bild9.png"
+        },
+        {
+          name: "Jason",
+          position: "Fastighetsekonomi/Pr manager",
+          img: "imgs/sellers/jason.png"
         }
       ];
 
