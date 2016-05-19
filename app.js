@@ -24,10 +24,10 @@ app.use(m.express.static(m.path.join(__dirname, 'www')));
 function funcX (moongose) {
   return [function (req, res){
     var property = moongose.model('Home');
-    console.log("params", req.query);
+    // console.log("params", req.query);
     property.find(req.query).count().exec(function(err,data){
       res.json(data);
-      console.log(data);
+      // console.log(data);
     });
     
 

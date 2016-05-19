@@ -23,7 +23,7 @@ app.directive("paginationList", [
                 url += '?type=' + counts[key]
               }
               $http.get(url).then(function(data) {
-                console.log("count for " + key, data);
+                // console.log("count for " + key, data);
                 $scope[key] = data.data;
               });
             });
