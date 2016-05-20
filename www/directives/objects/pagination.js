@@ -15,7 +15,7 @@ app.directive("paginationList", [
               villorBadge: 'Villor',
               lagenhetBadge: 'Lägenhet'
             };
-
+            
             Object.keys(counts).forEach(function(key) {
               var url = '/api/objekt-count';
               // if we have a type to filter with
@@ -56,9 +56,7 @@ app.directive("paginationList", [
                 $scope.bigCurrentPage = 1; // startingpoint for active 
                 $scope[scopeProp] = data;  
               });
-
-
           };
-  }]
+      }]
     }
 }]);

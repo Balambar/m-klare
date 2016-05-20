@@ -1,20 +1,17 @@
 <div class="container">
-	<!-- carousel -->
 	<div class="row">
 		<div class="col-xs-24">
-			<my-carousel></my-carousel>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-24 col-md-24">
-			<uib-tabset active="activeJustified" justified="true">
-    			<uib-tab index="0" heading="Information">
-    				<enfast-info></enfast-info>
-    			</uib-tab>
-    			<uib-tab index="1" heading="Karta">
-    				<my-map></my-map>
-    			</uib-tab>
-    		</uib-tabset>
+			<div id="en-fast-panel" class="panel panel-default">
+  				<div class="panel-body">
+  					<my-carousel></my-carousel>
+  				</div>
+    			<div class="panel-body">
+  					<my-map></my-map>
+    			</div>
+    			<div class="panel-body">
+  					<enfast-info></enfast-info>
+    			</div>
+			</div>
 		</div>
 	</div>
 </div>
