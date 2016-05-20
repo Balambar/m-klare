@@ -6,6 +6,10 @@ module.exports = function(mongoose){
   // Create a new mongoose schema
   var HomeSchema = mongoose.Schema({
     address: {type: String, required: true},
+    coordinates:[{
+      latitude: {type: Number, required: true},
+      longitude: {type: Number, required: true}
+    }],
     area: {type: String, required: true},
     type: {type: String, required: true},
     size: {type: Number, required: true},

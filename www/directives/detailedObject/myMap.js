@@ -43,8 +43,8 @@ app.directive('myMap',  [function () {
       //centering the map on the same coordinates as the marker
       $scope.map = {
         center:{
-          latitude: 55.5899, 
-          longitude: 12.9212
+          latitude: myCords.lat, 
+          longitude: myCords.lon
         }, 
         zoom: 18
       };

@@ -30,6 +30,30 @@ app.directive('insertObject', [function(){
             'Bottna Knutsgård 97',
             'Lillesäter 59'
           ],
+
+          //array of possible coordinates
+          coordinates = [
+            {
+              lat: 55.5899,
+              lon: 12.9212
+            },
+            {
+              lat: 55.6109,
+              lon: 12.9946
+            },
+            {
+              lat: 55.6048,
+              lon: 12.9874
+            },
+            {
+              lat: 59.3473,
+              lon: 18.0238
+            },
+            {
+              lat: 58.0367,
+              lon: 14.3127
+            }
+          ];
           //array of possible areas
           areas = [
             'Kirseberg',
@@ -159,10 +183,19 @@ app.directive('insertObject', [function(){
             extImg = getRandomItem(frontImagesH);
           }
 
+          //get a random coordinate object
+          var c = getRandomItem(coordinates);
+
           //in each itteration, we want to create a new object and store it in the DB
           Home.create([
             {
                 "address": getRandomItem(adresses),
+                "coordinates": [
+                  {
+                    "latitude": c.lat,
+                    "longitude": c.lon
+                  }
+                ],
                 "area" : getRandomItem(areas),
                 "type" : t,
                 "size" : getRandomItem(sizes),
