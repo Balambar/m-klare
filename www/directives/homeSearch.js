@@ -23,6 +23,9 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
         btn.html(
           btn.html().indexOf('Sök') >= 0 ? 'Göm sök!': 'Sök här!'
         );
+        if (btn.html().indexOf('Sök') >= 0) {
+          scope.resetQuery();
+        }
          
       };
 
