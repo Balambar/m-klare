@@ -1,7 +1,7 @@
 // loads in ui bootstrap accordion
 app.directive('enfastInfo', [function () {
 
-  //return a different string depending on a boolean value
+  //return a string depending on a boolean value
   //myTrue & myFalse is optional
   function boolChange(myData, myTrue, myFalse){
     
@@ -36,6 +36,8 @@ app.directive('enfastInfo', [function () {
       
       $scope.info = Home.getById({id:$routeParams.id}, function(data){
 
+        //set new values to garden and balony instead of the
+        //default true/false
         $scope.info.garden = boolChange(data.garden);
         $scope.info.balcony = boolChange(data.balcony);
 
