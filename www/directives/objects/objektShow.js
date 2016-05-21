@@ -2,7 +2,7 @@ app.directive('objektShow', [
   function($window) {
     // Runs during compile
     return {
-      templateUrl: '/directives/objects/objektShow.html',
+      templateUrl: '/directives/objects/show.html',
       controller: ['$scope', '$anchorScroll', 'Home',
         function($scope, $anchorScroll, Home) {
           // göra om till en funktion som både kallas på i "siduppstart" samt när den får ett klickevent med attribut. 

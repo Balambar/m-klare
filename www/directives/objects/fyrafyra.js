@@ -4,7 +4,5 @@ app.directive('fyraFyra', [function(){
 		link: function(scope, elem, attrs) {
 			elem.find( "#datepicker" ).datepicker();
 		} 
-
 	}
-
 }]);
