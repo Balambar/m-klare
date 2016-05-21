@@ -7,7 +7,9 @@ var app = angular.module("myApp", [
   'ngResource',
   'ngTouch',
   'ui.bootstrap',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'Alertify'
+  
 ]);
 
 app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider", function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {

@@ -1,8 +1,9 @@
-app.controller("contact", ["$scope", "Contact", function($scope, Contact){
+app.controller("contact", ["$scope", 'Alertify', "Contact", function($scope,Alertify ,Contact){
 
 	$scope.sendContact = function(){
 		if ($scope.contactName == undefined || $scope.contactEmail == undefined || $scope.contactMessage == undefined) {
-			alert("Du måste fylla i alla obligatoriska rutor!");
+			  Alertify.success("Du måste fylla i alla obligatoriska rutor!");
+			
 		}
 		else
 			Contact.create({
@@ -12,7 +13,7 @@ app.controller("contact", ["$scope", "Contact", function($scope, Contact){
 				message: $scope.contactMessage,
 				type: "Regular Contact"
 			}, function(){
-				alert("Tack för din meddelande!");
+				Alertify.success("Tack för din meddelande!");
 				$scope.contactName = undefined;
 				$scope.contactEmail = undefined;
 				$scope.contactPhone = undefined;
