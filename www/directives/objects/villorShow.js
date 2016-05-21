@@ -24,9 +24,6 @@ app.directive('getVillor', [function(){
 
   			}
 			$scope.go(0)
-
-
-
 		}]
 	}
 
