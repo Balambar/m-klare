@@ -1,5 +1,6 @@
 <form name="outerForm" class="tab-form-demo">
   <uib-tabset active="activeJustified" justified="true">
+    
     <!-- Om Dyhr -->
     <uib-tab index="0" heading="Om Dyhr & Rumson">
       <h2><small>{{about.content}}</small></h2>
@@ -14,14 +15,7 @@
     
     <!-- Kontakt --> 
     <uib-tab index="2" heading="Kontakt">
-      <div class="container">
-  <div class="row">
-    <div class="col-xs-24 col-xs-offset-0 col-md-10 col-md-offset-7">
       <h4>Har du några frågor? Fyll gärna i formuläret så att vi kan kontakta dig så snart som möjligt!</h4><br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-24 col-xs-offset-0 col-md-9 col-md-offset-7">
       <form>
         <div class="form-group">
           <label for="contactName">*Namn: </label>
@@ -42,9 +36,6 @@
         <button type="submit" ng-click="sendContact()" class="btn btn-default">Skicka</button>
       </form><br>
       <div><i>* Obligatoriska rutor att fylla i</i></div>
-    </div>  
-  </div>
-</div>   
     </uib-tab>
   </uib-tabset>
 </form>
