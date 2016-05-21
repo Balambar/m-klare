@@ -14,7 +14,6 @@ app.directive('headerNav', [function(){
       // $interval(currentTime, 1000);
       $scope.navExpanded = false;
       $scope.$on('$routeChangeStart', function() {
-        console.log("broadcast args", arguments);
         $scope.navExpanded = false;
       });
     }]

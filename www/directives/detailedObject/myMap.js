@@ -5,13 +5,14 @@ app.directive('myMap',  [function () {
     controller: ['$scope', 'uiGmapGoogleMapApi', '$routeParams', 'Home', function($scope, uiGmapGoogleMapApi, $routeParams, Home) {
 
       //coordinates that will be loaded from database
-      var coordinates = {};
+      var coordinates = {},
+          defaultCoordinates = { lat: 0, lon: 0 };
 
       //initial map setup (the map need these values to load)
       $scope.map = {
         center:{
-          latitude: 0, 
-          longitude: 0
+          latitude: defaultCoordinates.lat, 
+          longitude: defaultCoordinates.lon
         }, 
         zoom: 18
       };
@@ -20,8 +21,8 @@ app.directive('myMap',  [function () {
       $scope.marker = {
         id: 0,
         coords: {
-          latitude: coordinates.latitude,
-          longitude: coordinates.longitude
+          latitude: defaultCoordinates.lat,
+          longitude: defaultCoordinates.lon
         },
         options: { dragable: false }
       };

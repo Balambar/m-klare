@@ -50,7 +50,6 @@ app.directive("paginationList", [
             console.log(url);
             
             $http.get(url).then(function(data) {
-                console.log(data);
                 $scope.maxSize = 5;  // how many that shows in the menu  (Limit number for pagination size.)
                 $scope.bigTotalItems = data.data;  //total number of objects in db. 
                 $scope.bigCurrentPage = 1; // startingpoint for active 
