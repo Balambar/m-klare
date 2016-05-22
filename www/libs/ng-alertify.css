@@ -64,9 +64,10 @@
 	/*here could you change the position on the alert box*/
 	position: fixed;
 	z-index: 5000;
-	top: 120px;
-	right: 15px;
+	bottom: 25%;
+	right: 50%;
 	width: 300px;
+	margin-right: -150px;
 }
 .alertify-logs-hidden {
 	display: none;
@@ -75,11 +76,11 @@
 		display: block;
 		margin-top: 10px;
 		position: relative;
-		right: -300px;
+		top: -300px;
 		opacity: 0;
 	}
 	.alertify-log-show {
-		right: 0;
+		top: 0;
 		opacity: 1;
 	}
 	.alertify-log-hide {
