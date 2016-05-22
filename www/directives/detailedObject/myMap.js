@@ -25,7 +25,10 @@ app.directive('myMap',  [function () {
           latitude: defaultCoordinates.lat,
           longitude: defaultCoordinates.lon
         },
-        options: { dragable: false }
+        options: { 
+          dragable: false,
+          icon: '../../imgs/map/markers/home-marker.png'
+        }
       };
 
       //GET request to database using the routeparam id
@@ -52,7 +55,10 @@ app.directive('myMap',  [function () {
               longitude: coordinates.longitude
             },
             //user should not be able to drag the marker around the map
-            options: { dragable: false }
+            options: { 
+              dragable: false,
+              icon: '../../imgs/map/markers/home-marker.png'
+            }
           };
         });
       });
