@@ -9,6 +9,16 @@ app.directive('myMap',  [function () {
           //default coordinates that will be loaded initially
           defaultCoordinates = { lat: 0, lon: 0 };
 
+        function defaultMarker(){
+          return {
+            dragable: false,
+            icon: '../../imgs/map/markers/home-marker.png',
+            labelContent: 'OBJECT IS HERE!',
+            labelAnchor: '-8 10',
+            labelClass: 'marker-labels'
+          };
+        };
+
       //initial map setup (the map need these values to load)
       $scope.map = {
         center:{
@@ -25,10 +35,7 @@ app.directive('myMap',  [function () {
           latitude: defaultCoordinates.lat,
           longitude: defaultCoordinates.lon
         },
-        options: { 
-          dragable: false,
-          icon: '../../imgs/map/markers/home-marker.png'
-        }
+        options: defaultMarker()
       };
 
       //GET request to database using the routeparam id
@@ -55,10 +62,7 @@ app.directive('myMap',  [function () {
               longitude: coordinates.longitude
             },
             //user should not be able to drag the marker around the map
-            options: { 
-              dragable: false,
-              icon: '../../imgs/map/markers/home-marker.png'
-            }
+            options: defaultMarker()
           };
         });
       });
