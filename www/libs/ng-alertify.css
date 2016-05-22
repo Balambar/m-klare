@@ -64,7 +64,7 @@
 	/*here could you change the position on the alert box*/
 	position: fixed;
 	z-index: 5000;
-	bottom: 25%;
+	top: 40%;
 	right: 50%;
 	width: 300px;
 	margin-right: -150px;
