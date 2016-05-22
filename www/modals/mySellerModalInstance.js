@@ -1,6 +1,6 @@
 // the controller for the modal itself
 // (separate from underlying view/directive)
-app.controller('mySellerModalInstance', ['$scope', '$uibModalInstance', 'seller', 'Contact', function($scope, $uibModalInstance, seller, Contact) {
+app.controller('mySellerModalInstance', ['$scope', 'Alertify', '$uibModalInstance', 'seller', 'Contact', function($scope, Alertify,  $uibModalInstance, seller, Contact) {
   console.log("selected seller", seller);
   $scope.seller = seller;
   /*$scope.ok = function() {
@@ -12,7 +12,7 @@ app.controller('mySellerModalInstance', ['$scope', '$uibModalInstance', 'seller'
 
   $scope.sendContactSeller = function(){
     if ($scope.contactNameSeller == undefined || $scope.contactEmailSeller == undefined || $scope.contactMessageSeller == undefined) {
-      alert("Du måste fylla i alla obligatoriska rutor!");
+      Alertify.success("Du måste fylla i alla obligatoriska rutor!");
     }
     else
       Contact.create({
@@ -22,7 +22,7 @@ app.controller('mySellerModalInstance', ['$scope', '$uibModalInstance', 'seller'
         message: $scope.contactMessageSeller,
         type: "Mail to: " + seller.email 
       }, function(){
-        alert("Tack för din meddelande!");
+        Alertify.success("Tack för din meddelande!");
         $scope.contactNameSeller = undefined;
         $scope.contactEmailSeller = undefined;
         $scope.contactPhoneSeller = undefined;
