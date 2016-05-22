@@ -60,11 +60,12 @@
 		display: block;
 		visibility: hidden;
 	}
-.alertify-logs {
+.alertify-logs { 
+	/*here could you change the position on the alert box*/
 	position: fixed;
 	z-index: 5000;
-	bottom: 10px;
-	right: 10px;
+	top: 120px;
+	right: 15px;
 	width: 300px;
 }
 .alertify-logs-hidden {
