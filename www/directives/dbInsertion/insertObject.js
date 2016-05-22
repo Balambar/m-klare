@@ -206,23 +206,23 @@ app.directive('insertObject', [function(){
                 "price" : getRandomItem(prices),
                 "img" : [
                   {
-                    "name": "extBild",
+                    "name": "Exterior image",
                     "url": "imgs/objekt/ext/" + extImg + ".jpg"
                   },
                   {
-                    "name": "intBild",
+                    "name": "Interior image 1",
                     "url": "imgs/objekt/int/" + getRandomItem(intImages) + ".jpg"
                   },
                   {
-                    "name": "intBild",
+                    "name": "Interior image 2",
                     "url": "imgs/objekt/int/" + getRandomItem(intImages) + ".jpg"
                   },
                   {
-                    "name": "intBild",
+                    "name": "Interior image 3",
                     "url": "imgs/objekt/int/" + getRandomItem(intImages) + ".jpg"
                   },
                   {
-                    "name": "intBild",
+                    "name": "Interior image 4",
                     "url": "imgs/objekt/int/" + getRandomItem(intImages) + ".jpg"
                   }
                 ],
