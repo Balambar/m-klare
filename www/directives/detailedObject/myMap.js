@@ -15,10 +15,10 @@ app.directive('myMap',  [function () {
           latitude: defaultCoordinates.lat, 
           longitude: defaultCoordinates.lon
         }, 
-        zoom: 18
+        zoom: 1
       };
 
-      //initial marker setuo (map need these values to load)
+      //initial marker setup (the map need these values to load)
       $scope.marker = {
         id: 0,
         coords: {
@@ -41,7 +41,7 @@ app.directive('myMap',  [function () {
               latitude: coordinates.latitude, 
               longitude: coordinates.longitude
             }, 
-            zoom: 18
+            zoom: 17
           };
 
           //as above
