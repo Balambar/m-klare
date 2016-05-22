@@ -7,8 +7,10 @@ app.directive('contactForm', [function(){
 
 	$scope.sendContact = function(){
 		if ($scope.contactName == undefined || $scope.contactEmail == undefined || $scope.contactMessage == undefined) {
-			  var message = "Du måste fylla i alla obligatoriska rutor!";
-			  alertify.success(message);
+			  // var message = "Du måste fylla i alla obligatoriska rutor!";
+			  // alertify.success(message);
+			  _alertify.set('position', 'top-right');
+ alertify.success('d');
 
 			
 		}
