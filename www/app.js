@@ -27,34 +27,41 @@ app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider",
       templateUrl: "templates/about.html",
       controller: "about"
     })
+    
     .when("/fastigheter",{
       templateUrl: "templates/fastigheter.html",
     })
+    
      .when("/villor",{
       templateUrl: "templates/villor.html"
     })
+    
      .when("/lagenheter",{
       templateUrl: "templates/lagenheter.html",
     })
+    
     .when("/enfastighet",{
       templateUrl: "templates/enfastighet.html",
-    })  
+    })
+
     .when("/objekt/:id",{
       templateUrl: "templates/enfastighet.html",
     })
+
     .when("/kontakt",{  
-        templateUrl: "templates/contact.html",
-        controller: "contact"
+        templateUrl: "templates/contact.html"
     })
+    
     .when("/maklare",{  
         templateUrl: "templates/seller.html",
         controller: "seller"
     })
+    
     .when("/bostadSokning",{  
         templateUrl: "templates/testHomes.html",
         controller: "testHomes"
     })
-
+    
     .otherwise({
       templateUrl: "templates/404.html"
     });
