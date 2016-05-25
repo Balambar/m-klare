@@ -6,9 +6,9 @@ app.directive('objektShow', [function($window){
 
 				$scope.go = function(capsulate) {
     					
-    					var limit = 6;
-						var skip = capsulate * limit;
-						$scope.check = capsulate;
+    				var limit = 6;
+					var skip = capsulate * limit;
+					$scope.check = capsulate;
 			
     		
 

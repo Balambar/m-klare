@@ -2,9 +2,6 @@ html, body {
   margin:0;
   padding:0;
   height:100%;
-  //margin-top: 25px;
-  //margin-bottom: 60px;
-
 }
 
 #wrapper {
@@ -33,6 +30,10 @@ footer {
   left:0;
   right:0;
   text-align: center;
+
+  padding-bottom: 5px;
+  padding-top: 5px;
+
   padding-bottom: 18px;
   padding-top: 8px;
 }
@@ -72,14 +73,6 @@ header-carousel {
   visibility: visible;
 }
 
-.item {
-  width:100%;
-  height:100%;
-  background-position:center center;
-  background-size:cover;
-  z-index:0;
-}
- 
 #content-wrapper {
   position:absolute;
   z-index:1 !important;
@@ -87,55 +80,34 @@ header-carousel {
   min-height:100%;
 }
 
-#theSearchForm {
-  background-color: rgba(51,133,255, 0.6); 
-  position: relative; 
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-up: 80px;
-  color: white;
+//homeSearch ----------
+
+.dropdown-menu-center {
+  left: 50%;
+  right: auto;
   text-align: center;
+  transform: translate(-50%, 0);
 }
 
-#theSearchForm h2 {
-  margin-bottom: 50px;
+.minSize {
+  width: 120px;
 }
 
-#sokbar {
- 
-  width: 100%;
-}
-
-#ddown {
+#dropsearch {
   background-color: rgba(51,133,255, 0.6);
-  position: relative; 
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-up: 80px;
-  color: white;
-  text-align: center;
-  .kopa {
-    color: white;
-    background-color: #3385FF; 
-
-  }
 }
 
-#ddown h2 {
-  margin-bottom: 50px;  
-}
-
-
-.moreMargin{
-  margin-top: 80px;  
+.dropdown-menu-1 {
+  left: 50%;
+  width:200px;
+  transform: translate(-50%, 0);
 }
 
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 10px;
 }
+
 .input-group-btn .btn-group {
     display: flex !important;
 }
@@ -160,6 +132,43 @@ header-carousel {
     border-bottom-left-radius: 4px;
 }
 
+//searchForm ----------
+
+#searchForm {
+  background-color: rgba(51,133,255, 0.6); 
+  position: relative; 
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-up: 80px;
+  color: white;
+  text-align: center;
+}
+
+#searchForm h2 {
+  margin-bottom: 50px;
+}
+
+#ddown {
+  background-color: rgba(51,133,255, 0.6);
+  position: relative; 
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-up: 80px;
+  color: white;
+  text-align: center;
+  .kopa {
+    color: white;
+    background-color: #3385FF; 
+  }
+}
+
+#ddown h2 {
+  margin-bottom: 50px;  
+}
+
+//@media ----------
 @media screen and (min-width: 768px) {
     #adv-search {
         width: 400px;
@@ -171,19 +180,4 @@ header-carousel {
     .dropdown.dropdown-lg .dropdown-menu {
         min-width: 500px;
     }
-}
-
-//dropdown i sök bostad fältet
-#dropsearch {
-  background-color: rgba(51,133,255, 0.6);
-}
-
-.dropdown-menu-1 {
-  left: 50%;
-  width:200px;
-  transform: translate(-50%, 0);
-}
-
-.hej{
-  padding-left:20px;
 }
