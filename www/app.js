@@ -9,7 +9,6 @@ var app = angular.module("myApp", [
   'ui.bootstrap',
   'uiGmapgoogle-maps',
   'Alertify'
-  
 ]);
 
 app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider", function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider) {
@@ -29,7 +28,7 @@ app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider",
     })
     
     .when("/fastigheter",{
-      templateUrl: "templates/fastigheter.html",
+      templateUrl: "templates/fastigheter.html"
     })
     
      .when("/villor",{
@@ -41,11 +40,11 @@ app.config(["$routeProvider", "$locationProvider", "uiGmapGoogleMapApiProvider",
     })
     
     .when("/enfastighet",{
-      templateUrl: "templates/enfastighet.html",
+      templateUrl: "templates/enfastighet.html"
     })
 
     .when("/objekt/:id",{
-      templateUrl: "templates/enfastighet.html",
+      templateUrl: "templates/enfastighet.html"
     })
 
     .when("/kontakt",{  
