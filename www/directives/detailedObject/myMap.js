@@ -9,11 +9,15 @@ app.directive('myMap',  [function () {
           //default coordinates that will be loaded initially
           defaultCoordinates = { lat: 0, lon: 0 };
 
-        function defaultMarker(){
+        function markerOpt(label){
+
+          if(!label){
+            label = 'OBJECT IS HERE!';
+          }  
           return {
             dragable: false,
             icon: '../../imgs/map/markers/home-marker.png',
-            labelContent: 'OBJECT IS HERE!',
+            labelContent: label,
             labelAnchor: '-8 10',
             labelClass: 'marker-labels'
           };
@@ -35,7 +39,7 @@ app.directive('myMap',  [function () {
           latitude: defaultCoordinates.lat,
           longitude: defaultCoordinates.lon
         },
-        options: defaultMarker()
+        options: markerOpt()
       };
 
       //GET request to database using the routeparam id
@@ -62,7 +66,7 @@ app.directive('myMap',  [function () {
               longitude: coordinates.longitude
             },
             //user should not be able to drag the marker around the map
-            options: defaultMarker()
+            options: markerOpt(data.address)
           };
         });
       });
