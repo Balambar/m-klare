@@ -160,9 +160,11 @@ app.directive('insertObject', [function(){
           //but if it is empty (has no length)
           else{
             //we call our init!
+
             init(34);
-          }
-        });
+
+            init(1200);
+
 
         //init function, used to create dummydata, takes a itterations argument
         //that determines how many posts it will create
