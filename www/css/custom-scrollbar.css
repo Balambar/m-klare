@@ -3,8 +3,8 @@
   height: 11px;
 }
 ::-webkit-scrollbar-button {
-  width: 55px;
-  height: 55px;
+  width: 53px;
+  height: 53px;
 }
 ::-webkit-scrollbar-thumb {
   background: #79bcff;
