@@ -3,8 +3,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
   return {
     templateUrl: '/directives/homeSearch.html',
     link: function(scope, elem, attrs) {
-      // add "has-success" or "has-error" after each search
-
+      // Changing Menu position depending on site
       if ($location.path() == "/") {
         elem.find('.dropdown-menu').addClass('dropdown-menu-center');
       }
@@ -29,6 +28,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
          
       };
 
+      // add "has-success" or "has-error" after each search
       // depending on if we got results
       scope.highlight = function() {
         var className = scope.results.length > 0 ? 'has-success' : 'has-error';
@@ -37,6 +37,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
 
         $rootScope.results = scope.results;
 
+        // Comparing result from filter to Home so we reroute if its necessary
         Home.get(function(allHomes){
 
           var villa = [];
@@ -52,12 +53,12 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
               lgh.push(i);
           }
 
-          for (var i = 0; i < myResult.length; i++) {
-            if (myResult[i].type == "Villor") {
-              myVilla.push(i);
+          for (var j = 0; j < myResult.length; j++) {
+            if (myResult[j].type == "Villor") {
+              myVilla.push(j);
             }
             else
-              myLgh.push(i);
+              myLgh.push(j);
           }
 
           if (myResult.length === allHomes.length) {
@@ -166,18 +167,11 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
         });
       };
 
-      // Watch the variables for changes
-      /*$scope.$watchGroup(toWatch, function(){
-        // build and send our query
-        $scope.sendQuery();
-      });*/
-
-      
-
-      // reset all form inputs
+      // Start Query
       $scope.startQuery = function() {
         $scope.sendQuery();
       };
+      // reset all form inputs
       $scope.resetQuery = function() {
         for (var i in options) {
           $scope[i] = ''; // set ng-model to empty string (nothing)

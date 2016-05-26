@@ -1,14 +1,8 @@
 // the controller for the modal itself
 // (separate from underlying view/directive)
 app.controller('mySellerModalInstance', ['$scope', 'Alertify', '$uibModalInstance', 'seller', 'Contact', function($scope, Alertify,  $uibModalInstance, seller, Contact) {
-  console.log("selected seller", seller);
+
   $scope.seller = seller;
-  /*$scope.ok = function() {
-    // user approves om seleted option
-    // so send the selected option back to the myModal directive
-    // (modalInstance.result.then(...))
-    $uibModalInstance.close($scope.selectedOption);
-  };*/
 
   $scope.sendContactSeller = function(){
     if ($scope.contactNameSeller == undefined || $scope.contactEmailSeller == undefined || $scope.contactMessageSeller == undefined) {
