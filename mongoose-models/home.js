@@ -26,7 +26,8 @@ module.exports = function(mongoose){
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Seller',
       required: true
-    }
+    },
+    description: {type: String, required: true}
   });
 
   //enforce the schema required key even when the PUT method is used

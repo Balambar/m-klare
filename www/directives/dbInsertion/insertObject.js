@@ -76,6 +76,15 @@ app.directive('insertObject', [function(){
           balcony =[true, false],
           //array of possible prices
           prices = [50, 200000, 500000, 800000, 1000000, 1500000, 2000000, 2450000, 5000000, 100000000],
+          //array of possible descriptions
+          descriptions = [
+            'Unik chans att förvärva en exklusiv trea med möjlighet att köpa loss råvind och bygga etage. Här erbjuds en fantastisk lägenhet med påkostade och moderna materialval som blandas med äldre 20-tals detaljer. Genomgående planlösning med samtliga sovrumsfönster mot grönskande innergård. Utanför porten väntar Kungsholmens stora utbud och goda kommunikationer. Måste upplevas på plats!',
+            'Nu har ni möjligheten att förvärva denna imponerande villa. Huset ligger så gott som insynsskyddat och ostört omgivet av ett charmigt villaområde nära hav och natur. Huset anno 2008 bjuder så väl interiört som exteriört på en modern och smakfull inredning, generöst ljusinsläpp och representativa sällskapsytor. En hänförande trädgård med ljuvliga uteplatser lockar och ett fantastiskt hus med medveten arkitektur förför. Här bor ni på första parkett i Falsterbo med underbara sällskapsytor och genomtänkt planlösning. Pool, jacuzzi och tillhörande spa/bastu!',
+            'På tredje våningen i populära Brf Briljanten finner ni en lägenhet med bra planerade ytor för både familj och umgänge. Här ger fönsterpartierna ett härligt ljusinsläpp. En rymlig balkong med gott om plats att njuta av soliga dagar under de varmare årstiderna och skulle några droppar falla skyddar taket er.',
+            'Med exklusiv design och stor karaktär är det lätt att trivas i denna ljuvliga fyra! Öppna sällskapsytor, generös takhöjd, väl tilltagen terrass och stora fönster välkomnar solljuset och låter det flöda fritt genom bostaden. Det moderna köket från Vedum är bostadens hjärta och lockar till många inspirerande matlagningstillfällen. Att man dessutom kan gå rakt ut på den mysiga stenlagda uteplatsen i sydöst från köket gör detta till ett guldläge. Tvättmöjligheter i bostaden och två badrum som båda är utrustade med dusch underlättar vardagens bestyr samt skänker ytterligare plus till bostaden. Hjärtligt välkomna hem!',
+            'Välkomna till detta välplanerade hem med härlig balkong och skön kvällssol med utsikt över hamninloppet och några av Göteborgs landmärken. Ett attraktivt boende i hjärtat av Göteborg, ett guldläge för er som trivs i stadens puls men även önskar ett hem fyllt av lugn och ro. Här finns möjligheten till alternativ planlösning.',
+            'Mitt i city finner ni denna underbara drömlägenhet med vackra bevarade originaldetaljer, takrosetter, generös takhöjd, härlig rymd, välplanerade ytor, fin utsikt, badrum och gäst-WC samt fantastisk innergård. Varmt välkomna hem!'
+          ],
           //array of possible images for houses
           frontImagesH =[
             'hus1',
@@ -160,10 +169,9 @@ app.directive('insertObject', [function(){
           //but if it is empty (has no length)
           else{
             //we call our init!
-
-            init(34);
-
             init(1200);
+          }
+        });                                                                                                                           
 
 
         //init function, used to create dummydata, takes a itterations argument
@@ -228,7 +236,8 @@ app.directive('insertObject', [function(){
                     "url": "imgs/objekt/int/" + getRandomItem(intImages) + ".jpg"
                   }
                 ],
-                "seller" :getRandomItem(sellers)._id
+                "seller" :getRandomItem(sellers)._id,
+                "description": getRandomItem(descriptions)
               }
          ]);
         }
