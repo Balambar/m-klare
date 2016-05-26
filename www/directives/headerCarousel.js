@@ -11,7 +11,7 @@ app.directive('headerCarousel', [function(){
     		"imgs/Home/bild5.jpg"
     	];
 
-    	$scope.myInterval = 5000;
+    	$scope.myInterval = 7000;
 	    $scope.noWrapSlides = false;
 	    $scope.active = 0;
     }]
