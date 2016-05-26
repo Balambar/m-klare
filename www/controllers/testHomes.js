@@ -2,9 +2,9 @@ app.controller("testHomes", ["$scope", '$rootScope', '$location', function($scop
 
 	// If no result go to home
 	if(!$rootScope.results){
-		$location.path('/');
+		$location.path('/fastigheter');
 	}
-
+			
 	$scope.minToMax = function(){
 			var myResult = $rootScope.results;
 			myResult.sort(function(a,b){
