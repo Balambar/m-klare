@@ -27,7 +27,14 @@ module.exports = function(mongoose){
       ref: 'Seller',
       required: true
     },
-    description: {type: String, required: true}
+    description: {type: String, required: true},
+    show: [{
+      day: {type: Number, required: true},
+      month: {type: Number, required: true},
+      hour: {type: Number, required: true},
+      minutes: {type: Number, required: true},
+      open: {type: Boolean, required: true}
+    }]
   });
 
   //enforce the schema required key even when the PUT method is used

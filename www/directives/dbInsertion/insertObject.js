@@ -31,6 +31,38 @@ app.directive('insertObject', [function(){
             'Lillesäter 59'
           ],
 
+          //array of possible show days
+          showDays =[
+            {
+              day: 1,
+              month: 5,
+              hour: 18,
+              minutes: 00,
+              open: true
+            },
+            {
+              day: 8,
+              month: 5,
+              hour: 18,
+              minutes: 30,
+              open: true
+            },
+            {
+              day: 15,
+              month: 5,
+              hour: 18,
+              minutes: 00,
+              open: true
+            },
+            {
+              day: 22,
+              month: 5,
+              hour: 19,
+              minutes: 00,
+              open: true
+            },
+          ],
+
           //array of possible coordinates
           coordinates = [
             {
@@ -237,7 +269,8 @@ app.directive('insertObject', [function(){
                   }
                 ],
                 "seller" :getRandomItem(sellers)._id,
-                "description": getRandomItem(descriptions)
+                "description": getRandomItem(descriptions),
+                "show": getRandomItem(showDays)
               }
          ]);
         }
