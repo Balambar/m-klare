@@ -39,7 +39,7 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
 
         console.log(scope.minAreaSel);
 
-        // If statement that comparing selection so we reroute if the user wants all homes or just houses or apartments
+        // If statement that compares the selection so we reroute if the user wants all homes or just all houses or all apartments
         if (scope.townSel == undefined && scope.minAreaSel == undefined && scope.minPriceSel == undefined && scope.maxPriceSel == undefined && scope.minSizeSel == undefined && scope.maxRoomSel == undefined) {
            $location.path("/fastigheter");
         }
