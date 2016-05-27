@@ -37,42 +37,19 @@ app.directive('homeSearch', ['$rootScope', '$location', 'Home', function ($rootS
 
         $rootScope.results = scope.results;
 
-        // Comparing result from filter to Home so we reroute if its necessary
-        Home.get(function(allHomes){
+        console.log(scope.minAreaSel);
 
-          var villa = [];
-          var lgh = [];
-          var myVilla = [];
-          var myLgh = [];
-
-          for (var i = 0; i < allHomes.length; i++) {
-            if (allHomes[i].type == "Villor") {
-              villa.push(i);
-            }
-            else
-              lgh.push(i);
-          }
-
-          for (var j = 0; j < myResult.length; j++) {
-            if (myResult[j].type == "Villor") {
-              myVilla.push(j);
-            }
-            else
-              myLgh.push(j);
-          }
-
-          if (myResult.length === allHomes.length) {
-            $location.path("/fastigheter");
-          }
-          else if (villa.length === myVilla.length) {
-            $location.path("/villor");
-          }
-          else if (lgh.length === myLgh.length) {
-            $location.path("/lagenheter");
-          }
-          else
-            $location.path("/bostadSokning");
-        });
+        // If statement that comparing selection so we reroute if the user wants all homes or just houses or apartments
+        if (scope.townSel == undefined && scope.minAreaSel == undefined && scope.minPriceSel == undefined && scope.maxPriceSel == undefined && scope.minSizeSel == undefined && scope.maxRoomSel == undefined) {
+           $location.path("/fastigheter");
+        }
+        else if (scope.townSel == 'Villor' && scope.minAreaSel == undefined && scope.minPriceSel == undefined && scope.maxPriceSel == undefined && scope.minSizeSel == undefined && scope.maxRoomSel == undefined) {
+          $location.path("/villor");
+        }
+        else if (scope.townSel == 'Lägenhet' && scope.minAreaSel == undefined && scope.minPriceSel == undefined && scope.maxPriceSel == undefined && scope.minSizeSel == undefined && scope.maxRoomSel == undefined) {
+          $location.path("/lagenheter");
+        }
+        else $location.path("/bostadSokning"); 
 
         // find my <form>, and add the class
         elem.find('form').addClass(className);
